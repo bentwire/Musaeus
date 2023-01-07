@@ -1,0 +1,129 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : top.vf
+// /___/   /\     Timestamp : 01/01/2023 00:02:43
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family xc9500 -verilog /home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/top.vf -w /home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/top.sch
+//Design Name: top
+//Device: xc9500
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module IBUF4_MXILINX_top(I0, 
+                         I1, 
+                         I2, 
+                         I3, 
+                         O0, 
+                         O1, 
+                         O2, 
+                         O3);
+
+    input I0;
+    input I1;
+    input I2;
+    input I3;
+   output O0;
+   output O1;
+   output O2;
+   output O3;
+   
+   
+   IBUF  I_36_37 (.I(I3), 
+                 .O(O3));
+   IBUF  I_36_38 (.I(I2), 
+                 .O(O2));
+   IBUF  I_36_39 (.I(I1), 
+                 .O(O1));
+   IBUF  I_36_40 (.I(I0), 
+                 .O(O0));
+endmodule
+`timescale 1ns / 1ps
+
+module IBUF8_MXILINX_top(I, 
+                         O);
+
+    input [7:0] I;
+   output [7:0] O;
+   
+   
+   IBUF  I_36_30 (.I(I[4]), 
+                 .O(O[4]));
+   IBUF  I_36_31 (.I(I[5]), 
+                 .O(O[5]));
+   IBUF  I_36_32 (.I(I[6]), 
+                 .O(O[6]));
+   IBUF  I_36_33 (.I(I[7]), 
+                 .O(O[7]));
+   IBUF  I_36_34 (.I(I[3]), 
+                 .O(O[3]));
+   IBUF  I_36_35 (.I(I[2]), 
+                 .O(O[2]));
+   IBUF  I_36_36 (.I(I[1]), 
+                 .O(O[1]));
+   IBUF  I_36_37 (.I(I[0]), 
+                 .O(O[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module top(A_, 
+           A_28, 
+           A_29, 
+           A_30, 
+           A_31, 
+           A0, 
+           A1, 
+           RW_, 
+           SIZ0, 
+           SIZ1, 
+           SYSCLK_);
+
+    input [27:20] A_;
+    input A_28;
+    input A_29;
+    input A_30;
+    input A_31;
+    input A0;
+    input A1;
+    input RW_;
+    input SIZ0;
+    input SIZ1;
+    input SYSCLK_;
+   
+   
+   (* HU_SET = "XLXI_1_0" *) 
+   IBUF8_MXILINX_top  XLXI_1 (.I(A_[27:20]), 
+                             .O());
+   (* HU_SET = "XLXI_2_1" *) 
+   IBUF4_MXILINX_top  XLXI_2 (.I0(A_28), 
+                             .I1(A_29), 
+                             .I2(A_30), 
+                             .I3(A_31), 
+                             .O0(), 
+                             .O1(), 
+                             .O2(), 
+                             .O3());
+   IBUF  XLXI_4 (.I(SYSCLK_), 
+                .O());
+   (* HU_SET = "XLXI_5_2" *) 
+   IBUF4_MXILINX_top  XLXI_5 (.I0(A0), 
+                             .I1(A1), 
+                             .I2(SIZ0), 
+                             .I3(SIZ1), 
+                             .O0(), 
+                             .O1(), 
+                             .O2(), 
+                             .O3());
+   IBUF  XLXI_6 (.I(RW_), 
+                .O());
+endmodule

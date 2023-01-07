@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/top.xst" -ofn "/home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc95108-TQ100-7 top.ngc top.ngd  
