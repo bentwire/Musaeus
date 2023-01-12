@@ -1,0 +1,5 @@
+set -tmpdir "/home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/xst/projnav.tmp"
+set -xsthdpdir "/home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/xst"
+elaborate
+-ifn cycle_timer.prj
+-ifmt mixed

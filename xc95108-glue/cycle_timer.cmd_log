@@ -1,0 +1,11 @@
+vhdtdtfi -lib work cycle_timer.vhd -prj xc95108-glue -o cycle_timer.spl -module cycle_timer -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500 cycle_timer.spl /home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/cycle_timer.sym 
+vhdtdtfi -lib work cycle_timer.vhd -prj xc95108-glue -o cycle_timer.spl -module cycle_timer -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500 cycle_timer.spl /home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/cycle_timer.sym 
+vhdtdtfi -prj xc95108-glue -o /home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/cycle_timer.tfi -module cycle_timer -template /opt/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror -lib work cycle_timer.vhd 
+vhdtdtfi -lib work cycle_timer.vhd -prj xc95108-glue -o cycle_timer.spl -module cycle_timer -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500 cycle_timer.spl /home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/cycle_timer.sym 
+vhdtdtfi -lib work cycle_timer.vhd -prj xc95108-glue -o cycle_timer.spl -module cycle_timer -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500 -w cycle_timer.spl /home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/cycle_timer.sym 
+vhdtdtfi -lib work cycle_timer.vhd -prj xc95108-glue -o cycle_timer.spl -module cycle_timer -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500 -w cycle_timer.spl /home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/cycle_timer.sym 

@@ -1,0 +1,42 @@
+MDF Database:  version 1.0
+MDF_INFO | top | XC95108-7-TQ100
+MACROCELL | 5 | 1 | N0
+ATTRIBUTES | 265984 | 0
+INPUTS | 0
+EQ | 2 | 
+   O_x_x_x_x = Gnd;
+   O_x_x_x_x.OE = Gnd;
+
+MACROCELL | 4 | 1 | N0$BUF0
+ATTRIBUTES | 265984 | 0
+INPUTS | 0
+EQ | 2 | 
+   O_x_x_x = Gnd;
+   O_x_x_x.OE = Gnd;
+
+MACROCELL | 0 | 1 | N0$BUF1
+ATTRIBUTES | 265984 | 0
+INPUTS | 0
+EQ | 2 | 
+   O_x_x = Gnd;
+   O_x_x.OE = Gnd;
+
+MACROCELL | 2 | 1 | N0$BUF2
+ATTRIBUTES | 265984 | 0
+INPUTS | 0
+EQ | 2 | 
+   O_x = Gnd;
+   O_x.OE = Gnd;
+
+MACROCELL | 1 | 1 | N0$BUF3
+ATTRIBUTES | 265984 | 0
+INPUTS | 0
+EQ | 2 | 
+   O = Gnd;
+   O.OE = Gnd;
+
+PIN | O_x_x_x_x | 128 | 0 | N/A | 88
+PIN | O_x_x_x | 128 | 0 | N/A | 67
+PIN | O_x_x | 128 | 0 | N/A | 18
+PIN | O_x | 128 | 0 | N/A | 41
+PIN | O | 128 | 0 | N/A | 129
