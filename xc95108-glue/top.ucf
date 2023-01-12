@@ -1,0 +1,2 @@
+NET "A_28" LOC="P16";
+INST "XLXI_2" LOC="FB1";

@@ -9,13 +9,13 @@
          <ClosedNodesVersion>2</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>top (/home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/top.sch)</SelectedItem>
+         <SelectedItem>top.ucf (/home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/top.ucf)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000004a7000000020000000000000000000000000200000064ffffffff000000810000000300000002000004a70000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000004d9000000020000000000000000000000000200000064ffffffff000000810000000300000002000004d90000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>top (/home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/top.sch)</CurrentItem>
+      <CurrentItem>top.ucf (/home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/top.ucf)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -23,26 +23,26 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem>Design Utilities</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000024e000000010000000100000000000000000000000064ffffffff0000008100000000000000010000024e0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000034e000000010000000100000000000000000000000064ffffffff0000008100000000000000010000034e0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem>Design Utilities</CurrentItem>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>top.sch</SelectedItem>
+         <SelectedItem>top.ucf</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000075f000000040101000100000000000000000000000064ffffffff000000810000000000000004000001630000000100000000000000400000000100000000000000b60000000100000000000005060000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000034e000000040101000100000000000000000000000064ffffffff000000810000000000000004000001630000000100000000000000400000000100000000000000b60000000100000000000000f50000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>top.sch</CurrentItem>
+      <CurrentItem>top.ucf</CurrentItem>
    </ItemView>
    <ItemView guiview="Library" >
       <ClosedNodes>
@@ -69,7 +69,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000024e000000010000000100000000000000000000000064ffffffff0000008100000000000000010000024e0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000034e000000010000000100000000000000000000000064ffffffff0000008100000000000000010000034e0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
@@ -82,10 +82,24 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000024e000000010000000100000000000000000000000064ffffffff0000008100000000000000010000024e0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000034e000000010000000100000000000000000000000064ffffffff0000008100000000000000010000034e0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem/>
    </ItemView>
    <SourceProcessView>000000ff0000000000000002000001bc0000011d01000000060100000002</SourceProcessView>
    <CurrentView>Implementation</CurrentView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000034e000000010000000100000000000000000000000064ffffffff0000008100000000000000010000034e0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
 </Project>

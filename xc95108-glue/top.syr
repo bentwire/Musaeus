@@ -77,9 +77,15 @@ wysiwyg                            : NO
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
+Compiling vhdl file "/home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/dynamic_sizer.vhd" in Library work.
+Architecture behavioral of Entity dynamic_sizer is up to date.
 Compiling verilog file "top.vf" in library work
-Module <IBUF4_MXILINX_top> compiled
 Module <IBUF8_MXILINX_top> compiled
+Module <NOR8_MXILINX_top> compiled
+Module <AND9_MXILINX_top> compiled
+Module <FTCE_MXILINX_top> compiled
+Module <CB4CE_MXILINX_top> compiled
+Module <IBUF4_MXILINX_top> compiled
 Module <top> compiled
 No errors in compilation
 Analysis of file <"top.prj"> succeeded.
@@ -96,6 +102,32 @@ Analyzing hierarchy for module <IBUF4_MXILINX_top> in library <work>.
 
 Analyzing hierarchy for module <IBUF4_MXILINX_top> in library <work>.
 
+Analyzing hierarchy for module <CB4CE_MXILINX_top> in library <work>.
+
+Analyzing hierarchy for module <AND9_MXILINX_top> in library <work>.
+
+Analyzing hierarchy for module <NOR8_MXILINX_top> in library <work>.
+
+Analyzing hierarchy for entity <dynamic_sizer> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for module <FTCE_MXILINX_top> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_top> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_top> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_top> in library <work> with parameters.
+	INIT = "0"
+
+WARNING:Xst:2591 - "top.vf" line 402: attribute on instance <SLEW> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "top.vf" line 405: attribute on instance <SLEW> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "top.vf" line 452: attribute on instance <SLEW> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "top.vf" line 455: attribute on instance <SLEW> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "top.vf" line 458: attribute on instance <SLEW> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "top.vf" line 461: attribute on instance <SLEW> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
 
 =========================================================================
 *                            HDL Analysis                               *
@@ -113,9 +145,73 @@ Module <top> is correct for synthesis.
     Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <XLXI_6> in unit <top>.
     Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <XLXI_6> in unit <top>.
     Set user-defined property "IOSTANDARD =  DEFAULT" for instance <XLXI_6> in unit <top>.
-    Set user-defined property "HU_SET =  XLXI_1_0" for instance <XLXI_1> in unit <top>.
-    Set user-defined property "HU_SET =  XLXI_2_1" for instance <XLXI_2> in unit <top>.
-    Set user-defined property "HU_SET =  XLXI_5_2" for instance <XLXI_5> in unit <top>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <XLXI_15> in unit <top>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <XLXI_15> in unit <top>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <XLXI_15> in unit <top>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <XLXI_15> in unit <top>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <XLXI_15> in unit <top>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <XLXI_16> in unit <top>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <XLXI_16> in unit <top>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <XLXI_16> in unit <top>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <XLXI_16> in unit <top>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <XLXI_16> in unit <top>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <XLXI_17> in unit <top>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <XLXI_17> in unit <top>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <XLXI_17> in unit <top>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <XLXI_17> in unit <top>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <XLXI_17> in unit <top>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <XLXI_32> in unit <top>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <XLXI_32> in unit <top>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <XLXI_32> in unit <top>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <XLXI_32> in unit <top>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <XLXI_32> in unit <top>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <XLXI_34> in unit <top>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <XLXI_34> in unit <top>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <XLXI_34> in unit <top>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <XLXI_34> in unit <top>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <XLXI_34> in unit <top>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <XLXI_37> in unit <top>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <XLXI_37> in unit <top>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <XLXI_37> in unit <top>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <XLXI_37> in unit <top>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <XLXI_37> in unit <top>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <XLXI_40> in unit <top>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <XLXI_40> in unit <top>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <XLXI_40> in unit <top>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <XLXI_40> in unit <top>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <XLXI_40> in unit <top>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <XLXI_44> in unit <top>.
+    Set user-defined property "DRIVE =  12" for instance <XLXI_44> in unit <top>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <XLXI_44> in unit <top>.
+    Set user-defined property "SLEW =  SLOW" for instance <XLXI_44> in unit <top>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <XLXI_45> in unit <top>.
+    Set user-defined property "DRIVE =  12" for instance <XLXI_45> in unit <top>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <XLXI_45> in unit <top>.
+    Set user-defined property "SLEW =  SLOW" for instance <XLXI_45> in unit <top>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <XLXI_106> in unit <top>.
+    Set user-defined property "DRIVE =  12" for instance <XLXI_106> in unit <top>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <XLXI_106> in unit <top>.
+    Set user-defined property "SLEW =  SLOW" for instance <XLXI_106> in unit <top>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <XLXI_107> in unit <top>.
+    Set user-defined property "DRIVE =  12" for instance <XLXI_107> in unit <top>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <XLXI_107> in unit <top>.
+    Set user-defined property "SLEW =  SLOW" for instance <XLXI_107> in unit <top>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <XLXI_108> in unit <top>.
+    Set user-defined property "DRIVE =  12" for instance <XLXI_108> in unit <top>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <XLXI_108> in unit <top>.
+    Set user-defined property "SLEW =  SLOW" for instance <XLXI_108> in unit <top>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <XLXI_109> in unit <top>.
+    Set user-defined property "DRIVE =  12" for instance <XLXI_109> in unit <top>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <XLXI_109> in unit <top>.
+    Set user-defined property "SLEW =  SLOW" for instance <XLXI_109> in unit <top>.
+    Set user-defined property "HU_SET =  XLXI_1_9" for instance <XLXI_1> in unit <top>.
+    Set user-defined property "HU_SET =  XLXI_2_4" for instance <XLXI_2> in unit <top>.
+    Set user-defined property "HU_SET =  XLXI_22_6" for instance <XLXI_22> in unit <top>.
+    Set user-defined property "HU_SET =  XLXI_49_7" for instance <XLXI_49> in unit <top>.
+    Set user-defined property "HU_SET =  XLXI_5_5" for instance <XLXI_5> in unit <top>.
+    Set user-defined property "HU_SET =  XLXI_59_8" for instance <XLXI_59> in unit <top>.
+    Set user-defined property "LOC =  P15" for signal <A_28> in unit <top>.
+    Set user-defined property "LOC =  P14" for signal <nCIIN_> in unit <top>.
 Analyzing module <IBUF8_MXILINX_top> in library <work>.
 Module <IBUF8_MXILINX_top> is correct for synthesis.
  
@@ -205,12 +301,53 @@ Module <IBUF4_MXILINX_top.2> is correct for synthesis.
     Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <I_36_40> in unit <IBUF4_MXILINX_top.2>.
     Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <I_36_40> in unit <IBUF4_MXILINX_top.2>.
     Set user-defined property "IOSTANDARD =  DEFAULT" for instance <I_36_40> in unit <IBUF4_MXILINX_top.2>.
+Analyzing module <CB4CE_MXILINX_top> in library <work>.
+Module <CB4CE_MXILINX_top> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  U0_0" for instance <U0> in unit <CB4CE_MXILINX_top>.
+    Set user-defined property "HU_SET =  U1_1" for instance <U1> in unit <CB4CE_MXILINX_top>.
+    Set user-defined property "HU_SET =  U2_2" for instance <U2> in unit <CB4CE_MXILINX_top>.
+    Set user-defined property "HU_SET =  U3_3" for instance <U3> in unit <CB4CE_MXILINX_top>.
+Analyzing module <FTCE_MXILINX_top.1> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_top.1> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_top.1>.
+Analyzing module <FTCE_MXILINX_top.2> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_top.2> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_top.2>.
+Analyzing module <FTCE_MXILINX_top.3> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_top.3> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_top.3>.
+Analyzing module <FTCE_MXILINX_top.4> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_top.4> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_top.4>.
+Analyzing module <AND9_MXILINX_top> in library <work>.
+Module <AND9_MXILINX_top> is correct for synthesis.
+ 
+Analyzing module <NOR8_MXILINX_top> in library <work>.
+Module <NOR8_MXILINX_top> is correct for synthesis.
+ 
+Analyzing Entity <dynamic_sizer> in library <work> (Architecture <behavioral>).
+Entity <dynamic_sizer> analyzed. Unit <dynamic_sizer> generated.
+
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Performing bidirectional port resolution...
+
+Synthesizing Unit <dynamic_sizer>.
+    Related source file is "/home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/dynamic_sizer.vhd".
+Unit <dynamic_sizer> synthesized.
+
 
 Synthesizing Unit <IBUF8_MXILINX_top>.
     Related source file is "top.vf".
@@ -227,8 +364,48 @@ Synthesizing Unit <IBUF4_MXILINX_top_2>.
 Unit <IBUF4_MXILINX_top_2> synthesized.
 
 
+Synthesizing Unit <AND9_MXILINX_top>.
+    Related source file is "top.vf".
+Unit <AND9_MXILINX_top> synthesized.
+
+
+Synthesizing Unit <NOR8_MXILINX_top>.
+    Related source file is "top.vf".
+Unit <NOR8_MXILINX_top> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_top_1>.
+    Related source file is "top.vf".
+Unit <FTCE_MXILINX_top_1> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_top_2>.
+    Related source file is "top.vf".
+Unit <FTCE_MXILINX_top_2> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_top_3>.
+    Related source file is "top.vf".
+Unit <FTCE_MXILINX_top_3> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_top_4>.
+    Related source file is "top.vf".
+Unit <FTCE_MXILINX_top_4> synthesized.
+
+
+Synthesizing Unit <CB4CE_MXILINX_top>.
+    Related source file is "top.vf".
+Unit <CB4CE_MXILINX_top> synthesized.
+
+
 Synthesizing Unit <top>.
     Related source file is "top.vf".
+WARNING:Xst:646 - Signal <nCLK> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <XLXN_88> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:646 - Signal <WR> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <DS> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <A<19:2>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 Unit <top> synthesized.
 
 
@@ -242,11 +419,16 @@ Found no macro
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+WARNING:Xst:1290 - Hierarchical block <XLXI_105> is unconnected in block <top>.
+   It will be removed from the design.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+
 =========================================================================
 
 =========================================================================
@@ -254,12 +436,36 @@ Found no macro
 =========================================================================
 
 Optimizing unit <top> ...
+  implementation constraint: LOC=P15	 : A_28
+  implementation constraint: LOC=P14	 : nCIIN_
+
+Optimizing unit <dynamic_sizer> ...
 
 Optimizing unit <IBUF8_MXILINX_top> ...
 
 Optimizing unit <IBUF4_MXILINX_top_1> ...
 
 Optimizing unit <IBUF4_MXILINX_top_2> ...
+
+Optimizing unit <AND9_MXILINX_top> ...
+
+Optimizing unit <NOR8_MXILINX_top> ...
+
+Optimizing unit <FTCE_MXILINX_top_1> ...
+  implementation constraint: INIT=0	 : I_36_35
+
+Optimizing unit <FTCE_MXILINX_top_2> ...
+  implementation constraint: INIT=0	 : I_36_35
+
+Optimizing unit <FTCE_MXILINX_top_3> ...
+  implementation constraint: INIT=0	 : I_36_35
+
+Optimizing unit <FTCE_MXILINX_top_4> ...
+  implementation constraint: INIT=0	 : I_36_35
+
+Optimizing unit <CB4CE_MXILINX_top> ...
+WARNING:Xst:1290 - Hierarchical block <XLXI_105> is unconnected in block <top>.
+   It will be removed from the design.
 
 =========================================================================
 *                           Partition Report                            *
@@ -287,23 +493,39 @@ XOR Preserve                       : YES
 wysiwyg                            : NO
 
 Design Statistics
-# IOs                              : 18
+# IOs                              : 27
 
 Cell Usage :
-# IO Buffers                       : 18
-#      IBUF                        : 18
+# BELS                             : 26
+#      AND2                        : 2
+#      AND3                        : 2
+#      AND4                        : 3
+#      GND                         : 1
+#      INV                         : 11
+#      OR4                         : 2
+#      VCC                         : 1
+#      XOR2                        : 4
+# FlipFlops/Latches                : 4
+#      FDCE                        : 4
+# IO Buffers                       : 31
+#      IBUF                        : 25
+#      OBUF                        : 6
+# Others                           : 3
+#      AND4B3                      : 1
+#      AND4B4                      : 1
+#      NOR2                        : 1
 =========================================================================
 
 
 Total REAL time to Xst completion: 2.00 secs
-Total CPU time to Xst completion: 1.88 secs
+Total CPU time to Xst completion: 1.93 secs
  
 --> 
 
 
-Total memory usage is 512068 kilobytes
+Total memory usage is 517140 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
+Number of warnings :   13 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

@@ -50,8 +50,8 @@ UUD <= RW or (not A(1) and not A(0));
 UMD <= RW or (A(0) and not A(1)) or (not A(1) and not SIZ(0)) or (not A(1) and SIZ(1));
 LMD <= RW or (not A(0) and A(1)) or (not A(1) and not SIZ(0) and not SIZ(1)) or (not A(1) and SIZ(0) and SIZ(1)) or (not A(1) and A(0) and not SIZ(0));
 LLD <= RW or (A(0) and A(1)) or (A(0) and SIZ(0) and SIZ(1)) or (not SIZ(0) and not SIZ(1)) or (A(1) and SIZ(1));
-UD <= '0';
-LD <= '0';
+UD <= RW or not A(0);
+LD <= RW or not SIZ(0) or SIZ(1) or A(0);
 
 end Behavioral;
 

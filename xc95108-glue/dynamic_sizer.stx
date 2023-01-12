@@ -5,14 +5,14 @@ Parameter TMPDIR set to /home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/x
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.02 secs
  
 --> 
 Parameter xsthdpdir set to /home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.02 secs
  
 --> 
 WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
@@ -22,7 +22,7 @@ WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Onl
 =========================================================================
 Compiling vhdl file "/home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/dynamic_sizer.vhd" in Library work.
 Entity <dynamic_sizer> compiled.
-Entity <dynamic_sizer> (Architecture <Behavioral>) compiled.
+Entity <dynamic_sizer> (Architecture <behavioral>) compiled.
 
 
 Total REAL time to Xst completion: 0.00 secs
@@ -31,7 +31,7 @@ Total CPU time to Xst completion: 0.03 secs
 --> 
 
 
-Total memory usage is 470816 kilobytes
+Total memory usage is 470812 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)

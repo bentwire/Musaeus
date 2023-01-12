@@ -62,59 +62,66 @@ begin
 	
 	process(state_reg, AS, TAK)
 	begin
-		-- Stay in current state unless we are supposed to change
-		state_next <= state_reg; 
-		-- Bus is in xfer mode when device asserts AS.  This lasts until the transfer
-		-- is finished by the assertion of TAK
-		-- All outputs should be negated in done before bus goes idle.
-		case state_reg is
-			when idle =>
-				if (AS = '1') then
-					-- Assert the select outputs here
-					-- IO_BASE starts at xFFnXXXXX 16M window starting at 0xFF000000
-					if (A(31 downto 24) = "11111111") then
-						SEL_IO_BASE   <= '1';
-						if (A(23 downto 20) = "0000") then
-							SEL_IO_xFF0XXXXX <= '1';
-						elsif (A(23 downto 20) = "0001") then
-							SEL_IO_xFF1XXXXX <= '1';
-						elsif (A(23 downto 20) = "0010") then
-							SEL_IO_xFF2XXXXX <= '1';
-						elsif (A(23 downto 20) = "0011") then
-							SEL_IO_xFF3XXXXX <= '1';
+		
+--		if (CLK'event and CLK = '1') then
+			-- Stay in current state unless we are supposed to change
+			state_next <= state_reg; 
+			-- Bus is in xfer mode when device asserts AS.  This lasts until the transfer
+			-- is finished by the assertion of TAK
+			-- All outputs should be negated in done before bus goes idle.
+			case state_reg is
+			
+				when idle =>
+					if (AS = '1') then
+						-- Assert the select outputs here
+						-- IO_BASE starts at xFFnXXXXX 16M window starting at 0xFF000000
+						if (A(31 downto 24) = "11111111") then
+							SEL_IO_BASE   <= '1';
+							if (A(23 downto 20) = "0000") then
+								SEL_IO_xFF0XXXXX <= '1';
+							elsif (A(23 downto 20) = "0001") then
+								SEL_IO_xFF1XXXXX <= '1';
+							elsif (A(23 downto 20) = "0010") then
+								SEL_IO_xFF2XXXXX <= '1';
+							elsif (A(23 downto 20) = "0011") then
+								SEL_IO_xFF3XXXXX <= '1';
+							end if;
+						-- RAM/ROM etc at x00nXXXXX 16M window starting at 0x00000000
+						elsif (A(31 downto 24) = "00000000") then
+							if (A(23 downto 20) = "0000") then
+								SEL_RAM       <= '1'; -- First 1M is RAM
+							elsif (A(23 downto 20) = "1111") then	
+								SEL_BOOT_ROM  <= '1'; -- Last 1M is BOOT ROM
+							elsif (A(23 downto 20) = "0001") then	
+								SEL_FLASH_ROM <= '1'; -- Second 1M is FLASH
+							end if;
 						end if;
-					-- RAM/ROM etc at x00nXXXXX 16M window starting at 0x00000000
-					elsif (A(31 downto 24) = "00000000") 
-						if (A(23 downto 20) = "0000") then
-							SEL_RAM       <= '1'; -- First 1M is RAM
-						elsif (A(23 downto 20) = "1111") then	
-							SEL_BOOT_ROM  <= '1'; -- Last 1M is BOOT ROM
-						elsif (A(23 downto 20) = "0001") then	
-							SEL_FLASH_ROM <= '1'; -- Second 1M is FLASH
-						end if;
+						-- reset the cycle counter
+						cycle_count_next <= (others => '0');
+						state_next <= xfer;
 					end if;
-					
-					cycle_count_next <= (others => '0');
-					state_next <= xfer;
-				end if;
-			when xfer =>
-				if (TAK = '1') then
-					state_next <= done;
-				end if
-				
-				cycle_count_next <= cycle_count_reg + 1;
-			when done =>
-				-- Deassert all selects here.
-				SEL_RAM       <= '0';
-				SEL_BOOT_ROM  <= '0';
-				SEL_FLASH_ROM <= '0';
-				SEL_IO_BASE   <= '0';
-				SEL_IO_xFF0XXXXX <= '0';
-				SEL_IO_xFF1XXXXX <= '0';
-				SEL_IO_xFF2XXXXX <= '0';
-				SEL_IO_xFF3XXXXX <= '0';
-				state_next <= idle;
-		end case
+				when xfer =>
+					if (TAK = '1') then
+						state_next <= done;
+					end if;
+					-- check counter value for required wait and
+					-- then go to done state.
+					-- increment cycle counter.
+					cycle_count_next <= cycle_count_reg + 1;
+				when done =>
+					-- Deassert all selects here.
+					SEL_RAM       <= '0';
+					SEL_BOOT_ROM  <= '0';
+					SEL_FLASH_ROM <= '0';
+					SEL_IO_BASE   <= '0';
+					SEL_IO_xFF0XXXXX <= '0';
+					SEL_IO_xFF1XXXXX <= '0';
+					SEL_IO_xFF2XXXXX <= '0';
+					SEL_IO_xFF3XXXXX <= '0';
+					state_next <= idle;
+			end case;
+--		end if;
 	end process;
 end Behavioral;
+
 
