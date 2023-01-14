@@ -97,16 +97,12 @@
         <signal name="DI(7:0)" />
         <signal name="DO(7:0)" />
         <signal name="XLXN_249" />
-        <signal name="XLXN_251(7:0)" />
+        <signal name="REG0(7:0)" />
         <signal name="XLXN_252" />
         <signal name="XLXN_255" />
         <signal name="REGSEL0" />
         <signal name="REGSEL1" />
-        <signal name="XLXN_263(7:0)" />
-        <signal name="XLXN_266" />
-        <signal name="XLXN_268" />
-        <signal name="XLXN_269" />
-        <signal name="XLXN_275(7:0)" />
+        <signal name="REG1(7:0)" />
         <signal name="XLXN_276" />
         <signal name="XLXN_281" />
         <port polarity="Input" name="SIZ_0" />
@@ -280,19 +276,6 @@
             <line x2="128" y1="-64" y2="-32" x1="64" />
             <line x2="64" y1="-32" y2="-32" x1="0" />
         </blockdef>
-        <blockdef name="obufe8">
-            <timestamp>2000-1-1T10:10:10</timestamp>
-            <line x2="64" y1="-96" y2="-96" x1="0" />
-            <line x2="64" y1="-32" y2="-32" x1="0" />
-            <line x2="128" y1="-32" y2="-32" x1="224" />
-            <rect width="64" x="0" y="-44" height="24" />
-            <rect width="96" x="128" y="-44" height="24" />
-            <line x2="64" y1="-96" y2="-96" x1="96" />
-            <line x2="96" y1="-48" y2="-96" x1="96" />
-            <line x2="64" y1="-64" y2="0" x1="64" />
-            <line x2="64" y1="-32" y2="-64" x1="128" />
-            <line x2="128" y1="0" y2="-32" x1="64" />
-        </blockdef>
         <blockdef name="bufe8">
             <timestamp>2000-1-1T10:10:10</timestamp>
             <rect width="96" x="128" y="-44" height="24" />
@@ -321,11 +304,35 @@
             <rect width="64" x="0" y="-268" height="24" />
             <rect width="256" x="64" y="-320" height="256" />
         </blockdef>
-        <block symbolname="ibuf" name="XLXI_6">
+        <blockdef name="obuft8">
+            <timestamp>2000-1-1T10:10:10</timestamp>
+            <line x2="96" y1="-48" y2="-96" x1="96" />
+            <line x2="64" y1="-96" y2="-96" x1="96" />
+            <line x2="128" y1="-32" y2="-32" x1="224" />
+            <line x2="128" y1="0" y2="-32" x1="64" />
+            <line x2="64" y1="-32" y2="-64" x1="128" />
+            <line x2="64" y1="-64" y2="0" x1="64" />
+            <line x2="64" y1="-96" y2="-96" x1="0" />
+            <rect width="64" x="0" y="-44" height="24" />
+            <line x2="64" y1="-32" y2="-32" x1="0" />
+            <rect width="96" x="128" y="-44" height="24" />
+        </blockdef>
+        <blockdef name="nand2">
+            <timestamp>2000-1-1T10:10:10</timestamp>
+            <line x2="64" y1="-64" y2="-64" x1="0" />
+            <line x2="64" y1="-128" y2="-128" x1="0" />
+            <line x2="216" y1="-96" y2="-96" x1="256" />
+            <circle r="12" cx="204" cy="-96" />
+            <line x2="64" y1="-48" y2="-144" x1="64" />
+            <line x2="144" y1="-144" y2="-144" x1="64" />
+            <line x2="64" y1="-48" y2="-48" x1="144" />
+            <arc ex="144" ey="-144" sx="144" sy="-48" r="48" cx="144" cy="-96" />
+        </blockdef>
+        <block symbolname="ibuf" name="IBUF_RnW">
             <blockpin signalname="RnW" name="I" />
             <blockpin signalname="RD" name="O" />
         </block>
-        <block symbolname="ibuf" name="XLXI_15">
+        <block symbolname="ibuf" name="IBUF_nAS">
             <blockpin signalname="nAS_EXT" name="I" />
             <blockpin signalname="nAS" name="O" />
         </block>
@@ -435,11 +442,11 @@
             <blockpin signalname="LLD" name="I1" />
             <blockpin signalname="WRLL" name="O" />
         </block>
-        <block symbolname="ibuf" name="XLXI_117">
+        <block symbolname="ibuf" name="IBUF_SIZ0">
             <blockpin signalname="SIZ_0" name="I" />
             <blockpin signalname="SIZ(0)" name="O" />
         </block>
-        <block symbolname="ibuf" name="XLXI_118">
+        <block symbolname="ibuf" name="IBUF_SIZ1">
             <blockpin signalname="SIZ_1" name="I" />
             <blockpin signalname="SIZ(1)" name="O" />
         </block>
@@ -451,7 +458,7 @@
             <blockpin signalname="A_EXT(31:16)" name="I(15:0)" />
             <blockpin signalname="A(31:16)" name="O(15:0)" />
         </block>
-        <block symbolname="ibuf" name="XLXI_4">
+        <block symbolname="ibuf" name="IBUF_SYSCLK">
             <blockpin signalname="SYSCLK_EXT" name="I" />
             <blockpin signalname="CLK" name="O" />
         </block>
@@ -459,7 +466,7 @@
             <blockpin signalname="CLK" name="I" />
             <blockpin signalname="nCLK" name="O" />
         </block>
-        <block symbolname="ibuf" name="XLXI_111">
+        <block symbolname="ibuf" name="IBUF_nRESET">
             <blockpin signalname="nRESET_EXT" name="I" />
             <blockpin signalname="nRESET" name="O" />
         </block>
@@ -559,21 +566,6 @@
             <blockpin signalname="D_EXT(7:0)" name="I(7:0)" />
             <blockpin signalname="DI(7:0)" name="O(7:0)" />
         </block>
-        <block symbolname="obufe8" name="DO_BUF">
-            <blockpin signalname="XLXN_249" name="E" />
-            <blockpin signalname="DO(7:0)" name="I(7:0)" />
-            <blockpin signalname="D_EXT(7:0)" name="O(7:0)" />
-        </block>
-        <block symbolname="and2" name="XLXI_167">
-            <blockpin signalname="INTCS" name="I0" />
-            <blockpin signalname="RD" name="I1" />
-            <blockpin signalname="XLXN_249" name="O" />
-        </block>
-        <block symbolname="bufe8" name="REG0_OBUF">
-            <blockpin signalname="XLXN_255" name="E" />
-            <blockpin signalname="XLXN_251(7:0)" name="I(7:0)" />
-            <blockpin signalname="DO(7:0)" name="O(7:0)" />
-        </block>
         <block symbolname="and2" name="XLXI_169">
             <blockpin signalname="REGSEL0" name="I0" />
             <blockpin signalname="RD" name="I1" />
@@ -584,34 +576,53 @@
             <blockpin signalname="WR" name="I1" />
             <blockpin signalname="XLXN_252" name="O" />
         </block>
-        <block symbolname="fd8ce" name="REG0">
+        <block symbolname="fd8ce" name="nerf0">
             <blockpin signalname="CLK" name="C" />
             <blockpin signalname="XLXN_252" name="CE" />
             <blockpin signalname="RESET" name="CLR" />
             <blockpin signalname="DI(7:0)" name="D(7:0)" />
-            <blockpin signalname="XLXN_251(7:0)" name="Q(7:0)" />
-        </block>
-        <block symbolname="bufe8" name="REG1_OBUF">
-            <blockpin signalname="XLXN_276" name="E" />
-            <blockpin signalname="XLXN_275(7:0)" name="I(7:0)" />
-            <blockpin signalname="DO(7:0)" name="O(7:0)" />
+            <blockpin signalname="REG0(7:0)" name="Q(7:0)" />
         </block>
         <block symbolname="and2" name="XLXI_179">
             <blockpin signalname="REGSEL1" name="I0" />
             <blockpin signalname="RD" name="I1" />
             <blockpin signalname="XLXN_276" name="O" />
         </block>
-        <block symbolname="fd8ce" name="REG1">
+        <block symbolname="fd8ce" name="nerf1">
             <blockpin signalname="CLK" name="C" />
             <blockpin signalname="XLXN_281" name="CE" />
             <blockpin signalname="RESET" name="CLR" />
             <blockpin signalname="DI(7:0)" name="D(7:0)" />
-            <blockpin signalname="XLXN_275(7:0)" name="Q(7:0)" />
+            <blockpin signalname="REG1(7:0)" name="Q(7:0)" />
         </block>
         <block symbolname="and2" name="XLXI_181">
             <blockpin signalname="REGSEL1" name="I0" />
             <blockpin signalname="WR" name="I1" />
             <blockpin signalname="XLXN_281" name="O" />
+        </block>
+        <block symbolname="bufe8" name="REG0BUF">
+            <blockpin signalname="XLXN_255" name="E" />
+            <blockpin signalname="REG0(7:0)" name="I(7:0)" />
+            <blockpin signalname="DO(7:0)" name="O(7:0)" />
+        </block>
+        <block symbolname="bufe8" name="REG1OBUF">
+            <blockpin signalname="XLXN_276" name="E" />
+            <blockpin signalname="REG1(7:0)" name="I(7:0)" />
+            <blockpin signalname="DO(7:0)" name="O(7:0)" />
+        </block>
+        <block symbolname="obuft8" name="DO_BUF">
+            <attr value="FAST" name="SLEW">
+                <trait verilog="all:0 wsynth:1" />
+                <trait vhdl="all:0 wa:1 wd:1" />
+            </attr>
+            <blockpin signalname="DO(7:0)" name="I(7:0)" />
+            <blockpin signalname="XLXN_249" name="T" />
+            <blockpin signalname="D_EXT(7:0)" name="O(7:0)" />
+        </block>
+        <block symbolname="nand2" name="XLXI_184">
+            <blockpin signalname="INTCS" name="I0" />
+            <blockpin signalname="RD" name="I1" />
+            <blockpin signalname="XLXN_249" name="O" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="7040" height="5440">
@@ -621,7 +632,7 @@
         <branch name="SIZ_1">
             <wire x2="688" y1="4320" y2="4320" x1="560" />
         </branch>
-        <instance x="688" y="4416" name="XLXI_6" orien="R0" />
+        <instance x="688" y="4416" name="IBUF_RnW" orien="R0" />
         <branch name="RnW">
             <wire x2="688" y1="4384" y2="4384" x1="544" />
         </branch>
@@ -638,7 +649,7 @@
         <branch name="SIZ(1)">
             <wire x2="1216" y1="4320" y2="4320" x1="912" />
         </branch>
-        <instance x="688" y="4480" name="XLXI_15" orien="R0" />
+        <instance x="688" y="4480" name="IBUF_nAS" orien="R0" />
         <branch name="nAS_EXT">
             <wire x2="688" y1="4448" y2="4448" x1="544" />
         </branch>
@@ -857,8 +868,8 @@
         </branch>
         <iomarker fontsize="28" x="2240" y="3456" name="WRLL" orien="R0" />
         <instance x="1184" y="4416" name="XLXI_31" orien="R0" />
-        <instance x="688" y="4352" name="XLXI_118" orien="R0" />
-        <instance x="688" y="4288" name="XLXI_117" orien="R0" />
+        <instance x="688" y="4352" name="IBUF_SIZ1" orien="R0" />
+        <instance x="688" y="4288" name="IBUF_SIZ0" orien="R0" />
         <iomarker fontsize="28" x="544" y="4384" name="RnW" orien="R180" />
         <iomarker fontsize="28" x="544" y="4448" name="nAS_EXT" orien="R180" />
         <iomarker fontsize="28" x="544" y="4640" name="nDS_EXT" orien="R180" />
@@ -881,9 +892,9 @@
         <bustap x2="1392" y1="2768" y2="2768" x1="1488" />
         <iomarker fontsize="28" x="336" y="4160" name="SYSCLK_EXT" orien="R180" />
         <iomarker fontsize="28" x="336" y="4064" name="nRESET_EXT" orien="R180" />
-        <instance x="368" y="4192" name="XLXI_4" orien="R0" />
+        <instance x="368" y="4192" name="IBUF_SYSCLK" orien="R0" />
         <instance x="688" y="4192" name="XLXI_14" orien="R0" />
-        <instance x="368" y="4096" name="XLXI_111" orien="R0" />
+        <instance x="368" y="4096" name="IBUF_nRESET" orien="R0" />
         <instance x="688" y="4096" name="XLXI_112" orien="R0" />
         <branch name="SYSCLK_EXT">
             <wire x2="368" y1="4160" y2="4160" x1="336" />
@@ -1113,7 +1124,6 @@
             <wire x2="3520" y1="2720" y2="3248" x1="3520" />
         </branch>
         <instance x="1024" y="2304" name="DI_BUF" orien="R0" />
-        <instance x="1248" y="2320" name="DO_BUF" orien="R180" />
         <branch name="D_EXT(7:0)">
             <wire x2="1008" y1="2320" y2="2320" x1="944" />
             <wire x2="1008" y1="2320" y2="2352" x1="1008" />
@@ -1130,7 +1140,6 @@
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="1392" y="2352" type="branch" />
             <wire x2="1392" y1="2352" y2="2352" x1="1248" />
         </branch>
-        <instance x="1552" y="2320" name="XLXI_167" orien="R180" />
         <branch name="XLXN_249">
             <wire x2="1296" y1="2416" y2="2416" x1="1248" />
         </branch>
@@ -1138,14 +1147,15 @@
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="1648" y="2384" type="branch" />
             <wire x2="1648" y1="2384" y2="2384" x1="1552" />
         </branch>
-        <branch name="XLXN_251(7:0)">
-            <wire x2="5056" y1="3200" y2="3200" x1="5024" />
+        <branch name="REG0(7:0)">
+            <wire x2="5040" y1="3200" y2="3200" x1="5024" />
+            <wire x2="5184" y1="3200" y2="3200" x1="5040" />
         </branch>
-        <instance x="5056" y="3232" name="REG0_OBUF" orien="R0" />
         <instance x="4720" y="3120" name="XLXI_169" orien="R0" />
         <branch name="XLXN_255">
-            <wire x2="5056" y1="3024" y2="3024" x1="4976" />
-            <wire x2="5056" y1="3024" y2="3136" x1="5056" />
+            <wire x2="4992" y1="3024" y2="3024" x1="4976" />
+            <wire x2="5184" y1="3024" y2="3024" x1="4992" />
+            <wire x2="5184" y1="3024" y2="3136" x1="5184" />
         </branch>
         <branch name="REGSEL0">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="4144" y="3056" type="branch" />
@@ -1170,11 +1180,7 @@
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="4144" y="3200" type="branch" />
             <wire x2="4640" y1="3200" y2="3200" x1="4144" />
         </branch>
-        <branch name="DO(7:0)">
-            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="5440" y="3200" type="branch" />
-            <wire x2="5440" y1="3200" y2="3200" x1="5280" />
-        </branch>
-        <instance x="4640" y="3456" name="REG0" orien="R0" />
+        <instance x="4640" y="3456" name="nerf0" orien="R0" />
         <instance x="4288" y="3360" name="XLXI_170" orien="R0" />
         <branch name="XLXN_252">
             <wire x2="4640" y1="3264" y2="3264" x1="4544" />
@@ -1191,14 +1197,15 @@
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="4512" y="3424" type="branch" />
             <wire x2="4640" y1="3424" y2="3424" x1="4512" />
         </branch>
-        <branch name="XLXN_275(7:0)">
-            <wire x2="5056" y1="3760" y2="3760" x1="5024" />
+        <branch name="REG1(7:0)">
+            <wire x2="5040" y1="3760" y2="3760" x1="5024" />
+            <wire x2="5184" y1="3760" y2="3760" x1="5040" />
         </branch>
-        <instance x="5056" y="3792" name="REG1_OBUF" orien="R0" />
         <instance x="4720" y="3680" name="XLXI_179" orien="R0" />
         <branch name="XLXN_276">
-            <wire x2="5056" y1="3584" y2="3584" x1="4976" />
-            <wire x2="5056" y1="3584" y2="3696" x1="5056" />
+            <wire x2="4992" y1="3584" y2="3584" x1="4976" />
+            <wire x2="5184" y1="3584" y2="3584" x1="4992" />
+            <wire x2="5184" y1="3584" y2="3696" x1="5184" />
         </branch>
         <branch name="REGSEL1">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="4144" y="3616" type="branch" />
@@ -1215,11 +1222,7 @@
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="4144" y="3760" type="branch" />
             <wire x2="4640" y1="3760" y2="3760" x1="4144" />
         </branch>
-        <branch name="DO(7:0)">
-            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="5440" y="3760" type="branch" />
-            <wire x2="5440" y1="3760" y2="3760" x1="5280" />
-        </branch>
-        <instance x="4640" y="4016" name="REG1" orien="R0" />
+        <instance x="4640" y="4016" name="nerf1" orien="R0" />
         <instance x="4288" y="3920" name="XLXI_181" orien="R0" />
         <branch name="XLXN_281">
             <wire x2="4640" y1="3824" y2="3824" x1="4544" />
@@ -1236,5 +1239,19 @@
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="4512" y="3984" type="branch" />
             <wire x2="4640" y1="3984" y2="3984" x1="4512" />
         </branch>
+        <instance x="5184" y="3232" name="REG0BUF" orien="R0" />
+        <branch name="DO(7:0)">
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="5568" y="3200" type="branch" />
+            <wire x2="5568" y1="3200" y2="3200" x1="5408" />
+        </branch>
+        <instance x="5184" y="3792" name="REG1OBUF" orien="R0" />
+        <branch name="DO(7:0)">
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="5568" y="3760" type="branch" />
+            <wire x2="5568" y1="3760" y2="3760" x1="5408" />
+        </branch>
+        <instance x="1248" y="2320" name="DO_BUF" orien="R180">
+            <attrtext style="alignment:RIGHT;fontsize:28;fontname:Arial;displayformat:NAMEEQUALSVALUE" attrname="SLEW" x="0" y="-208" type="instance" />
+        </instance>
+        <instance x="1552" y="2320" name="XLXI_184" orien="R180" />
     </sheet>
 </drawing>

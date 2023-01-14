@@ -1,0 +1,2138 @@
+MDF Database:  version 1.0
+MDF_INFO | top | XC95108-7-TQ100
+MACROCELL | 5 | 11 | XLXN_105_OBUF
+ATTRIBUTES | 396034 | 0
+INPUTS | 4 | XLXN_101_OBUF.LFBK  | XLXN_102_OBUF.LFBK  | XLXN_103.PIN  | XLXN_100_OBUF.LFBK
+INPUTMC | 3 | 5 | 1 | 5 | 2 | 5 | 13
+INPUTP | 1 | 2
+EQ | 2 | 
+   XLXN_105 = XLXN_100_OBUF.LFBK & XLXN_101_OBUF.LFBK & 
+	XLXN_102_OBUF.LFBK & XLXN_103.PIN;
+
+MACROCELL | 2 | 0 | DO<0>\$WA0
+ATTRIBUTES | 8562432 | 0
+INPUTS | 19 | nAS_EXT  | A_EXT<25>  | A_EXT<26>  | A_EXT<27>  | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | A_EXT<22>  | A_EXT<23>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | RnW  | DO<0>$BUF0.EXP  | EXP15_.EXP  | REG1<0>.LFBK
+INPUTMC | 3 | 2 | 1 | 2 | 17 | 2 | 12
+INPUTP | 16 | 31 | 131 | 127 | 78 | 121 | 70 | 38 | 16 | 107 | 42 | 126 | 51 | 21 | 106 | 122 | 20
+IMPORTS | 2 | 2 | 1 | 2 | 17
+EQ | 29 | 
+   DO<0>\$WA0.D = !A_EXT<27> & REG1<0>.LFBK
+	# !A_EXT<26> & REG1<0>.LFBK
+	# !A_EXT<25> & REG1<0>.LFBK
+	# nAS_EXT & REG1<0>.LFBK
+;Imported pterms FB3_2
+	# A_EXT<23> & REG1<0>.LFBK
+	# !A_EXT<22> & REG1<0>.LFBK
+	# A_EXT<21> & REG1<0>.LFBK
+	# A_EXT<20> & REG1<0>.LFBK
+;Imported pterms FB3_18
+	# !A_EXT<28> & REG1<0>.LFBK
+	# !A_EXT<29> & REG1<0>.LFBK
+	# !A_EXT<30> & REG1<0>.LFBK
+	# !A_EXT<31> & REG1<0>.LFBK
+	# !A_EXT<24> & REG1<0>.LFBK
+;Imported pterms FB3_17
+	# !A_EXT<0> & REG1<0>.LFBK
+	# A_EXT<1> & REG1<0>.LFBK
+	# RnW & REG1<0>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<0>.PIN;
+   DO<0>\$WA0.CLK = SYSCLK_EXT;	// GCK
+   !DO<0>\$WA0.AR = nRESET_EXT;	// GSR
+   DO<0>\$WA0.OE = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	RnW & A_EXT<24>;
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 2 | 10 | DO<0>\$WA1
+ATTRIBUTES | 8562432 | 0
+INPUTS | 19 | nAS_EXT  | A_EXT<25>  | A_EXT<26>  | A_EXT<27>  | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | A_EXT<22>  | A_EXT<23>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | RnW  | EXP14_.EXP  | DO<4>$BUF0.EXP  | REG0<0>.LFBK
+INPUTMC | 3 | 2 | 9 | 2 | 11 | 2 | 14
+INPUTP | 16 | 31 | 131 | 127 | 78 | 121 | 70 | 38 | 16 | 107 | 42 | 126 | 51 | 21 | 106 | 122 | 20
+IMPORTS | 2 | 2 | 9 | 2 | 11
+EQ | 29 | 
+   DO<0>\$WA1.D = !A_EXT<27> & REG0<0>.LFBK
+	# !A_EXT<26> & REG0<0>.LFBK
+	# !A_EXT<25> & REG0<0>.LFBK
+	# nAS_EXT & REG0<0>.LFBK
+;Imported pterms FB3_10
+	# !A_EXT<28> & REG0<0>.LFBK
+	# !A_EXT<29> & REG0<0>.LFBK
+	# !A_EXT<30> & REG0<0>.LFBK
+	# !A_EXT<31> & REG0<0>.LFBK
+	# !A_EXT<24> & REG0<0>.LFBK
+;Imported pterms FB3_9
+	# A_EXT<0> & REG0<0>.LFBK
+	# A_EXT<1> & REG0<0>.LFBK
+	# RnW & REG0<0>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<0>.PIN
+;Imported pterms FB3_12
+	# A_EXT<23> & REG0<0>.LFBK
+	# !A_EXT<22> & REG0<0>.LFBK
+	# A_EXT<21> & REG0<0>.LFBK
+	# A_EXT<20> & REG0<0>.LFBK;
+   DO<0>\$WA1.CLK = SYSCLK_EXT;	// GCK
+   !DO<0>\$WA1.AR = nRESET_EXT;	// GSR
+   DO<0>\$WA1.OE = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	RnW & A_EXT<24>;
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 1 | 0 | DO<1>\$WA0
+ATTRIBUTES | 8562432 | 0
+INPUTS | 19 | nAS_EXT  | A_EXT<25>  | A_EXT<26>  | A_EXT<27>  | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | A_EXT<22>  | A_EXT<23>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | RnW  | LLD_OBUF.EXP  | EXP11_.EXP  | REG1<1>.LFBK
+INPUTMC | 3 | 1 | 1 | 1 | 17 | 1 | 7
+INPUTP | 16 | 31 | 131 | 127 | 78 | 121 | 70 | 38 | 16 | 107 | 42 | 126 | 51 | 21 | 106 | 122 | 20
+IMPORTS | 2 | 1 | 1 | 1 | 17
+EQ | 29 | 
+   DO<1>\$WA0.D = !A_EXT<27> & REG1<1>.LFBK
+	# !A_EXT<26> & REG1<1>.LFBK
+	# !A_EXT<25> & REG1<1>.LFBK
+	# nAS_EXT & REG1<1>.LFBK
+;Imported pterms FB2_2
+	# A_EXT<23> & REG1<1>.LFBK
+	# !A_EXT<22> & REG1<1>.LFBK
+	# A_EXT<21> & REG1<1>.LFBK
+	# A_EXT<20> & REG1<1>.LFBK
+	# !A_EXT<0> & REG1<1>.LFBK
+;Imported pterms FB2_18
+	# !A_EXT<28> & REG1<1>.LFBK
+	# !A_EXT<29> & REG1<1>.LFBK
+	# !A_EXT<30> & REG1<1>.LFBK
+	# !A_EXT<31> & REG1<1>.LFBK
+	# !A_EXT<24> & REG1<1>.LFBK
+;Imported pterms FB2_17
+	# A_EXT<1> & REG1<1>.LFBK
+	# RnW & REG1<1>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<1>.PIN;
+   DO<1>\$WA0.CLK = SYSCLK_EXT;	// GCK
+   !DO<1>\$WA0.AR = nRESET_EXT;	// GSR
+   DO<1>\$WA0.OE = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	RnW & A_EXT<24>;
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 1 | 14 | DO<1>\$WA1
+ATTRIBUTES | 8562432 | 0
+INPUTS | 19 | nAS_EXT  | A_EXT<25>  | A_EXT<26>  | A_EXT<27>  | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | A_EXT<22>  | A_EXT<23>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | RnW  | EXP10_.EXP  | nRAMCS_OBUF.EXP  | REG0<1>.LFBK
+INPUTMC | 3 | 1 | 13 | 1 | 15 | 1 | 16
+INPUTP | 16 | 31 | 131 | 127 | 78 | 121 | 70 | 38 | 16 | 107 | 42 | 126 | 51 | 21 | 106 | 122 | 20
+IMPORTS | 2 | 1 | 13 | 1 | 15
+EQ | 29 | 
+   DO<1>\$WA1.D = !A_EXT<27> & REG0<1>.LFBK
+	# !A_EXT<26> & REG0<1>.LFBK
+	# !A_EXT<25> & REG0<1>.LFBK
+	# nAS_EXT & REG0<1>.LFBK
+;Imported pterms FB2_14
+	# !A_EXT<28> & REG0<1>.LFBK
+	# !A_EXT<29> & REG0<1>.LFBK
+	# !A_EXT<30> & REG0<1>.LFBK
+	# !A_EXT<31> & REG0<1>.LFBK
+	# !A_EXT<24> & REG0<1>.LFBK
+;Imported pterms FB2_13
+	# A_EXT<0> & REG0<1>.LFBK
+	# A_EXT<1> & REG0<1>.LFBK
+	# RnW & REG0<1>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<1>.PIN
+;Imported pterms FB2_16
+	# A_EXT<23> & REG0<1>.LFBK
+	# !A_EXT<22> & REG0<1>.LFBK
+	# A_EXT<21> & REG0<1>.LFBK
+	# A_EXT<20> & REG0<1>.LFBK;
+   DO<1>\$WA1.CLK = SYSCLK_EXT;	// GCK
+   !DO<1>\$WA1.AR = nRESET_EXT;	// GSR
+   DO<1>\$WA1.OE = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	RnW & A_EXT<24>;
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 1 | 9 | DO<2>\$WA0
+ATTRIBUTES | 8562432 | 0
+INPUTS | 19 | nAS_EXT  | A_EXT<25>  | A_EXT<26>  | A_EXT<27>  | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | A_EXT<22>  | A_EXT<23>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | RnW  | EXP8_.EXP  | EXP9_.EXP  | REG1<2>.LFBK
+INPUTMC | 3 | 1 | 8 | 1 | 10 | 1 | 6
+INPUTP | 16 | 31 | 131 | 127 | 78 | 121 | 70 | 38 | 16 | 107 | 42 | 126 | 51 | 21 | 106 | 122 | 20
+IMPORTS | 2 | 1 | 8 | 1 | 10
+EQ | 29 | 
+   DO<2>\$WA0.D = !A_EXT<27> & REG1<2>.LFBK
+	# !A_EXT<26> & REG1<2>.LFBK
+	# !A_EXT<25> & REG1<2>.LFBK
+	# nAS_EXT & REG1<2>.LFBK
+;Imported pterms FB2_9
+	# !A_EXT<28> & REG1<2>.LFBK
+	# !A_EXT<29> & REG1<2>.LFBK
+	# !A_EXT<30> & REG1<2>.LFBK
+	# !A_EXT<31> & REG1<2>.LFBK
+	# !A_EXT<24> & REG1<2>.LFBK
+;Imported pterms FB2_8
+	# A_EXT<1> & REG1<2>.LFBK
+	# RnW & REG1<2>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<2>.PIN
+;Imported pterms FB2_11
+	# A_EXT<23> & REG1<2>.LFBK
+	# !A_EXT<22> & REG1<2>.LFBK
+	# A_EXT<21> & REG1<2>.LFBK
+	# A_EXT<20> & REG1<2>.LFBK
+	# !A_EXT<0> & REG1<2>.LFBK;
+   DO<2>\$WA0.CLK = SYSCLK_EXT;	// GCK
+   !DO<2>\$WA0.AR = nRESET_EXT;	// GSR
+   DO<2>\$WA0.OE = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	RnW & A_EXT<24>;
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 3 | 0 | DO<2>\$WA1
+ATTRIBUTES | 8562432 | 0
+INPUTS | 19 | nAS_EXT  | REG0<2>  | A_EXT<25>  | A_EXT<26>  | A_EXT<27>  | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | A_EXT<22>  | A_EXT<23>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | RnW  | nBOOTCS_OBUF.EXP  | EXP19_.EXP
+INPUTMC | 3 | 1 | 12 | 3 | 1 | 3 | 17
+INPUTP | 16 | 31 | 131 | 127 | 78 | 121 | 70 | 38 | 16 | 107 | 42 | 126 | 51 | 21 | 106 | 122 | 20
+IMPORTS | 2 | 3 | 1 | 3 | 17
+EQ | 29 | 
+   DO<2>\$WA1.D = !A_EXT<27> & REG0<2>
+	# !A_EXT<26> & REG0<2>
+	# !A_EXT<25> & REG0<2>
+	# nAS_EXT & REG0<2>
+;Imported pterms FB4_2
+	# A_EXT<23> & REG0<2>
+	# !A_EXT<22> & REG0<2>
+	# A_EXT<21> & REG0<2>
+	# A_EXT<20> & REG0<2>
+	# A_EXT<0> & REG0<2>
+;Imported pterms FB4_18
+	# !A_EXT<28> & REG0<2>
+	# !A_EXT<29> & REG0<2>
+	# !A_EXT<30> & REG0<2>
+	# !A_EXT<31> & REG0<2>
+	# REG0<2> & !A_EXT<24>
+;Imported pterms FB4_17
+	# A_EXT<1> & REG0<2>
+	# REG0<2> & RnW
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<2>.PIN;
+   DO<2>\$WA1.CLK = SYSCLK_EXT;	// GCK
+   !DO<2>\$WA1.AR = nRESET_EXT;	// GSR
+   DO<2>\$WA1.OE = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	RnW & A_EXT<24>;
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 3 | 12 | DO<3>\$WA0
+ATTRIBUTES | 8562432 | 0
+INPUTS | 19 | nAS_EXT  | A_EXT<25>  | A_EXT<26>  | A_EXT<27>  | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | A_EXT<22>  | A_EXT<23>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | RnW  | EXP18_.EXP  | nIOSEL_OBUF.EXP  | REG1<3>.LFBK
+INPUTMC | 3 | 3 | 11 | 3 | 13 | 3 | 9
+INPUTP | 16 | 31 | 131 | 127 | 78 | 121 | 70 | 38 | 16 | 107 | 42 | 126 | 51 | 21 | 106 | 122 | 20
+IMPORTS | 2 | 3 | 11 | 3 | 13
+EQ | 29 | 
+   DO<3>\$WA0.D = !A_EXT<27> & REG1<3>.LFBK
+	# !A_EXT<26> & REG1<3>.LFBK
+	# !A_EXT<25> & REG1<3>.LFBK
+	# nAS_EXT & REG1<3>.LFBK
+;Imported pterms FB4_12
+	# !A_EXT<28> & REG1<3>.LFBK
+	# !A_EXT<29> & REG1<3>.LFBK
+	# !A_EXT<30> & REG1<3>.LFBK
+	# !A_EXT<31> & REG1<3>.LFBK
+	# !A_EXT<24> & REG1<3>.LFBK
+;Imported pterms FB4_11
+	# A_EXT<1> & REG1<3>.LFBK
+	# RnW & REG1<3>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<3>.PIN
+;Imported pterms FB4_14
+	# A_EXT<23> & REG1<3>.LFBK
+	# !A_EXT<22> & REG1<3>.LFBK
+	# A_EXT<21> & REG1<3>.LFBK
+	# A_EXT<20> & REG1<3>.LFBK
+	# !A_EXT<0> & REG1<3>.LFBK;
+   DO<3>\$WA0.CLK = SYSCLK_EXT;	// GCK
+   !DO<3>\$WA0.AR = nRESET_EXT;	// GSR
+   DO<3>\$WA0.OE = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	RnW & A_EXT<24>;
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 3 | 7 | DO<3>\$WA1
+ATTRIBUTES | 8562432 | 0
+INPUTS | 19 | nAS_EXT  | A_EXT<25>  | A_EXT<26>  | A_EXT<27>  | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | A_EXT<22>  | A_EXT<23>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | RnW  | EXP17_.EXP  | WRUU_OBUF.EXP  | REG0<3>.LFBK
+INPUTMC | 3 | 3 | 6 | 3 | 8 | 3 | 16
+INPUTP | 16 | 31 | 131 | 127 | 78 | 121 | 70 | 38 | 16 | 107 | 42 | 126 | 51 | 21 | 106 | 122 | 20
+IMPORTS | 2 | 3 | 6 | 3 | 8
+EQ | 29 | 
+   DO<3>\$WA1.D = !A_EXT<27> & REG0<3>.LFBK
+	# !A_EXT<26> & REG0<3>.LFBK
+	# !A_EXT<25> & REG0<3>.LFBK
+	# nAS_EXT & REG0<3>.LFBK
+;Imported pterms FB4_7
+	# !A_EXT<28> & REG0<3>.LFBK
+	# !A_EXT<29> & REG0<3>.LFBK
+	# !A_EXT<30> & REG0<3>.LFBK
+	# !A_EXT<31> & REG0<3>.LFBK
+	# !A_EXT<24> & REG0<3>.LFBK
+;Imported pterms FB4_6
+	# A_EXT<1> & REG0<3>.LFBK
+	# RnW & REG0<3>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<3>.PIN
+;Imported pterms FB4_9
+	# A_EXT<23> & REG0<3>.LFBK
+	# !A_EXT<22> & REG0<3>.LFBK
+	# A_EXT<21> & REG0<3>.LFBK
+	# A_EXT<20> & REG0<3>.LFBK
+	# A_EXT<0> & REG0<3>.LFBK;
+   DO<3>\$WA1.CLK = SYSCLK_EXT;	// GCK
+   !DO<3>\$WA1.AR = nRESET_EXT;	// GSR
+   DO<3>\$WA1.OE = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	RnW & A_EXT<24>;
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 0 | 2 | DO<4>\$WA0
+ATTRIBUTES | 8562432 | 0
+INPUTS | 19 | nAS_EXT  | REG1<4>  | A_EXT<25>  | A_EXT<26>  | A_EXT<27>  | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | A_EXT<22>  | A_EXT<23>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | RnW  | EXP1_.EXP  | n68230CS_OBUF.EXP
+INPUTMC | 3 | 3 | 5 | 0 | 1 | 0 | 3
+INPUTP | 16 | 31 | 131 | 127 | 78 | 121 | 70 | 38 | 16 | 107 | 42 | 126 | 51 | 21 | 106 | 122 | 20
+IMPORTS | 2 | 0 | 1 | 0 | 3
+EQ | 29 | 
+   DO<4>\$WA0.D = !A_EXT<27> & REG1<4>
+	# !A_EXT<26> & REG1<4>
+	# !A_EXT<25> & REG1<4>
+	# nAS_EXT & REG1<4>
+;Imported pterms FB1_2
+	# !A_EXT<28> & REG1<4>
+	# !A_EXT<29> & REG1<4>
+	# !A_EXT<30> & REG1<4>
+	# !A_EXT<31> & REG1<4>
+	# REG1<4> & !A_EXT<24>
+;Imported pterms FB1_1
+	# !A_EXT<0> & REG1<4>
+	# A_EXT<1> & REG1<4>
+	# REG1<4> & RnW
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<4>.PIN
+;Imported pterms FB1_4
+	# A_EXT<23> & REG1<4>
+	# !A_EXT<22> & REG1<4>
+	# A_EXT<21> & REG1<4>
+	# A_EXT<20> & REG1<4>;
+   DO<4>\$WA0.CLK = SYSCLK_EXT;	// GCK
+   !DO<4>\$WA0.AR = nRESET_EXT;	// GSR
+   DO<4>\$WA0.OE = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	RnW & A_EXT<24>;
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 0 | 16 | DO<4>\$WA1
+ATTRIBUTES | 8562432 | 0
+INPUTS | 19 | nAS_EXT  | REG0<4>  | A_EXT<25>  | A_EXT<26>  | A_EXT<27>  | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | A_EXT<22>  | A_EXT<23>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | RnW  | EXP6_.EXP  | EXP7_.EXP
+INPUTMC | 3 | 3 | 15 | 0 | 15 | 0 | 17
+INPUTP | 16 | 31 | 131 | 127 | 78 | 121 | 70 | 38 | 16 | 107 | 42 | 126 | 51 | 21 | 106 | 122 | 20
+IMPORTS | 2 | 0 | 15 | 0 | 17
+EQ | 29 | 
+   DO<4>\$WA1.D = !A_EXT<27> & REG0<4>
+	# !A_EXT<26> & REG0<4>
+	# !A_EXT<25> & REG0<4>
+	# nAS_EXT & REG0<4>
+;Imported pterms FB1_16
+	# !A_EXT<28> & REG0<4>
+	# !A_EXT<29> & REG0<4>
+	# !A_EXT<30> & REG0<4>
+	# !A_EXT<31> & REG0<4>
+	# REG0<4> & !A_EXT<24>
+;Imported pterms FB1_15
+	# A_EXT<1> & REG0<4>
+	# REG0<4> & RnW
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<4>.PIN
+;Imported pterms FB1_18
+	# A_EXT<23> & REG0<4>
+	# !A_EXT<22> & REG0<4>
+	# A_EXT<21> & REG0<4>
+	# A_EXT<20> & REG0<4>
+	# A_EXT<0> & REG0<4>;
+   DO<4>\$WA1.CLK = SYSCLK_EXT;	// GCK
+   !DO<4>\$WA1.AR = nRESET_EXT;	// GSR
+   DO<4>\$WA1.OE = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	RnW & A_EXT<24>;
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 0 | 12 | DO<5>\$WA0
+ATTRIBUTES | 8562432 | 0
+INPUTS | 19 | nAS_EXT  | REG1<5>  | A_EXT<25>  | A_EXT<26>  | A_EXT<27>  | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | A_EXT<22>  | A_EXT<23>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | RnW  | EXP4_.EXP  | EXP5_.EXP
+INPUTMC | 3 | 3 | 3 | 0 | 11 | 0 | 13
+INPUTP | 16 | 31 | 131 | 127 | 78 | 121 | 70 | 38 | 16 | 107 | 42 | 126 | 51 | 21 | 106 | 122 | 20
+IMPORTS | 2 | 0 | 11 | 0 | 13
+EQ | 29 | 
+   DO<5>\$WA0.D = !A_EXT<27> & REG1<5>
+	# !A_EXT<26> & REG1<5>
+	# !A_EXT<25> & REG1<5>
+	# nAS_EXT & REG1<5>
+;Imported pterms FB1_12
+	# !A_EXT<28> & REG1<5>
+	# !A_EXT<29> & REG1<5>
+	# !A_EXT<30> & REG1<5>
+	# !A_EXT<31> & REG1<5>
+	# REG1<5> & !A_EXT<24>
+;Imported pterms FB1_11
+	# A_EXT<1> & REG1<5>
+	# REG1<5> & RnW
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<5>.PIN
+;Imported pterms FB1_14
+	# A_EXT<23> & REG1<5>
+	# !A_EXT<22> & REG1<5>
+	# A_EXT<21> & REG1<5>
+	# A_EXT<20> & REG1<5>
+	# !A_EXT<0> & REG1<5>;
+   DO<5>\$WA0.CLK = SYSCLK_EXT;	// GCK
+   !DO<5>\$WA0.AR = nRESET_EXT;	// GSR
+   DO<5>\$WA0.OE = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	RnW & A_EXT<24>;
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 0 | 6 | DO<5>\$WA1
+ATTRIBUTES | 8562432 | 0
+INPUTS | 19 | nAS_EXT  | REG0<5>  | A_EXT<25>  | A_EXT<26>  | A_EXT<27>  | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | A_EXT<22>  | A_EXT<23>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | RnW  | EXP3_.EXP  | nIOCS0_OBUF.EXP
+INPUTMC | 3 | 3 | 14 | 0 | 5 | 0 | 7
+INPUTP | 16 | 31 | 131 | 127 | 78 | 121 | 70 | 38 | 16 | 107 | 42 | 126 | 51 | 21 | 106 | 122 | 20
+IMPORTS | 2 | 0 | 5 | 0 | 7
+EQ | 29 | 
+   DO<5>\$WA1.D = !A_EXT<27> & REG0<5>
+	# !A_EXT<26> & REG0<5>
+	# !A_EXT<25> & REG0<5>
+	# nAS_EXT & REG0<5>
+;Imported pterms FB1_6
+	# !A_EXT<28> & REG0<5>
+	# !A_EXT<29> & REG0<5>
+	# !A_EXT<30> & REG0<5>
+	# !A_EXT<31> & REG0<5>
+	# REG0<5> & !A_EXT<24>
+;Imported pterms FB1_5
+	# A_EXT<1> & REG0<5>
+	# REG0<5> & RnW
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<5>.PIN
+;Imported pterms FB1_8
+	# A_EXT<23> & REG0<5>
+	# !A_EXT<22> & REG0<5>
+	# A_EXT<21> & REG0<5>
+	# A_EXT<20> & REG0<5>
+	# A_EXT<0> & REG0<5>;
+   DO<5>\$WA1.CLK = SYSCLK_EXT;	// GCK
+   !DO<5>\$WA1.AR = nRESET_EXT;	// GSR
+   DO<5>\$WA1.OE = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	RnW & A_EXT<24>;
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 5 | 17 | DO<6>\$WA0
+ATTRIBUTES | 8562432 | 0
+INPUTS | 19 | nAS_EXT  | A_EXT<25>  | A_EXT<26>  | A_EXT<27>  | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | A_EXT<22>  | A_EXT<23>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | RnW  | EXP24_.EXP  | EXP25_.EXP  | REG1<6>.LFBK
+INPUTMC | 3 | 5 | 0 | 5 | 16 | 5 | 15
+INPUTP | 16 | 31 | 131 | 127 | 78 | 121 | 70 | 38 | 16 | 107 | 42 | 126 | 51 | 21 | 106 | 122 | 20
+IMPORTS | 2 | 5 | 0 | 5 | 16
+EQ | 29 | 
+   DO<6>\$WA0.D = !A_EXT<27> & REG1<6>.LFBK
+	# !A_EXT<26> & REG1<6>.LFBK
+	# !A_EXT<25> & REG1<6>.LFBK
+	# nAS_EXT & REG1<6>.LFBK
+;Imported pterms FB6_1
+	# A_EXT<23> & REG1<6>.LFBK
+	# !A_EXT<22> & REG1<6>.LFBK
+	# A_EXT<21> & REG1<6>.LFBK
+	# A_EXT<20> & REG1<6>.LFBK
+	# !A_EXT<0> & REG1<6>.LFBK
+;Imported pterms FB6_2
+	# A_EXT<1> & REG1<6>.LFBK
+	# RnW & REG1<6>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<6>.PIN
+;Imported pterms FB6_17
+	# !A_EXT<28> & REG1<6>.LFBK
+	# !A_EXT<29> & REG1<6>.LFBK
+	# !A_EXT<30> & REG1<6>.LFBK
+	# !A_EXT<31> & REG1<6>.LFBK
+	# !A_EXT<24> & REG1<6>.LFBK;
+   DO<6>\$WA0.CLK = SYSCLK_EXT;	// GCK
+   !DO<6>\$WA0.AR = nRESET_EXT;	// GSR
+   DO<6>\$WA0.OE = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	RnW & A_EXT<24>;
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 4 | 17 | DO<6>\$WA1
+ATTRIBUTES | 8562432 | 0
+INPUTS | 19 | nAS_EXT  | REG0<6>  | A_EXT<25>  | A_EXT<26>  | A_EXT<27>  | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | A_EXT<22>  | A_EXT<23>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | RnW  | EXP20_.EXP  | LD_OBUF.EXP
+INPUTMC | 3 | 3 | 10 | 4 | 0 | 4 | 16
+INPUTP | 16 | 31 | 131 | 127 | 78 | 121 | 70 | 38 | 16 | 107 | 42 | 126 | 51 | 21 | 106 | 122 | 20
+IMPORTS | 2 | 4 | 0 | 4 | 16
+EQ | 29 | 
+   DO<6>\$WA1.D = !A_EXT<27> & REG0<6>
+	# !A_EXT<26> & REG0<6>
+	# !A_EXT<25> & REG0<6>
+	# nAS_EXT & REG0<6>
+;Imported pterms FB5_1
+	# A_EXT<23> & REG0<6>
+	# !A_EXT<22> & REG0<6>
+	# A_EXT<21> & REG0<6>
+	# A_EXT<20> & REG0<6>
+	# A_EXT<0> & REG0<6>
+;Imported pterms FB5_2
+	# A_EXT<1> & REG0<6>
+	# REG0<6> & RnW
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<6>.PIN
+;Imported pterms FB5_17
+	# !A_EXT<28> & REG0<6>
+	# !A_EXT<29> & REG0<6>
+	# !A_EXT<30> & REG0<6>
+	# !A_EXT<31> & REG0<6>
+	# REG0<6> & !A_EXT<24>;
+   DO<6>\$WA1.CLK = SYSCLK_EXT;	// GCK
+   !DO<6>\$WA1.AR = nRESET_EXT;	// GSR
+   DO<6>\$WA1.OE = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	RnW & A_EXT<24>;
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 4 | 12 | DO<7>\$WA0
+ATTRIBUTES | 8562432 | 0
+INPUTS | 19 | nAS_EXT  | REG1<7>  | A_EXT<25>  | A_EXT<26>  | A_EXT<27>  | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | A_EXT<22>  | A_EXT<23>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | RnW  | EXP23_.EXP  | UMD_OBUF.EXP
+INPUTMC | 3 | 0 | 8 | 4 | 11 | 4 | 13
+INPUTP | 16 | 31 | 131 | 127 | 78 | 121 | 70 | 38 | 16 | 107 | 42 | 126 | 51 | 21 | 106 | 122 | 20
+IMPORTS | 2 | 4 | 11 | 4 | 13
+EQ | 29 | 
+   DO<7>\$WA0.D = !A_EXT<27> & REG1<7>
+	# !A_EXT<26> & REG1<7>
+	# !A_EXT<25> & REG1<7>
+	# nAS_EXT & REG1<7>
+;Imported pterms FB5_12
+	# !A_EXT<28> & REG1<7>
+	# !A_EXT<29> & REG1<7>
+	# !A_EXT<30> & REG1<7>
+	# !A_EXT<31> & REG1<7>
+	# REG1<7> & !A_EXT<24>
+;Imported pterms FB5_11
+	# A_EXT<1> & REG1<7>
+	# REG1<7> & RnW
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<7>.PIN
+;Imported pterms FB5_14
+	# A_EXT<23> & REG1<7>
+	# !A_EXT<22> & REG1<7>
+	# A_EXT<21> & REG1<7>
+	# A_EXT<20> & REG1<7>
+	# !A_EXT<0> & REG1<7>;
+   DO<7>\$WA0.CLK = SYSCLK_EXT;	// GCK
+   !DO<7>\$WA0.AR = nRESET_EXT;	// GSR
+   DO<7>\$WA0.OE = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	RnW & A_EXT<24>;
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 4 | 6 | DO<7>\$WA1
+ATTRIBUTES | 8562432 | 0
+INPUTS | 19 | nAS_EXT  | REG0<7>  | A_EXT<25>  | A_EXT<26>  | A_EXT<27>  | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | A_EXT<22>  | A_EXT<23>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | RnW  | EXP22_.EXP  | LMD_OBUF.EXP
+INPUTMC | 3 | 0 | 9 | 4 | 5 | 4 | 7
+INPUTP | 16 | 31 | 131 | 127 | 78 | 121 | 70 | 38 | 16 | 107 | 42 | 126 | 51 | 21 | 106 | 122 | 20
+IMPORTS | 2 | 4 | 5 | 4 | 7
+EQ | 29 | 
+   DO<7>\$WA1.D = !A_EXT<27> & REG0<7>
+	# !A_EXT<26> & REG0<7>
+	# !A_EXT<25> & REG0<7>
+	# nAS_EXT & REG0<7>
+;Imported pterms FB5_6
+	# !A_EXT<28> & REG0<7>
+	# !A_EXT<29> & REG0<7>
+	# !A_EXT<30> & REG0<7>
+	# !A_EXT<31> & REG0<7>
+	# REG0<7> & !A_EXT<24>
+;Imported pterms FB5_5
+	# A_EXT<1> & REG0<7>
+	# REG0<7> & RnW
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<7>.PIN
+;Imported pterms FB5_8
+	# A_EXT<23> & REG0<7>
+	# !A_EXT<22> & REG0<7>
+	# A_EXT<21> & REG0<7>
+	# A_EXT<20> & REG0<7>
+	# A_EXT<0> & REG0<7>;
+   DO<7>\$WA1.CLK = SYSCLK_EXT;	// GCK
+   !DO<7>\$WA1.AR = nRESET_EXT;	// GSR
+   DO<7>\$WA1.OE = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	RnW & A_EXT<24>;
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 5 | 13 | XLXN_100_OBUF
+ATTRIBUTES | 4686610 | 0
+OUTPUTMC | 4 | 5 | 11 | 5 | 1 | 5 | 2 | 5 | 10
+INPUTS | 2 | nAS_EXT  | XLXN_102_OBUF/XLXN_102_OBUF_RSTF__$INT
+INPUTMC | 1 | 4 | 3
+INPUTP | 1 | 31
+EQ | 3 | 
+   !XLXN_100.T = nAS_EXT;
+   XLXN_100.CLK = SYSCLK_EXT;	// GCK
+   XLXN_100.AR = !XLXN_102_OBUF/XLXN_102_OBUF_RSTF__$INT;
+GLOBALS | 1 | 2 | SYSCLK_EXT
+
+MACROCELL | 5 | 1 | XLXN_101_OBUF
+ATTRIBUTES | 4686610 | 0
+OUTPUTMC | 4 | 5 | 0 | 5 | 11 | 5 | 2 | 5 | 10
+INPUTS | 20 | nAS_EXT  | REG1<6>.LFBK  | XLXN_102_OBUF/XLXN_102_OBUF_RSTF__$INT  | A_EXT<1>  | RnW  | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<24>  | D_EXT<6>.PIN  | XLXN_100_OBUF.LFBK
+INPUTMC | 3 | 5 | 15 | 4 | 3 | 5 | 13
+INPUTP | 17 | 31 | 122 | 20 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 126 | 42 | 51 | 21 | 106 | 107 | 56
+EXPORTS | 1 | 5 | 0
+EQ | 9 | 
+   XLXN_101.T = !nAS_EXT & XLXN_100_OBUF.LFBK;
+   XLXN_101.CLK = SYSCLK_EXT;	// GCK
+   XLXN_101.AR = !XLXN_102_OBUF/XLXN_102_OBUF_RSTF__$INT;
+    XLXN_101_OBUF.EXP  =  A_EXT<1> & REG1<6>.LFBK
+	# RnW & REG1<6>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<6>.PIN
+GLOBALS | 1 | 2 | SYSCLK_EXT
+
+MACROCELL | 5 | 2 | XLXN_102_OBUF
+ATTRIBUTES | 4686610 | 0
+OUTPUTMC | 2 | 5 | 11 | 5 | 10
+INPUTS | 4 | nAS_EXT  | XLXN_101_OBUF.LFBK  | XLXN_102_OBUF/XLXN_102_OBUF_RSTF__$INT  | XLXN_100_OBUF.LFBK
+INPUTMC | 3 | 5 | 1 | 4 | 3 | 5 | 13
+INPUTP | 1 | 31
+EQ | 4 | 
+   XLXN_102.T = !nAS_EXT & XLXN_100_OBUF.LFBK & 
+	XLXN_101_OBUF.LFBK;
+   XLXN_102.CLK = SYSCLK_EXT;	// GCK
+   XLXN_102.AR = !XLXN_102_OBUF/XLXN_102_OBUF_RSTF__$INT;
+GLOBALS | 1 | 2 | SYSCLK_EXT
+
+MACROCELL | 1 | 5 | XLXN_103_OBUF
+ATTRIBUTES | 4621074 | 0
+INPUTS | 5 | nAS_EXT  | XLXN_101.PIN  | XLXN_102.PIN  | XLXN_102_OBUF/XLXN_102_OBUF_RSTF__$INT  | XLXN_100.PIN
+INPUTMC | 1 | 4 | 3
+INPUTP | 4 | 31 | 88 | 89 | 104
+EQ | 4 | 
+   XLXN_103.T = !nAS_EXT & XLXN_100.PIN & XLXN_101.PIN & 
+	XLXN_102.PIN;
+   XLXN_103.CLK = SYSCLK_EXT;	// GCK
+   XLXN_103.AR = !XLXN_102_OBUF/XLXN_102_OBUF_RSTF__$INT;
+GLOBALS | 1 | 2 | SYSCLK_EXT
+
+MACROCELL | 4 | 8 | XLXI_158/boot_in_progress
+ATTRIBUTES | 4428544 | 0
+OUTPUTMC | 8 | 3 | 2 | 1 | 2 | 1 | 4 | 1 | 15 | 4 | 7 | 4 | 8 | 4 | 14 | 4 | 9
+INPUTS | 10 | XLXI_158/boot_cycle_count_reg<2>.LFBK  | XLXI_158/boot_cycle_count_reg<0>  | XLXI_158/boot_cycle_count_reg<1>  | XLXI_158/boot_cycle_count_reg<3>.LFBK  | A_EXT<0>  | A_EXT<1>  | RnW  | SIZ_1  | SIZ_0  | XLXI_158/boot_in_progress.LFBK
+INPUTMC | 5 | 4 | 14 | 1 | 2 | 1 | 4 | 4 | 9 | 4 | 8
+INPUTP | 5 | 106 | 122 | 20 | 19 | 18
+EXPORTS | 1 | 4 | 7
+EQ | 8 | 
+   XLXI_158/boot_in_progress.T = !XLXI_158/boot_cycle_count_reg<0> & 
+	!XLXI_158/boot_cycle_count_reg<1> & XLXI_158/boot_in_progress.LFBK & 
+	!XLXI_158/boot_cycle_count_reg<2>.LFBK & XLXI_158/boot_cycle_count_reg<3>.LFBK;
+   !XLXI_158/boot_in_progress.CLK = nAS_EXT;	// GCK
+   !XLXI_158/boot_in_progress.AP = nRESET_EXT;	// GSR
+    XLXI_158/boot_in_progress.EXP  =  A_EXT<0> & A_EXT<1> & !RnW
+	# !A_EXT<1> & !RnW & !SIZ_1 & SIZ_0
+	# !A_EXT<0> & !A_EXT<1> & !RnW & SIZ_1 & !SIZ_0
+GLOBALS | 2 | 2 | nAS_EXT | 1 | nRESET_EXT
+
+MACROCELL | 1 | 2 | XLXI_158/boot_cycle_count_reg<0>
+ATTRIBUTES | 4432640 | 0
+OUTPUTMC | 5 | 4 | 8 | 4 | 9 | 4 | 14 | 1 | 1 | 1 | 4
+INPUTS | 6 | XLXI_158/boot_in_progress  | A_EXT<0>  | A_EXT<1>  | RnW  | SIZ_1  | SIZ_0
+INPUTMC | 1 | 4 | 8
+INPUTP | 5 | 106 | 122 | 20 | 19 | 18
+EXPORTS | 1 | 1 | 1
+EQ | 7 | 
+   XLXI_158/boot_cycle_count_reg<0>.T = XLXI_158/boot_in_progress;
+   !XLXI_158/boot_cycle_count_reg<0>.CLK = nAS_EXT;	// GCK
+   !XLXI_158/boot_cycle_count_reg<0>.AR = nRESET_EXT;	// GSR
+    XLXI_158/boot_cycle_count_reg<0>.EXP  =  !A_EXT<0> & !A_EXT<1> & !RnW & SIZ_1
+	# !A_EXT<0> & !RnW & !SIZ_1 & SIZ_0
+	# !A_EXT<1> & !RnW & SIZ_1 & !SIZ_0
+	# !A_EXT<1> & !RnW & !SIZ_1 & SIZ_0
+GLOBALS | 2 | 2 | nAS_EXT | 4 | nRESET_EXT
+
+MACROCELL | 1 | 4 | XLXI_158/boot_cycle_count_reg<1>
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 3 | 4 | 8 | 4 | 14 | 4 | 9
+INPUTS | 2 | XLXI_158/boot_in_progress  | XLXI_158/boot_cycle_count_reg<0>.LFBK
+INPUTMC | 2 | 4 | 8 | 1 | 2
+EQ | 4 | 
+   XLXI_158/boot_cycle_count_reg<1>.T = XLXI_158/boot_in_progress & 
+	XLXI_158/boot_cycle_count_reg<0>.LFBK;
+   !XLXI_158/boot_cycle_count_reg<1>.CLK = nAS_EXT;	// GCK
+   !XLXI_158/boot_cycle_count_reg<1>.AR = nRESET_EXT;	// GSR
+GLOBALS | 2 | 2 | nAS_EXT | 4 | nRESET_EXT
+
+MACROCELL | 4 | 14 | XLXI_158/boot_cycle_count_reg<2>
+ATTRIBUTES | 4432640 | 0
+OUTPUTMC | 3 | 4 | 13 | 4 | 8 | 4 | 9
+INPUTS | 8 | XLXI_158/boot_cycle_count_reg<0>  | XLXI_158/boot_cycle_count_reg<1>  | A_EXT<1>  | RnW  | A_EXT<0>  | SIZ_1  | SIZ_0  | XLXI_158/boot_in_progress.LFBK
+INPUTMC | 3 | 1 | 2 | 1 | 4 | 4 | 8
+INPUTP | 5 | 122 | 20 | 106 | 19 | 18
+EXPORTS | 1 | 4 | 13
+EQ | 6 | 
+   XLXI_158/boot_cycle_count_reg<2>.T = XLXI_158/boot_cycle_count_reg<0> & 
+	XLXI_158/boot_cycle_count_reg<1> & XLXI_158/boot_in_progress.LFBK;
+   !XLXI_158/boot_cycle_count_reg<2>.CLK = nAS_EXT;	// GCK
+   !XLXI_158/boot_cycle_count_reg<2>.AR = nRESET_EXT;	// GSR
+    XLXI_158/boot_cycle_count_reg<2>.EXP  =  A_EXT<1> & !RnW
+	# !A_EXT<0> & !RnW & !SIZ_1 & SIZ_0
+GLOBALS | 2 | 2 | nAS_EXT | 4 | nRESET_EXT
+
+MACROCELL | 4 | 9 | XLXI_158/boot_cycle_count_reg<3>
+ATTRIBUTES | 4432640 | 0
+OUTPUTMC | 2 | 4 | 10 | 4 | 8
+INPUTS | 7 | XLXI_158/boot_cycle_count_reg<2>.LFBK  | XLXI_158/boot_cycle_count_reg<0>  | XLXI_158/boot_cycle_count_reg<1>  | A_EXT<0>  | A_EXT<1>  | RnW  | XLXI_158/boot_in_progress.LFBK
+INPUTMC | 4 | 4 | 14 | 1 | 2 | 1 | 4 | 4 | 8
+INPUTP | 3 | 106 | 122 | 20
+EXPORTS | 1 | 4 | 10
+EQ | 6 | 
+   XLXI_158/boot_cycle_count_reg<3>.T = XLXI_158/boot_cycle_count_reg<0> & 
+	XLXI_158/boot_cycle_count_reg<1> & XLXI_158/boot_in_progress.LFBK & 
+	XLXI_158/boot_cycle_count_reg<2>.LFBK;
+   !XLXI_158/boot_cycle_count_reg<3>.CLK = nAS_EXT;	// GCK
+   !XLXI_158/boot_cycle_count_reg<3>.AR = nRESET_EXT;	// GSR
+    XLXI_158/boot_cycle_count_reg<3>.EXP  =  A_EXT<0> & !A_EXT<1> & !RnW
+GLOBALS | 2 | 2 | nAS_EXT | 4 | nRESET_EXT
+
+MACROCELL | 2 | 14 | REG0<0>
+ATTRIBUTES | 4432640 | 0
+OUTPUTMC | 5 | 2 | 10 | 2 | 14 | 2 | 8 | 2 | 11 | 2 | 9
+INPUTS | 18 | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | RnW  | A_EXT<24>  | D_EXT<0>.PIN  | REG0<0>.LFBK
+INPUTMC | 1 | 2 | 14
+INPUTP | 17 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 106 | 122 | 20 | 107 | 41
+EQ | 10 | 
+   REG0<0>.T = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<0>.PIN & !REG0<0>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & !D_EXT<0>.PIN & REG0<0>.LFBK;
+   REG0<0>.CLK = SYSCLK_EXT;	// GCK
+   !REG0<0>.AR = nRESET_EXT;	// GSR
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 1 | 16 | REG0<1>
+ATTRIBUTES | 4432640 | 0
+OUTPUTMC | 6 | 1 | 17 | 1 | 14 | 1 | 16 | 1 | 12 | 1 | 15 | 1 | 13
+INPUTS | 19 | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | REG1<1>.LFBK  | RnW  | A_EXT<24>  | D_EXT<1>.PIN  | REG0<1>.LFBK
+INPUTMC | 2 | 1 | 7 | 1 | 16
+INPUTP | 17 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 106 | 122 | 20 | 107 | 46
+EXPORTS | 1 | 1 | 17
+EQ | 16 | 
+   REG0<1>.T = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<1>.PIN & !REG0<1>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & !D_EXT<1>.PIN & REG0<1>.LFBK;
+   REG0<1>.CLK = SYSCLK_EXT;	// GCK
+   !REG0<1>.AR = nRESET_EXT;	// GSR
+    REG0<1>.EXP  =  A_EXT<1> & REG1<1>.LFBK
+	# RnW & REG1<1>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<1>.PIN
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 1 | 12 | REG0<2>
+ATTRIBUTES | 4432640 | 0
+OUTPUTMC | 7 | 3 | 0 | 3 | 17 | 3 | 16 | 3 | 1 | 1 | 13 | 1 | 12 | 1 | 11
+INPUTS | 21 | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | REG0<1>.LFBK  | RnW  | A_EXT<24>  | D_EXT<2>.PIN  | D_EXT<1>.PIN  | nFLASHCS_OBUF.EXP  | REG0<2>.LFBK
+INPUTMC | 3 | 1 | 16 | 1 | 11 | 1 | 12
+INPUTP | 18 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 106 | 122 | 20 | 107 | 47 | 46
+EXPORTS | 1 | 1 | 13
+IMPORTS | 1 | 1 | 11
+EQ | 18 | 
+   REG0<2>.T = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & !D_EXT<2>.PIN & REG0<2>.LFBK
+;Imported pterms FB2_12
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<2>.PIN & !REG0<2>.LFBK;
+   REG0<2>.CLK = SYSCLK_EXT;	// GCK
+   !REG0<2>.AR = nRESET_EXT;	// GSR
+    REG0<2>.EXP  =  A_EXT<0> & REG0<1>.LFBK
+	# A_EXT<1> & REG0<1>.LFBK
+	# RnW & REG0<1>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<1>.PIN
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 3 | 16 | REG0<3>
+ATTRIBUTES | 4432640 | 0
+OUTPUTMC | 6 | 3 | 17 | 3 | 7 | 3 | 16 | 3 | 5 | 3 | 8 | 3 | 6
+INPUTS | 20 | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | RnW  | A_EXT<24>  | D_EXT<3>.PIN  | REG0<2>  | D_EXT<2>.PIN  | REG0<3>.LFBK
+INPUTMC | 2 | 1 | 12 | 3 | 16
+INPUTP | 18 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 106 | 122 | 20 | 107 | 50 | 47
+EXPORTS | 1 | 3 | 17
+EQ | 16 | 
+   REG0<3>.T = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<3>.PIN & !REG0<3>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & !D_EXT<3>.PIN & REG0<3>.LFBK;
+   REG0<3>.CLK = SYSCLK_EXT;	// GCK
+   !REG0<3>.AR = nRESET_EXT;	// GSR
+    REG0<3>.EXP  =  A_EXT<1> & REG0<2>
+	# REG0<2> & RnW
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<2>.PIN
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 3 | 15 | REG0<4>
+ATTRIBUTES | 4432640 | 0
+OUTPUTMC | 5 | 0 | 16 | 0 | 17 | 0 | 14 | 0 | 15 | 3 | 15
+INPUTS | 18 | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | RnW  | A_EXT<24>  | D_EXT<4>.PIN  | REG0<4>.LFBK
+INPUTMC | 1 | 3 | 15
+INPUTP | 17 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 106 | 122 | 20 | 107 | 53
+EQ | 10 | 
+   REG0<4>.T = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<4>.PIN & !REG0<4>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & !D_EXT<4>.PIN & REG0<4>.LFBK;
+   REG0<4>.CLK = SYSCLK_EXT;	// GCK
+   !REG0<4>.AR = nRESET_EXT;	// GSR
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 3 | 14 | REG0<5>
+ATTRIBUTES | 4432640 | 0
+OUTPUTMC | 6 | 0 | 6 | 0 | 7 | 0 | 4 | 0 | 5 | 3 | 13 | 3 | 14
+INPUTS | 18 | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | RnW  | A_EXT<24>  | D_EXT<5>.PIN  | REG0<5>.LFBK
+INPUTMC | 1 | 3 | 14
+INPUTP | 17 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 106 | 122 | 20 | 107 | 54
+EXPORTS | 1 | 3 | 13
+EQ | 12 | 
+   REG0<5>.T = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<5>.PIN & !REG0<5>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & !D_EXT<5>.PIN & REG0<5>.LFBK;
+   REG0<5>.CLK = SYSCLK_EXT;	// GCK
+   !REG0<5>.AR = nRESET_EXT;	// GSR
+    REG0<5>.EXP  =  A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & A_EXT<24>
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 3 | 10 | REG0<6>
+ATTRIBUTES | 4432640 | 0
+OUTPUTMC | 6 | 4 | 17 | 4 | 16 | 4 | 0 | 4 | 1 | 3 | 11 | 3 | 10
+INPUTS | 20 | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | REG1<3>.LFBK  | RnW  | A_EXT<24>  | D_EXT<6>.PIN  | D_EXT<3>.PIN  | REG0<6>.LFBK
+INPUTMC | 2 | 3 | 9 | 3 | 10
+INPUTP | 18 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 106 | 122 | 20 | 107 | 56 | 50
+EXPORTS | 1 | 3 | 11
+EQ | 16 | 
+   REG0<6>.T = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<6>.PIN & !REG0<6>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & !D_EXT<6>.PIN & REG0<6>.LFBK;
+   REG0<6>.CLK = SYSCLK_EXT;	// GCK
+   !REG0<6>.AR = nRESET_EXT;	// GSR
+    REG0<6>.EXP  =  A_EXT<1> & REG1<3>.LFBK
+	# RnW & REG1<3>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<3>.PIN
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 0 | 9 | REG0<7>
+ATTRIBUTES | 4432640 | 0
+OUTPUTMC | 5 | 4 | 6 | 4 | 7 | 4 | 4 | 4 | 5 | 0 | 9
+INPUTS | 18 | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | RnW  | A_EXT<24>  | D_EXT<7>.PIN  | REG0<7>.LFBK
+INPUTMC | 1 | 0 | 9
+INPUTP | 17 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 106 | 122 | 20 | 107 | 65
+EQ | 10 | 
+   REG0<7>.T = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<7>.PIN & !REG0<7>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & !D_EXT<7>.PIN & REG0<7>.LFBK;
+   REG0<7>.CLK = SYSCLK_EXT;	// GCK
+   !REG0<7>.AR = nRESET_EXT;	// GSR
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 2 | 12 | REG1<0>
+ATTRIBUTES | 4432640 | 0
+OUTPUTMC | 6 | 2 | 11 | 2 | 0 | 2 | 12 | 2 | 1 | 2 | 16 | 2 | 17
+INPUTS | 19 | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | RnW  | A_EXT<24>  | D_EXT<0>.PIN  | DO<4>  | REG1<0>.LFBK
+INPUTMC | 1 | 2 | 12
+INPUTP | 17 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 106 | 122 | 20 | 107 | 41
+EXPORTS | 1 | 2 | 11
+EQ | 11 | 
+   REG1<0>.T = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<0>.PIN & !REG1<0>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & !D_EXT<0>.PIN & REG1<0>.LFBK;
+   REG1<0>.CLK = SYSCLK_EXT;	// GCK
+   !REG1<0>.AR = nRESET_EXT;	// GSR
+    REG1<0>.EXP  =  DO<4>
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 1 | 7 | REG1<1>
+ATTRIBUTES | 4432640 | 0
+OUTPUTMC | 6 | 1 | 8 | 1 | 0 | 1 | 16 | 1 | 7 | 1 | 1 | 1 | 17
+INPUTS | 20 | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | REG1<2>.LFBK  | RnW  | A_EXT<24>  | D_EXT<1>.PIN  | D_EXT<2>.PIN  | REG1<1>.LFBK
+INPUTMC | 2 | 1 | 6 | 1 | 7
+INPUTP | 18 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 106 | 122 | 20 | 107 | 46 | 47
+EXPORTS | 1 | 1 | 8
+EQ | 16 | 
+   REG1<1>.T = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<1>.PIN & !REG1<1>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & !D_EXT<1>.PIN & REG1<1>.LFBK;
+   REG1<1>.CLK = SYSCLK_EXT;	// GCK
+   !REG1<1>.AR = nRESET_EXT;	// GSR
+    REG1<1>.EXP  =  A_EXT<1> & REG1<2>.LFBK
+	# RnW & REG1<2>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<2>.PIN
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 1 | 6 | REG1<2>
+ATTRIBUTES | 4432640 | 0
+OUTPUTMC | 5 | 1 | 9 | 1 | 7 | 1 | 6 | 1 | 8 | 1 | 10
+INPUTS | 18 | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | RnW  | A_EXT<24>  | D_EXT<2>.PIN  | REG1<2>.LFBK
+INPUTMC | 1 | 1 | 6
+INPUTP | 17 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 106 | 122 | 20 | 107 | 47
+EQ | 10 | 
+   REG1<2>.T = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<2>.PIN & !REG1<2>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & !D_EXT<2>.PIN & REG1<2>.LFBK;
+   REG1<2>.CLK = SYSCLK_EXT;	// GCK
+   !REG1<2>.AR = nRESET_EXT;	// GSR
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 3 | 9 | REG1<3>
+ATTRIBUTES | 4432640 | 0
+OUTPUTMC | 6 | 3 | 8 | 3 | 12 | 3 | 10 | 3 | 9 | 3 | 13 | 3 | 11
+INPUTS | 18 | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | RnW  | A_EXT<24>  | D_EXT<3>.PIN  | REG1<3>.LFBK
+INPUTMC | 1 | 3 | 9
+INPUTP | 17 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 106 | 122 | 20 | 107 | 50
+EXPORTS | 1 | 3 | 8
+EQ | 11 | 
+   REG1<3>.T = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<3>.PIN & !REG1<3>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & !D_EXT<3>.PIN & REG1<3>.LFBK;
+   REG1<3>.CLK = SYSCLK_EXT;	// GCK
+   !REG1<3>.AR = nRESET_EXT;	// GSR
+    REG1<3>.EXP  =  !A_EXT<0> & !A_EXT<1> & !RnW
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 3 | 5 | REG1<4>
+ATTRIBUTES | 4432640 | 0
+OUTPUTMC | 6 | 0 | 2 | 0 | 3 | 0 | 0 | 0 | 1 | 3 | 6 | 3 | 5
+INPUTS | 20 | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | REG0<3>.LFBK  | RnW  | A_EXT<24>  | D_EXT<4>.PIN  | D_EXT<3>.PIN  | REG1<4>.LFBK
+INPUTMC | 2 | 3 | 16 | 3 | 5
+INPUTP | 18 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 106 | 122 | 20 | 107 | 53 | 50
+EXPORTS | 1 | 3 | 6
+EQ | 16 | 
+   REG1<4>.T = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<4>.PIN & !REG1<4>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & !D_EXT<4>.PIN & REG1<4>.LFBK;
+   REG1<4>.CLK = SYSCLK_EXT;	// GCK
+   !REG1<4>.AR = nRESET_EXT;	// GSR
+    REG1<4>.EXP  =  A_EXT<1> & REG0<3>.LFBK
+	# RnW & REG0<3>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<3>.PIN
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 3 | 3 | REG1<5>
+ATTRIBUTES | 4432640 | 0
+OUTPUTMC | 5 | 0 | 12 | 0 | 13 | 0 | 10 | 0 | 11 | 3 | 3
+INPUTS | 18 | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | RnW  | A_EXT<24>  | D_EXT<5>.PIN  | REG1<5>.LFBK
+INPUTMC | 1 | 3 | 3
+INPUTP | 17 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 106 | 122 | 20 | 107 | 54
+EQ | 10 | 
+   REG1<5>.T = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<5>.PIN & !REG1<5>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & !D_EXT<5>.PIN & REG1<5>.LFBK;
+   REG1<5>.CLK = SYSCLK_EXT;	// GCK
+   !REG1<5>.AR = nRESET_EXT;	// GSR
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 5 | 15 | REG1<6>
+ATTRIBUTES | 4432640 | 0
+OUTPUTMC | 5 | 5 | 17 | 5 | 1 | 5 | 15 | 5 | 0 | 5 | 16
+INPUTS | 18 | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | RnW  | A_EXT<24>  | D_EXT<6>.PIN  | REG1<6>.LFBK
+INPUTMC | 1 | 5 | 15
+INPUTP | 17 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 106 | 122 | 20 | 107 | 56
+EQ | 10 | 
+   REG1<6>.T = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<6>.PIN & !REG1<6>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & !D_EXT<6>.PIN & REG1<6>.LFBK;
+   REG1<6>.CLK = SYSCLK_EXT;	// GCK
+   !REG1<6>.AR = nRESET_EXT;	// GSR
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 0 | 8 | REG1<7>
+ATTRIBUTES | 4432640 | 0
+OUTPUTMC | 6 | 4 | 12 | 4 | 13 | 4 | 10 | 4 | 11 | 0 | 7 | 0 | 8
+INPUTS | 18 | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | RnW  | A_EXT<24>  | D_EXT<7>.PIN  | REG1<7>.LFBK
+INPUTMC | 1 | 0 | 8
+INPUTP | 17 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 106 | 122 | 20 | 107 | 65
+EXPORTS | 1 | 0 | 7
+EQ | 13 | 
+   REG1<7>.T = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<7>.PIN & !REG1<7>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & !D_EXT<7>.PIN & REG1<7>.LFBK;
+   REG1<7>.CLK = SYSCLK_EXT;	// GCK
+   !REG1<7>.AR = nRESET_EXT;	// GSR
+    REG1<7>.EXP  =  A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	!A_EXT<22> & A_EXT<21> & !A_EXT<20> & A_EXT<24>
+GLOBALS | 2 | 2 | SYSCLK_EXT | 4 | nRESET_EXT
+
+MACROCELL | 1 | 1 | LLD_OBUF
+ATTRIBUTES | 396034 | 0
+OUTPUTMC | 1 | 1 | 0
+INPUTS | 7 | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | XLXI_158/boot_cycle_count_reg<0>.EXP  | REG1<1>.LFBK
+INPUTMC | 2 | 1 | 2 | 1 | 7
+INPUTP | 5 | 126 | 42 | 51 | 21 | 106
+EXPORTS | 1 | 1 | 0
+IMPORTS | 1 | 1 | 2
+EQ | 10 | 
+   !LLD = ;Imported pterms FB2_3
+	  !A_EXT<0> & !A_EXT<1> & !RnW & SIZ_1
+	# !A_EXT<0> & !RnW & !SIZ_1 & SIZ_0
+	# !A_EXT<1> & !RnW & SIZ_1 & !SIZ_0
+	# !A_EXT<1> & !RnW & !SIZ_1 & SIZ_0;
+    LLD_OBUF.EXP  =  A_EXT<23> & REG1<1>.LFBK
+	# !A_EXT<22> & REG1<1>.LFBK
+	# A_EXT<21> & REG1<1>.LFBK
+	# A_EXT<20> & REG1<1>.LFBK
+	# !A_EXT<0> & REG1<1>.LFBK
+
+MACROCELL | 4 | 7 | LMD_OBUF
+ATTRIBUTES | 396034 | 0
+OUTPUTMC | 1 | 4 | 6
+INPUTS | 7 | A_EXT<23>  | REG0<7>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | XLXI_158/boot_in_progress.EXP
+INPUTMC | 2 | 0 | 9 | 4 | 8
+INPUTP | 5 | 126 | 42 | 51 | 21 | 106
+EXPORTS | 1 | 4 | 6
+IMPORTS | 1 | 4 | 8
+EQ | 9 | 
+   !LMD = ;Imported pterms FB5_9
+	  A_EXT<0> & A_EXT<1> & !RnW
+	# !A_EXT<1> & !RnW & !SIZ_1 & SIZ_0
+	# !A_EXT<0> & !A_EXT<1> & !RnW & SIZ_1 & !SIZ_0;
+    LMD_OBUF.EXP  =  A_EXT<23> & REG0<7>
+	# !A_EXT<22> & REG0<7>
+	# A_EXT<21> & REG0<7>
+	# A_EXT<20> & REG0<7>
+	# A_EXT<0> & REG0<7>
+
+MACROCELL | 4 | 13 | UMD_OBUF
+ATTRIBUTES | 396034 | 0
+OUTPUTMC | 1 | 4 | 12
+INPUTS | 7 | A_EXT<23>  | REG1<7>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | XLXI_158/boot_cycle_count_reg<2>.EXP
+INPUTMC | 2 | 0 | 8 | 4 | 14
+INPUTP | 5 | 126 | 42 | 51 | 21 | 106
+EXPORTS | 1 | 4 | 12
+IMPORTS | 1 | 4 | 14
+EQ | 8 | 
+   !UMD = ;Imported pterms FB5_15
+	  A_EXT<1> & !RnW
+	# !A_EXT<0> & !RnW & !SIZ_1 & SIZ_0;
+    UMD_OBUF.EXP  =  A_EXT<23> & REG1<7>
+	# !A_EXT<22> & REG1<7>
+	# A_EXT<21> & REG1<7>
+	# A_EXT<20> & REG1<7>
+	# !A_EXT<0> & REG1<7>
+
+MACROCELL | 4 | 15 | UUD_OBUF
+ATTRIBUTES | 396034 | 0
+OUTPUTMC | 1 | 4 | 16
+INPUTS | 5 | RnW  | A_EXT<0>  | A_EXT<1>  | SIZ_1  | SIZ_0
+INPUTP | 5 | 20 | 106 | 122 | 19 | 18
+EXPORTS | 1 | 4 | 16
+EQ | 3 | 
+   UUD = RnW
+	# !A_EXT<0> & !A_EXT<1>;
+    UUD_OBUF.EXP  =  !A_EXT<0> & !RnW & !SIZ_1 & SIZ_0
+
+MACROCELL | 2 | 1 | DO<0>$BUF0
+ATTRIBUTES | 265984 | 0
+OUTPUTMC | 1 | 2 | 0
+INPUTS | 16 | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | RnW  | A_EXT<24>  | EXP12_.EXP  | REG1<0>.LFBK
+INPUTMC | 2 | 2 | 2 | 2 | 12
+INPUTP | 14 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 20 | 107
+EXPORTS | 1 | 2 | 0
+IMPORTS | 1 | 2 | 2
+EQ | 9 | 
+   D_EXT<0> = ;Imported pterms FB3_3
+	  DO<0>;
+   D_EXT<0>.OE = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & RnW & A_EXT<24>;
+    DO<0>$BUF0.EXP  =  A_EXT<23> & REG1<0>.LFBK
+	# !A_EXT<22> & REG1<0>.LFBK
+	# A_EXT<21> & REG1<0>.LFBK
+	# A_EXT<20> & REG1<0>.LFBK
+
+MACROCELL | 2 | 4 | DO<1>$BUF0
+ATTRIBUTES | 265984 | 0
+INPUTS | 15 | DO<1>  | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | RnW  | A_EXT<24>
+INPUTP | 14 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 20 | 107
+EQ | 4 | 
+   D_EXT<1> = DO<1>;
+   D_EXT<1>.OE = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & RnW & A_EXT<24>;
+
+MACROCELL | 2 | 5 | DO<2>$BUF0
+ATTRIBUTES | 265984 | 0
+INPUTS | 15 | DO<2>  | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | RnW  | A_EXT<24>
+INPUTP | 14 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 20 | 107
+EQ | 4 | 
+   D_EXT<2> = DO<2>;
+   D_EXT<2>.OE = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & RnW & A_EXT<24>;
+
+MACROCELL | 2 | 8 | DO<3>$BUF0
+ATTRIBUTES | 265984 | 0
+OUTPUTMC | 1 | 2 | 9
+INPUTS | 19 | A_EXT<0>  | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | RnW  | A_EXT<24>  | A_EXT<1>  | D_EXT<0>.PIN  | EXP13_.EXP  | REG0<0>.LFBK
+INPUTMC | 2 | 2 | 7 | 2 | 14
+INPUTP | 17 | 106 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 20 | 107 | 122 | 41
+EXPORTS | 1 | 2 | 9
+IMPORTS | 1 | 2 | 7
+EQ | 12 | 
+   D_EXT<3> = ;Imported pterms FB3_8
+	  DO<3>;
+   D_EXT<3>.OE = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & RnW & A_EXT<24>;
+    DO<3>$BUF0.EXP  =  A_EXT<0> & REG0<0>.LFBK
+	# A_EXT<1> & REG0<0>.LFBK
+	# RnW & REG0<0>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<0>.PIN
+
+MACROCELL | 2 | 11 | DO<4>$BUF0
+ATTRIBUTES | 265984 | 0
+OUTPUTMC | 1 | 2 | 10
+INPUTS | 16 | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | RnW  | A_EXT<24>  | REG1<0>.EXP  | REG0<0>.LFBK
+INPUTMC | 2 | 2 | 12 | 2 | 14
+INPUTP | 14 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 20 | 107
+EXPORTS | 1 | 2 | 10
+IMPORTS | 1 | 2 | 12
+EQ | 9 | 
+   D_EXT<4> = ;Imported pterms FB3_13
+	  DO<4>;
+   D_EXT<4>.OE = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & RnW & A_EXT<24>;
+    DO<4>$BUF0.EXP  =  A_EXT<23> & REG0<0>.LFBK
+	# !A_EXT<22> & REG0<0>.LFBK
+	# A_EXT<21> & REG0<0>.LFBK
+	# A_EXT<20> & REG0<0>.LFBK
+
+MACROCELL | 2 | 13 | DO<5>$BUF0
+ATTRIBUTES | 265984 | 0
+INPUTS | 15 | DO<5>  | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | RnW  | A_EXT<24>
+INPUTP | 14 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 20 | 107
+EQ | 4 | 
+   D_EXT<5> = DO<5>;
+   D_EXT<5>.OE = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & RnW & A_EXT<24>;
+
+MACROCELL | 2 | 15 | DO<6>$BUF0
+ATTRIBUTES | 265984 | 0
+OUTPUTMC | 1 | 2 | 16
+INPUTS | 16 | DO<6>  | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | RnW  | A_EXT<24>  | DO<7>
+INPUTP | 14 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 20 | 107
+EXPORTS | 1 | 2 | 16
+EQ | 5 | 
+   D_EXT<6> = DO<6>;
+   D_EXT<6>.OE = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & RnW & A_EXT<24>;
+    DO<6>$BUF0.EXP  =  DO<7>
+
+MACROCELL | 2 | 16 | DO<7>$BUF0
+ATTRIBUTES | 265984 | 0
+OUTPUTMC | 1 | 2 | 17
+INPUTS | 19 | A_EXT<0>  | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | RnW  | A_EXT<24>  | A_EXT<1>  | D_EXT<0>.PIN  | DO<6>$BUF0.EXP  | REG1<0>.LFBK
+INPUTMC | 2 | 2 | 15 | 2 | 12
+INPUTP | 17 | 106 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 20 | 107 | 122 | 41
+EXPORTS | 1 | 2 | 17
+IMPORTS | 1 | 2 | 15
+EQ | 12 | 
+   D_EXT<7> = ;Imported pterms FB3_16
+	  DO<7>;
+   D_EXT<7>.OE = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & RnW & A_EXT<24>;
+    DO<7>$BUF0.EXP  =  !A_EXT<0> & REG1<0>.LFBK
+	# A_EXT<1> & REG1<0>.LFBK
+	# RnW & REG1<0>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<0>.PIN
+
+MACROCELL | 4 | 16 | LD_OBUF
+ATTRIBUTES | 396034 | 0
+OUTPUTMC | 1 | 4 | 17
+INPUTS | 7 | A_EXT<28>  | REG0<6>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | UUD_OBUF.EXP
+INPUTMC | 2 | 3 | 10 | 4 | 15
+INPUTP | 5 | 121 | 70 | 38 | 16 | 107
+EXPORTS | 1 | 4 | 17
+IMPORTS | 1 | 4 | 15
+EQ | 7 | 
+   !LD = ;Imported pterms FB5_16
+	  !A_EXT<0> & !RnW & !SIZ_1 & SIZ_0;
+    LD_OBUF.EXP  =  !A_EXT<28> & REG0<6>
+	# !A_EXT<29> & REG0<6>
+	# !A_EXT<30> & REG0<6>
+	# !A_EXT<31> & REG0<6>
+	# REG0<6> & !A_EXT<24>
+
+MACROCELL | 3 | 4 | UD_OBUF
+ATTRIBUTES | 396034 | 0
+INPUTS | 2 | A_EXT<0>  | RnW
+INPUTP | 2 | 106 | 20
+EQ | 1 | 
+   !UD = A_EXT<0> & !RnW;
+
+MACROCELL | 5 | 4 | RDLL_OBUF
+ATTRIBUTES | 396034 | 0
+INPUTS | 1 | RnW
+INPUTP | 1 | 20
+EQ | 1 | 
+   RDLL = RnW;
+
+MACROCELL | 5 | 5 | RDLM_OBUF
+ATTRIBUTES | 396034 | 0
+INPUTS | 1 | RnW
+INPUTP | 1 | 20
+EQ | 1 | 
+   RDLM = RnW;
+
+MACROCELL | 5 | 7 | RDUM_OBUF
+ATTRIBUTES | 396034 | 0
+INPUTS | 1 | RnW
+INPUTP | 1 | 20
+EQ | 1 | 
+   RDUM = RnW;
+
+MACROCELL | 5 | 8 | RDUU_OBUF
+ATTRIBUTES | 396034 | 0
+INPUTS | 1 | RnW
+INPUTP | 1 | 20
+EQ | 1 | 
+   RDUU = RnW;
+
+MACROCELL | 4 | 1 | WRLL_OBUF
+ATTRIBUTES | 396034 | 0
+OUTPUTMC | 1 | 4 | 0
+INPUTS | 20 | A_EXT<0>  | A_EXT<1>  | RnW  | SIZ_1  | REG0<6>  | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<24>  | D_EXT<6>.PIN  | EXP21_.EXP
+INPUTMC | 2 | 3 | 10 | 4 | 2
+INPUTP | 18 | 106 | 122 | 20 | 19 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 107 | 56
+EXPORTS | 1 | 4 | 0
+IMPORTS | 1 | 4 | 2
+EQ | 11 | 
+   WRLL = A_EXT<0> & A_EXT<1> & !RnW
+	# A_EXT<1> & !RnW & SIZ_1
+;Imported pterms FB5_3
+	# !RnW & !SIZ_1 & !SIZ_0
+	# A_EXT<0> & !RnW & SIZ_1 & SIZ_0;
+    WRLL_OBUF.EXP  =  A_EXT<1> & REG0<6>
+	# REG0<6> & RnW
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<6>.PIN
+
+MACROCELL | 4 | 4 | WRLM_OBUF
+ATTRIBUTES | 396034 | 0
+OUTPUTMC | 1 | 4 | 5
+INPUTS | 21 | A_EXT<1>  | RnW  | SIZ_1  | SIZ_0  | REG0<7>  | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<24>  | D_EXT<7>.PIN  | XLXN_102_OBUF/XLXN_102_OBUF_RSTF__$INT.EXP
+INPUTMC | 2 | 0 | 9 | 4 | 3
+INPUTP | 19 | 122 | 20 | 19 | 18 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 106 | 107 | 65
+EXPORTS | 1 | 4 | 5
+IMPORTS | 1 | 4 | 3
+EQ | 11 | 
+   WRLM = !A_EXT<1> & !RnW & SIZ_1 & SIZ_0
+	# !A_EXT<1> & !RnW & !SIZ_1 & !SIZ_0
+;Imported pterms FB5_4
+	# !A_EXT<0> & A_EXT<1> & !RnW
+	# A_EXT<0> & !A_EXT<1> & !RnW & !SIZ_0;
+    WRLM_OBUF.EXP  =  A_EXT<1> & REG0<7>
+	# REG0<7> & RnW
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<7>.PIN
+
+MACROCELL | 4 | 10 | WRUM_OBUF
+ATTRIBUTES | 396034 | 0
+OUTPUTMC | 1 | 4 | 11
+INPUTS | 21 | A_EXT<1>  | RnW  | SIZ_1  | SIZ_0  | REG1<7>  | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<24>  | D_EXT<7>.PIN  | XLXI_158/boot_cycle_count_reg<3>.EXP
+INPUTMC | 2 | 0 | 8 | 4 | 9
+INPUTP | 19 | 122 | 20 | 19 | 18 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 106 | 107 | 65
+EXPORTS | 1 | 4 | 11
+IMPORTS | 1 | 4 | 9
+EQ | 10 | 
+   WRUM = !A_EXT<1> & !RnW & SIZ_1
+	# !A_EXT<1> & !RnW & !SIZ_0
+;Imported pterms FB5_10
+	# A_EXT<0> & !A_EXT<1> & !RnW;
+    WRUM_OBUF.EXP  =  A_EXT<1> & REG1<7>
+	# REG1<7> & RnW
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<7>.PIN
+
+MACROCELL | 3 | 8 | WRUU_OBUF
+ATTRIBUTES | 396034 | 0
+OUTPUTMC | 1 | 3 | 7
+INPUTS | 7 | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | REG1<3>.EXP  | REG0<3>.LFBK
+INPUTMC | 2 | 3 | 9 | 3 | 16
+INPUTP | 5 | 126 | 42 | 51 | 21 | 106
+EXPORTS | 1 | 3 | 7
+IMPORTS | 1 | 3 | 9
+EQ | 7 | 
+   WRUU = ;Imported pterms FB4_10
+	  !A_EXT<0> & !A_EXT<1> & !RnW;
+    WRUU_OBUF.EXP  =  A_EXT<23> & REG0<3>.LFBK
+	# !A_EXT<22> & REG0<3>.LFBK
+	# A_EXT<21> & REG0<3>.LFBK
+	# A_EXT<20> & REG0<3>.LFBK
+	# A_EXT<0> & REG0<3>.LFBK
+
+MACROCELL | 5 | 10 | XLXN_104_OBUF
+ATTRIBUTES | 396034 | 0
+INPUTS | 5 | nAS_EXT  | XLXN_101_OBUF.LFBK  | XLXN_102_OBUF.LFBK  | XLXN_103.PIN  | XLXN_100_OBUF.LFBK
+INPUTMC | 3 | 5 | 1 | 5 | 2 | 5 | 13
+INPUTP | 2 | 31 | 2
+EQ | 2 | 
+   XLXN_104 = !nAS_EXT & XLXN_100_OBUF.LFBK & 
+	XLXN_101_OBUF.LFBK & XLXN_102_OBUF.LFBK & XLXN_103.PIN;
+
+MACROCELL | 0 | 3 | n68230CS_OBUF
+ATTRIBUTES | 396034 | 0
+OUTPUTMC | 1 | 0 | 2
+INPUTS | 14 | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<24>  | REG1<4>
+INPUTMC | 1 | 3 | 5
+INPUTP | 13 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 107
+EXPORTS | 1 | 0 | 2
+EQ | 7 | 
+   !n68230CS = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	!A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<24>;
+    n68230CS_OBUF.EXP  =  A_EXT<23> & REG1<4>
+	# !A_EXT<22> & REG1<4>
+	# A_EXT<21> & REG1<4>
+	# A_EXT<20> & REG1<4>
+
+MACROCELL | 3 | 1 | nBOOTCS_OBUF
+ATTRIBUTES | 396034 | 0
+OUTPUTMC | 1 | 3 | 0
+INPUTS | 7 | A_EXT<23>  | REG0<2>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | EXP16_.EXP
+INPUTMC | 2 | 1 | 12 | 3 | 2
+INPUTP | 5 | 126 | 42 | 51 | 21 | 106
+EXPORTS | 1 | 3 | 0
+IMPORTS | 1 | 3 | 2
+EQ | 10 | 
+   !nBOOTCS = ;Imported pterms FB4_3
+	  !nAS_EXT & XLXI_158/boot_in_progress
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & A_EXT<23> & 
+	A_EXT<22> & A_EXT<21> & A_EXT<20> & A_EXT<24>;
+    nBOOTCS_OBUF.EXP  =  A_EXT<23> & REG0<2>
+	# !A_EXT<22> & REG0<2>
+	# A_EXT<21> & REG0<2>
+	# A_EXT<20> & REG0<2>
+	# A_EXT<0> & REG0<2>
+
+MACROCELL | 1 | 11 | nFLASHCS_OBUF
+ATTRIBUTES | 396034 | 0
+OUTPUTMC | 1 | 1 | 12
+INPUTS | 18 | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<24>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<1>  | RnW  | D_EXT<2>.PIN  | REG0<2>.LFBK
+INPUTMC | 1 | 1 | 12
+INPUTP | 17 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 107 | 42 | 51 | 21 | 106 | 122 | 20 | 47
+EXPORTS | 1 | 1 | 12
+EQ | 7 | 
+   !nFLASHCS = !A_EXT<28> & !A_EXT<29> & !A_EXT<30> & !A_EXT<31> & 
+	!A_EXT<27> & !A_EXT<26> & !A_EXT<25> & !nAS_EXT & A_EXT<23> & 
+	!A_EXT<24>;
+    nFLASHCS_OBUF.EXP  =  A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<2>.PIN & !REG0<2>.LFBK
+
+MACROCELL | 0 | 7 | nIOCS0_OBUF
+ATTRIBUTES | 396034 | 0
+OUTPUTMC | 1 | 0 | 6
+INPUTS | 7 | A_EXT<23>  | REG0<5>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | REG1<7>.EXP
+INPUTMC | 2 | 3 | 14 | 0 | 8
+INPUTP | 5 | 126 | 42 | 51 | 21 | 106
+EXPORTS | 1 | 0 | 6
+IMPORTS | 1 | 0 | 8
+EQ | 9 | 
+   !nIOCS0 = ;Imported pterms FB1_9
+	  A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	!A_EXT<22> & A_EXT<21> & !A_EXT<20> & A_EXT<24>;
+    nIOCS0_OBUF.EXP  =  A_EXT<23> & REG0<5>
+	# !A_EXT<22> & REG0<5>
+	# A_EXT<21> & REG0<5>
+	# A_EXT<20> & REG0<5>
+	# A_EXT<0> & REG0<5>
+
+MACROCELL | 0 | 10 | nIOCS1_OBUF
+ATTRIBUTES | 396034 | 0
+OUTPUTMC | 1 | 0 | 11
+INPUTS | 18 | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<24>  | A_EXT<1>  | REG1<5>  | RnW  | A_EXT<0>  | D_EXT<5>.PIN
+INPUTMC | 1 | 3 | 3
+INPUTP | 17 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 107 | 122 | 20 | 106 | 54
+EXPORTS | 1 | 0 | 11
+EQ | 9 | 
+   !nIOCS1 = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	!A_EXT<22> & A_EXT<21> & A_EXT<20> & A_EXT<24>;
+    nIOCS1_OBUF.EXP  =  A_EXT<1> & REG1<5>
+	# REG1<5> & RnW
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<5>.PIN
+
+MACROCELL | 3 | 13 | nIOSEL_OBUF
+ATTRIBUTES | 396034 | 0
+OUTPUTMC | 1 | 3 | 12
+INPUTS | 7 | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | REG0<5>.EXP  | REG1<3>.LFBK
+INPUTMC | 2 | 3 | 14 | 3 | 9
+INPUTP | 5 | 126 | 42 | 51 | 21 | 106
+EXPORTS | 1 | 3 | 12
+IMPORTS | 1 | 3 | 14
+EQ | 8 | 
+   !nIOSEL = ;Imported pterms FB4_15
+	  A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & A_EXT<24>;
+    nIOSEL_OBUF.EXP  =  A_EXT<23> & REG1<3>.LFBK
+	# !A_EXT<22> & REG1<3>.LFBK
+	# A_EXT<21> & REG1<3>.LFBK
+	# A_EXT<20> & REG1<3>.LFBK
+	# !A_EXT<0> & REG1<3>.LFBK
+
+MACROCELL | 0 | 14 | nR68561CS_OBUF
+ATTRIBUTES | 396034 | 0
+OUTPUTMC | 1 | 0 | 15
+INPUTS | 18 | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<24>  | A_EXT<1>  | REG0<4>  | RnW  | A_EXT<0>  | D_EXT<4>.PIN
+INPUTMC | 1 | 3 | 15
+INPUTP | 17 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 107 | 122 | 20 | 106 | 53
+EXPORTS | 1 | 0 | 15
+EQ | 9 | 
+   !nR68561CS = A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	!A_EXT<22> & !A_EXT<21> & A_EXT<20> & A_EXT<24>;
+    nR68561CS_OBUF.EXP  =  A_EXT<1> & REG0<4>
+	# REG0<4> & RnW
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<4>.PIN
+
+MACROCELL | 1 | 15 | nRAMCS_OBUF
+ATTRIBUTES | 396034 | 0
+OUTPUTMC | 1 | 1 | 14
+INPUTS | 15 | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | XLXI_158/boot_in_progress  | A_EXT<24>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | REG0<1>.LFBK
+INPUTMC | 2 | 4 | 8 | 1 | 16
+INPUTP | 13 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 107 | 42 | 51 | 21
+EXPORTS | 1 | 1 | 14
+EQ | 7 | 
+   !nRAMCS = !A_EXT<28> & !A_EXT<29> & !A_EXT<30> & !A_EXT<31> & 
+	!A_EXT<27> & !A_EXT<26> & !A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	!XLXI_158/boot_in_progress & !A_EXT<24>;
+    nRAMCS_OBUF.EXP  =  A_EXT<23> & REG0<1>.LFBK
+	# !A_EXT<22> & REG0<1>.LFBK
+	# A_EXT<21> & REG0<1>.LFBK
+	# A_EXT<20> & REG0<1>.LFBK
+
+MACROCELL | 4 | 3 | XLXN_102_OBUF/XLXN_102_OBUF_RSTF__$INT
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 5 | 5 | 13 | 5 | 1 | 5 | 2 | 1 | 5 | 4 | 4
+INPUTS | 6 | nRESET_EXT  | nECS_EXT  | A_EXT<0>  | A_EXT<1>  | RnW  | SIZ_0
+INPUTP | 6 | 134 | 49 | 106 | 122 | 20 | 18
+EXPORTS | 1 | 4 | 4
+EQ | 3 | 
+   XLXN_102_OBUF/XLXN_102_OBUF_RSTF__$INT = nRESET_EXT & nECS_EXT;
+    XLXN_102_OBUF/XLXN_102_OBUF_RSTF__$INT.EXP  =  !A_EXT<0> & A_EXT<1> & !RnW
+	# A_EXT<0> & !A_EXT<1> & !RnW & !SIZ_0
+
+MACROCELL | 0 | 0 | EXP0_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 1
+INPUTS | 18 | A_EXT<0>  | REG1<4>  | A_EXT<1>  | RnW  | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<24>  | D_EXT<4>.PIN
+INPUTMC | 1 | 3 | 5
+INPUTP | 17 | 106 | 122 | 20 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 107 | 53
+EXPORTS | 1 | 0 | 1
+EQ | 7 | 
+       EXP0_.EXP  =  !A_EXT<0> & REG1<4>
+	# A_EXT<1> & REG1<4>
+	# REG1<4> & RnW
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<4>.PIN
+
+MACROCELL | 0 | 1 | EXP1_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 2
+INPUTS | 7 | A_EXT<28>  | REG1<4>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | EXP0_.EXP
+INPUTMC | 2 | 3 | 5 | 0 | 0
+INPUTP | 5 | 121 | 70 | 38 | 16 | 107
+EXPORTS | 1 | 0 | 2
+IMPORTS | 1 | 0 | 0
+EQ | 13 | 
+       EXP1_.EXP  =  !A_EXT<28> & REG1<4>
+	# !A_EXT<29> & REG1<4>
+	# !A_EXT<30> & REG1<4>
+	# !A_EXT<31> & REG1<4>
+	# REG1<4> & !A_EXT<24>
+;Imported pterms FB1_1
+	# !A_EXT<0> & REG1<4>
+	# A_EXT<1> & REG1<4>
+	# REG1<4> & RnW
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<4>.PIN
+
+MACROCELL | 0 | 4 | EXP2_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 5
+INPUTS | 18 | A_EXT<1>  | REG0<5>  | RnW  | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | nAS_EXT  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | A_EXT<24>  | D_EXT<5>.PIN
+INPUTMC | 1 | 3 | 14
+INPUTP | 17 | 122 | 20 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 31 | 126 | 42 | 51 | 21 | 106 | 107 | 54
+EXPORTS | 1 | 0 | 5
+EQ | 6 | 
+       EXP2_.EXP  =  A_EXT<1> & REG0<5>
+	# REG0<5> & RnW
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<5>.PIN
+
+MACROCELL | 0 | 5 | EXP3_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 6
+INPUTS | 7 | A_EXT<28>  | REG0<5>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | EXP2_.EXP
+INPUTMC | 2 | 3 | 14 | 0 | 4
+INPUTP | 5 | 121 | 70 | 38 | 16 | 107
+EXPORTS | 1 | 0 | 6
+IMPORTS | 1 | 0 | 4
+EQ | 12 | 
+       EXP3_.EXP  =  !A_EXT<28> & REG0<5>
+	# !A_EXT<29> & REG0<5>
+	# !A_EXT<30> & REG0<5>
+	# !A_EXT<31> & REG0<5>
+	# REG0<5> & !A_EXT<24>
+;Imported pterms FB1_5
+	# A_EXT<1> & REG0<5>
+	# REG0<5> & RnW
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<5>.PIN
+
+MACROCELL | 0 | 11 | EXP4_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 12
+INPUTS | 7 | A_EXT<28>  | REG1<5>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | nIOCS1_OBUF.EXP
+INPUTMC | 2 | 3 | 3 | 0 | 10
+INPUTP | 5 | 121 | 70 | 38 | 16 | 107
+EXPORTS | 1 | 0 | 12
+IMPORTS | 1 | 0 | 10
+EQ | 12 | 
+       EXP4_.EXP  =  !A_EXT<28> & REG1<5>
+	# !A_EXT<29> & REG1<5>
+	# !A_EXT<30> & REG1<5>
+	# !A_EXT<31> & REG1<5>
+	# REG1<5> & !A_EXT<24>
+;Imported pterms FB1_11
+	# A_EXT<1> & REG1<5>
+	# REG1<5> & RnW
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<5>.PIN
+
+MACROCELL | 0 | 13 | EXP5_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 12
+INPUTS | 6 | A_EXT<23>  | REG1<5>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>
+INPUTMC | 1 | 3 | 3
+INPUTP | 5 | 126 | 42 | 51 | 21 | 106
+EXPORTS | 1 | 0 | 12
+EQ | 5 | 
+       EXP5_.EXP  =  A_EXT<23> & REG1<5>
+	# !A_EXT<22> & REG1<5>
+	# A_EXT<21> & REG1<5>
+	# A_EXT<20> & REG1<5>
+	# !A_EXT<0> & REG1<5>
+
+MACROCELL | 0 | 15 | EXP6_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 16
+INPUTS | 7 | A_EXT<28>  | REG0<4>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | nR68561CS_OBUF.EXP
+INPUTMC | 2 | 3 | 15 | 0 | 14
+INPUTP | 5 | 121 | 70 | 38 | 16 | 107
+EXPORTS | 1 | 0 | 16
+IMPORTS | 1 | 0 | 14
+EQ | 12 | 
+       EXP6_.EXP  =  !A_EXT<28> & REG0<4>
+	# !A_EXT<29> & REG0<4>
+	# !A_EXT<30> & REG0<4>
+	# !A_EXT<31> & REG0<4>
+	# REG0<4> & !A_EXT<24>
+;Imported pterms FB1_15
+	# A_EXT<1> & REG0<4>
+	# REG0<4> & RnW
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<4>.PIN
+
+MACROCELL | 0 | 17 | EXP7_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 16
+INPUTS | 6 | A_EXT<23>  | REG0<4>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>
+INPUTMC | 1 | 3 | 15
+INPUTP | 5 | 126 | 42 | 51 | 21 | 106
+EXPORTS | 1 | 0 | 16
+EQ | 5 | 
+       EXP7_.EXP  =  A_EXT<23> & REG0<4>
+	# !A_EXT<22> & REG0<4>
+	# A_EXT<21> & REG0<4>
+	# A_EXT<20> & REG0<4>
+	# A_EXT<0> & REG0<4>
+
+MACROCELL | 1 | 8 | EXP8_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 1 | 9
+INPUTS | 7 | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | REG1<1>.EXP  | REG1<2>.LFBK
+INPUTMC | 2 | 1 | 7 | 1 | 6
+INPUTP | 5 | 121 | 70 | 38 | 16 | 107
+EXPORTS | 1 | 1 | 9
+IMPORTS | 1 | 1 | 7
+EQ | 12 | 
+       EXP8_.EXP  =  !A_EXT<28> & REG1<2>.LFBK
+	# !A_EXT<29> & REG1<2>.LFBK
+	# !A_EXT<30> & REG1<2>.LFBK
+	# !A_EXT<31> & REG1<2>.LFBK
+	# !A_EXT<24> & REG1<2>.LFBK
+;Imported pterms FB2_8
+	# A_EXT<1> & REG1<2>.LFBK
+	# RnW & REG1<2>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<2>.PIN
+
+MACROCELL | 1 | 10 | EXP9_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 1 | 9
+INPUTS | 6 | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | REG1<2>.LFBK
+INPUTMC | 1 | 1 | 6
+INPUTP | 5 | 126 | 42 | 51 | 21 | 106
+EXPORTS | 1 | 1 | 9
+EQ | 5 | 
+       EXP9_.EXP  =  A_EXT<23> & REG1<2>.LFBK
+	# !A_EXT<22> & REG1<2>.LFBK
+	# A_EXT<21> & REG1<2>.LFBK
+	# A_EXT<20> & REG1<2>.LFBK
+	# !A_EXT<0> & REG1<2>.LFBK
+
+MACROCELL | 1 | 13 | EXP10_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 1 | 14
+INPUTS | 7 | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | REG0<2>.EXP  | REG0<1>.LFBK
+INPUTMC | 2 | 1 | 12 | 1 | 16
+INPUTP | 5 | 121 | 70 | 38 | 16 | 107
+EXPORTS | 1 | 1 | 14
+IMPORTS | 1 | 1 | 12
+EQ | 13 | 
+       EXP10_.EXP  =  !A_EXT<28> & REG0<1>.LFBK
+	# !A_EXT<29> & REG0<1>.LFBK
+	# !A_EXT<30> & REG0<1>.LFBK
+	# !A_EXT<31> & REG0<1>.LFBK
+	# !A_EXT<24> & REG0<1>.LFBK
+;Imported pterms FB2_13
+	# A_EXT<0> & REG0<1>.LFBK
+	# A_EXT<1> & REG0<1>.LFBK
+	# RnW & REG0<1>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<1>.PIN
+
+MACROCELL | 1 | 17 | EXP11_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 1 | 0
+INPUTS | 7 | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | REG0<1>.EXP  | REG1<1>.LFBK
+INPUTMC | 2 | 1 | 16 | 1 | 7
+INPUTP | 5 | 121 | 70 | 38 | 16 | 107
+EXPORTS | 1 | 1 | 0
+IMPORTS | 1 | 1 | 16
+EQ | 12 | 
+       EXP11_.EXP  =  !A_EXT<28> & REG1<1>.LFBK
+	# !A_EXT<29> & REG1<1>.LFBK
+	# !A_EXT<30> & REG1<1>.LFBK
+	# !A_EXT<31> & REG1<1>.LFBK
+	# !A_EXT<24> & REG1<1>.LFBK
+;Imported pterms FB2_17
+	# A_EXT<1> & REG1<1>.LFBK
+	# RnW & REG1<1>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<1>.PIN
+
+MACROCELL | 2 | 2 | EXP12_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 1
+INPUTS | 1 | DO<0>
+EXPORTS | 1 | 2 | 1
+EQ | 1 | 
+       EXP12_.EXP  =  DO<0>
+
+MACROCELL | 2 | 7 | EXP13_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 8
+INPUTS | 1 | DO<3>
+EXPORTS | 1 | 2 | 8
+EQ | 1 | 
+       EXP13_.EXP  =  DO<3>
+
+MACROCELL | 2 | 9 | EXP14_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 10
+INPUTS | 7 | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | DO<3>$BUF0.EXP  | REG0<0>.LFBK
+INPUTMC | 2 | 2 | 8 | 2 | 14
+INPUTP | 5 | 121 | 70 | 38 | 16 | 107
+EXPORTS | 1 | 2 | 10
+IMPORTS | 1 | 2 | 8
+EQ | 13 | 
+       EXP14_.EXP  =  !A_EXT<28> & REG0<0>.LFBK
+	# !A_EXT<29> & REG0<0>.LFBK
+	# !A_EXT<30> & REG0<0>.LFBK
+	# !A_EXT<31> & REG0<0>.LFBK
+	# !A_EXT<24> & REG0<0>.LFBK
+;Imported pterms FB3_9
+	# A_EXT<0> & REG0<0>.LFBK
+	# A_EXT<1> & REG0<0>.LFBK
+	# RnW & REG0<0>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<0>.PIN
+
+MACROCELL | 2 | 17 | EXP15_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 0
+INPUTS | 7 | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | DO<7>$BUF0.EXP  | REG1<0>.LFBK
+INPUTMC | 2 | 2 | 16 | 2 | 12
+INPUTP | 5 | 121 | 70 | 38 | 16 | 107
+EXPORTS | 1 | 2 | 0
+IMPORTS | 1 | 2 | 16
+EQ | 13 | 
+       EXP15_.EXP  =  !A_EXT<28> & REG1<0>.LFBK
+	# !A_EXT<29> & REG1<0>.LFBK
+	# !A_EXT<30> & REG1<0>.LFBK
+	# !A_EXT<31> & REG1<0>.LFBK
+	# !A_EXT<24> & REG1<0>.LFBK
+;Imported pterms FB3_17
+	# !A_EXT<0> & REG1<0>.LFBK
+	# A_EXT<1> & REG1<0>.LFBK
+	# RnW & REG1<0>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<0>.PIN
+
+MACROCELL | 3 | 2 | EXP16_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 3 | 1
+INPUTS | 14 | nAS_EXT  | XLXI_158/boot_in_progress  | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<27>  | A_EXT<26>  | A_EXT<25>  | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<24>
+INPUTMC | 1 | 4 | 8
+INPUTP | 13 | 31 | 121 | 70 | 38 | 16 | 78 | 127 | 131 | 126 | 42 | 51 | 21 | 107
+EXPORTS | 1 | 3 | 1
+EQ | 4 | 
+       EXP16_.EXP  =  !nAS_EXT & XLXI_158/boot_in_progress
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & A_EXT<23> & 
+	A_EXT<22> & A_EXT<21> & A_EXT<20> & A_EXT<24>
+
+MACROCELL | 3 | 6 | EXP17_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 3 | 7
+INPUTS | 7 | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | REG1<4>.EXP  | REG0<3>.LFBK
+INPUTMC | 2 | 3 | 5 | 3 | 16
+INPUTP | 5 | 121 | 70 | 38 | 16 | 107
+EXPORTS | 1 | 3 | 7
+IMPORTS | 1 | 3 | 5
+EQ | 12 | 
+       EXP17_.EXP  =  !A_EXT<28> & REG0<3>.LFBK
+	# !A_EXT<29> & REG0<3>.LFBK
+	# !A_EXT<30> & REG0<3>.LFBK
+	# !A_EXT<31> & REG0<3>.LFBK
+	# !A_EXT<24> & REG0<3>.LFBK
+;Imported pterms FB4_6
+	# A_EXT<1> & REG0<3>.LFBK
+	# RnW & REG0<3>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<3>.PIN
+
+MACROCELL | 3 | 11 | EXP18_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 3 | 12
+INPUTS | 7 | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | REG0<6>.EXP  | REG1<3>.LFBK
+INPUTMC | 2 | 3 | 10 | 3 | 9
+INPUTP | 5 | 121 | 70 | 38 | 16 | 107
+EXPORTS | 1 | 3 | 12
+IMPORTS | 1 | 3 | 10
+EQ | 12 | 
+       EXP18_.EXP  =  !A_EXT<28> & REG1<3>.LFBK
+	# !A_EXT<29> & REG1<3>.LFBK
+	# !A_EXT<30> & REG1<3>.LFBK
+	# !A_EXT<31> & REG1<3>.LFBK
+	# !A_EXT<24> & REG1<3>.LFBK
+;Imported pterms FB4_11
+	# A_EXT<1> & REG1<3>.LFBK
+	# RnW & REG1<3>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<3>.PIN
+
+MACROCELL | 3 | 17 | EXP19_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 3 | 0
+INPUTS | 7 | A_EXT<28>  | REG0<2>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | REG0<3>.EXP
+INPUTMC | 2 | 1 | 12 | 3 | 16
+INPUTP | 5 | 121 | 70 | 38 | 16 | 107
+EXPORTS | 1 | 3 | 0
+IMPORTS | 1 | 3 | 16
+EQ | 12 | 
+       EXP19_.EXP  =  !A_EXT<28> & REG0<2>
+	# !A_EXT<29> & REG0<2>
+	# !A_EXT<30> & REG0<2>
+	# !A_EXT<31> & REG0<2>
+	# REG0<2> & !A_EXT<24>
+;Imported pterms FB4_17
+	# A_EXT<1> & REG0<2>
+	# REG0<2> & RnW
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<2>.PIN
+
+MACROCELL | 4 | 0 | EXP20_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 4 | 17
+INPUTS | 7 | A_EXT<23>  | REG0<6>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | WRLL_OBUF.EXP
+INPUTMC | 2 | 3 | 10 | 4 | 1
+INPUTP | 5 | 126 | 42 | 51 | 21 | 106
+EXPORTS | 1 | 4 | 17
+IMPORTS | 1 | 4 | 1
+EQ | 12 | 
+       EXP20_.EXP  =  A_EXT<23> & REG0<6>
+	# !A_EXT<22> & REG0<6>
+	# A_EXT<21> & REG0<6>
+	# A_EXT<20> & REG0<6>
+	# A_EXT<0> & REG0<6>
+;Imported pterms FB5_2
+	# A_EXT<1> & REG0<6>
+	# REG0<6> & RnW
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<6>.PIN
+
+MACROCELL | 4 | 2 | EXP21_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 4 | 1
+INPUTS | 4 | RnW  | SIZ_1  | SIZ_0  | A_EXT<0>
+INPUTP | 4 | 20 | 19 | 18 | 106
+EXPORTS | 1 | 4 | 1
+EQ | 2 | 
+       EXP21_.EXP  =  !RnW & !SIZ_1 & !SIZ_0
+	# A_EXT<0> & !RnW & SIZ_1 & SIZ_0
+
+MACROCELL | 4 | 5 | EXP22_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 4 | 6
+INPUTS | 7 | A_EXT<28>  | REG0<7>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | WRLM_OBUF.EXP
+INPUTMC | 2 | 0 | 9 | 4 | 4
+INPUTP | 5 | 121 | 70 | 38 | 16 | 107
+EXPORTS | 1 | 4 | 6
+IMPORTS | 1 | 4 | 4
+EQ | 12 | 
+       EXP22_.EXP  =  !A_EXT<28> & REG0<7>
+	# !A_EXT<29> & REG0<7>
+	# !A_EXT<30> & REG0<7>
+	# !A_EXT<31> & REG0<7>
+	# REG0<7> & !A_EXT<24>
+;Imported pterms FB5_5
+	# A_EXT<1> & REG0<7>
+	# REG0<7> & RnW
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & !A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<7>.PIN
+
+MACROCELL | 4 | 11 | EXP23_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 4 | 12
+INPUTS | 7 | A_EXT<28>  | REG1<7>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | WRUM_OBUF.EXP
+INPUTMC | 2 | 0 | 8 | 4 | 10
+INPUTP | 5 | 121 | 70 | 38 | 16 | 107
+EXPORTS | 1 | 4 | 12
+IMPORTS | 1 | 4 | 10
+EQ | 12 | 
+       EXP23_.EXP  =  !A_EXT<28> & REG1<7>
+	# !A_EXT<29> & REG1<7>
+	# !A_EXT<30> & REG1<7>
+	# !A_EXT<31> & REG1<7>
+	# REG1<7> & !A_EXT<24>
+;Imported pterms FB5_11
+	# A_EXT<1> & REG1<7>
+	# REG1<7> & RnW
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<7>.PIN
+
+MACROCELL | 5 | 0 | EXP24_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 5 | 17
+INPUTS | 7 | A_EXT<23>  | A_EXT<22>  | A_EXT<21>  | A_EXT<20>  | A_EXT<0>  | XLXN_101_OBUF.EXP  | REG1<6>.LFBK
+INPUTMC | 2 | 5 | 1 | 5 | 15
+INPUTP | 5 | 126 | 42 | 51 | 21 | 106
+EXPORTS | 1 | 5 | 17
+IMPORTS | 1 | 5 | 1
+EQ | 12 | 
+       EXP24_.EXP  =  A_EXT<23> & REG1<6>.LFBK
+	# !A_EXT<22> & REG1<6>.LFBK
+	# A_EXT<21> & REG1<6>.LFBK
+	# A_EXT<20> & REG1<6>.LFBK
+	# !A_EXT<0> & REG1<6>.LFBK
+;Imported pterms FB6_2
+	# A_EXT<1> & REG1<6>.LFBK
+	# RnW & REG1<6>.LFBK
+	# A_EXT<28> & A_EXT<29> & A_EXT<30> & A_EXT<31> & 
+	A_EXT<27> & A_EXT<26> & A_EXT<25> & !nAS_EXT & !A_EXT<23> & 
+	A_EXT<22> & !A_EXT<21> & !A_EXT<20> & A_EXT<0> & !A_EXT<1> & 
+	!RnW & A_EXT<24> & D_EXT<6>.PIN
+
+MACROCELL | 5 | 16 | EXP25_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 5 | 17
+INPUTS | 6 | A_EXT<28>  | A_EXT<29>  | A_EXT<30>  | A_EXT<31>  | A_EXT<24>  | REG1<6>.LFBK
+INPUTMC | 1 | 5 | 15
+INPUTP | 5 | 121 | 70 | 38 | 16 | 107
+EXPORTS | 1 | 5 | 17
+EQ | 5 | 
+       EXP25_.EXP  =  !A_EXT<28> & REG1<6>.LFBK
+	# !A_EXT<29> & REG1<6>.LFBK
+	# !A_EXT<30> & REG1<6>.LFBK
+	# !A_EXT<31> & REG1<6>.LFBK
+	# !A_EXT<24> & REG1<6>.LFBK
+
+PIN | A_EXT<28> | 64 | 0 | N/A | 121 | 68 | 2 | 0 | 2 | 10 | 1 | 0 | 1 | 14 | 1 | 9 | 3 | 0 | 3 | 12 | 3 | 7 | 0 | 2 | 0 | 16 | 0 | 12 | 0 | 6 | 5 | 17 | 4 | 17 | 4 | 12 | 4 | 6 | 2 | 14 | 1 | 16 | 1 | 12 | 3 | 16 | 3 | 15 | 3 | 14 | 3 | 10 | 0 | 9 | 2 | 12 | 1 | 7 | 1 | 6 | 3 | 9 | 3 | 5 | 3 | 3 | 5 | 15 | 0 | 8 | 2 | 1 | 2 | 4 | 2 | 5 | 2 | 8 | 2 | 11 | 2 | 13 | 2 | 15 | 2 | 16 | 0 | 3 | 2 | 17 | 1 | 11 | 0 | 5 | 0 | 10 | 3 | 11 | 0 | 14 | 1 | 15 | 0 | 0 | 0 | 1 | 0 | 4 | 0 | 11 | 0 | 15 | 1 | 8 | 1 | 13 | 1 | 17 | 2 | 9 | 3 | 2 | 3 | 6 | 3 | 17 | 4 | 1 | 4 | 4 | 4 | 5 | 4 | 10 | 4 | 11 | 4 | 16 | 5 | 1 | 5 | 16
+PIN | A_EXT<29> | 64 | 0 | N/A | 70 | 68 | 2 | 0 | 2 | 10 | 1 | 0 | 1 | 14 | 1 | 9 | 3 | 0 | 3 | 12 | 3 | 7 | 0 | 2 | 0 | 16 | 0 | 12 | 0 | 6 | 5 | 17 | 4 | 17 | 4 | 12 | 4 | 6 | 2 | 14 | 1 | 16 | 1 | 12 | 3 | 16 | 3 | 15 | 3 | 14 | 3 | 10 | 0 | 9 | 2 | 12 | 1 | 7 | 1 | 6 | 3 | 9 | 3 | 5 | 3 | 3 | 5 | 15 | 0 | 8 | 2 | 1 | 2 | 4 | 2 | 5 | 2 | 8 | 2 | 11 | 2 | 13 | 2 | 15 | 2 | 16 | 0 | 3 | 2 | 17 | 1 | 11 | 0 | 5 | 0 | 10 | 3 | 11 | 0 | 14 | 1 | 15 | 0 | 0 | 0 | 1 | 0 | 4 | 0 | 11 | 0 | 15 | 1 | 8 | 1 | 13 | 1 | 17 | 2 | 9 | 3 | 2 | 3 | 6 | 3 | 17 | 4 | 1 | 4 | 4 | 4 | 5 | 4 | 10 | 4 | 11 | 4 | 16 | 5 | 1 | 5 | 16
+PIN | A_EXT<30> | 64 | 0 | N/A | 38 | 68 | 2 | 0 | 2 | 10 | 1 | 0 | 1 | 14 | 1 | 9 | 3 | 0 | 3 | 12 | 3 | 7 | 0 | 2 | 0 | 16 | 0 | 12 | 0 | 6 | 5 | 17 | 4 | 17 | 4 | 12 | 4 | 6 | 2 | 14 | 1 | 16 | 1 | 12 | 3 | 16 | 3 | 15 | 3 | 14 | 3 | 10 | 0 | 9 | 2 | 12 | 1 | 7 | 1 | 6 | 3 | 9 | 3 | 5 | 3 | 3 | 5 | 15 | 0 | 8 | 2 | 1 | 2 | 4 | 2 | 5 | 2 | 8 | 2 | 11 | 2 | 13 | 2 | 15 | 2 | 16 | 0 | 3 | 2 | 17 | 1 | 11 | 0 | 5 | 0 | 10 | 3 | 11 | 0 | 14 | 1 | 15 | 0 | 0 | 0 | 1 | 0 | 4 | 0 | 11 | 0 | 15 | 1 | 8 | 1 | 13 | 1 | 17 | 2 | 9 | 3 | 2 | 3 | 6 | 3 | 17 | 4 | 1 | 4 | 4 | 4 | 5 | 4 | 10 | 4 | 11 | 4 | 16 | 5 | 1 | 5 | 16
+PIN | A_EXT<31> | 64 | 0 | N/A | 16 | 68 | 2 | 0 | 2 | 10 | 1 | 0 | 1 | 14 | 1 | 9 | 3 | 0 | 3 | 12 | 3 | 7 | 0 | 2 | 0 | 16 | 0 | 12 | 0 | 6 | 5 | 17 | 4 | 17 | 4 | 12 | 4 | 6 | 2 | 14 | 1 | 16 | 1 | 12 | 3 | 16 | 3 | 15 | 3 | 14 | 3 | 10 | 0 | 9 | 2 | 12 | 1 | 7 | 1 | 6 | 3 | 9 | 3 | 5 | 3 | 3 | 5 | 15 | 0 | 8 | 2 | 1 | 2 | 4 | 2 | 5 | 2 | 8 | 2 | 11 | 2 | 13 | 2 | 15 | 2 | 16 | 0 | 3 | 2 | 17 | 1 | 11 | 0 | 5 | 0 | 10 | 3 | 11 | 0 | 14 | 1 | 15 | 0 | 0 | 0 | 1 | 0 | 4 | 0 | 11 | 0 | 15 | 1 | 8 | 1 | 13 | 1 | 17 | 2 | 9 | 3 | 2 | 3 | 6 | 3 | 17 | 4 | 1 | 4 | 4 | 4 | 5 | 4 | 10 | 4 | 11 | 4 | 16 | 5 | 1 | 5 | 16
+PIN | A_EXT<27> | 64 | 0 | N/A | 78 | 52 | 2 | 0 | 2 | 10 | 1 | 0 | 1 | 14 | 1 | 9 | 3 | 0 | 3 | 12 | 3 | 7 | 0 | 2 | 0 | 16 | 0 | 12 | 0 | 6 | 5 | 17 | 4 | 17 | 4 | 12 | 4 | 6 | 2 | 14 | 1 | 16 | 1 | 12 | 3 | 16 | 3 | 15 | 3 | 14 | 3 | 10 | 0 | 9 | 2 | 12 | 1 | 7 | 1 | 6 | 3 | 9 | 3 | 5 | 3 | 3 | 5 | 15 | 0 | 8 | 2 | 1 | 2 | 4 | 2 | 5 | 2 | 8 | 2 | 11 | 2 | 13 | 2 | 15 | 2 | 16 | 0 | 3 | 0 | 0 | 1 | 11 | 0 | 4 | 0 | 10 | 3 | 2 | 0 | 14 | 1 | 15 | 4 | 1 | 4 | 4 | 4 | 10 | 5 | 1
+PIN | A_EXT<26> | 64 | 0 | N/A | 127 | 52 | 2 | 0 | 2 | 10 | 1 | 0 | 1 | 14 | 1 | 9 | 3 | 0 | 3 | 12 | 3 | 7 | 0 | 2 | 0 | 16 | 0 | 12 | 0 | 6 | 5 | 17 | 4 | 17 | 4 | 12 | 4 | 6 | 2 | 14 | 1 | 16 | 1 | 12 | 3 | 16 | 3 | 15 | 3 | 14 | 3 | 10 | 0 | 9 | 2 | 12 | 1 | 7 | 1 | 6 | 3 | 9 | 3 | 5 | 3 | 3 | 5 | 15 | 0 | 8 | 2 | 1 | 2 | 4 | 2 | 5 | 2 | 8 | 2 | 11 | 2 | 13 | 2 | 15 | 2 | 16 | 0 | 3 | 0 | 0 | 1 | 11 | 0 | 4 | 0 | 10 | 3 | 2 | 0 | 14 | 1 | 15 | 4 | 1 | 4 | 4 | 4 | 10 | 5 | 1
+PIN | A_EXT<25> | 64 | 0 | N/A | 131 | 52 | 2 | 0 | 2 | 10 | 1 | 0 | 1 | 14 | 1 | 9 | 3 | 0 | 3 | 12 | 3 | 7 | 0 | 2 | 0 | 16 | 0 | 12 | 0 | 6 | 5 | 17 | 4 | 17 | 4 | 12 | 4 | 6 | 2 | 14 | 1 | 16 | 1 | 12 | 3 | 16 | 3 | 15 | 3 | 14 | 3 | 10 | 0 | 9 | 2 | 12 | 1 | 7 | 1 | 6 | 3 | 9 | 3 | 5 | 3 | 3 | 5 | 15 | 0 | 8 | 2 | 1 | 2 | 4 | 2 | 5 | 2 | 8 | 2 | 11 | 2 | 13 | 2 | 15 | 2 | 16 | 0 | 3 | 0 | 0 | 1 | 11 | 0 | 4 | 0 | 10 | 3 | 2 | 0 | 14 | 1 | 15 | 4 | 1 | 4 | 4 | 4 | 10 | 5 | 1
+PIN | nAS_EXT | 8256 | 0 | N/A | 31 | 61 | 2 | 0 | 2 | 10 | 1 | 0 | 1 | 14 | 1 | 9 | 3 | 0 | 3 | 12 | 3 | 7 | 0 | 2 | 0 | 16 | 0 | 12 | 0 | 6 | 5 | 17 | 4 | 17 | 4 | 12 | 4 | 6 | 5 | 13 | 5 | 1 | 5 | 2 | 1 | 5 | 2 | 14 | 1 | 16 | 1 | 12 | 3 | 16 | 3 | 15 | 3 | 14 | 3 | 10 | 0 | 9 | 2 | 12 | 1 | 7 | 1 | 6 | 3 | 9 | 3 | 5 | 3 | 3 | 5 | 15 | 0 | 8 | 2 | 1 | 2 | 4 | 2 | 5 | 2 | 8 | 2 | 11 | 2 | 13 | 2 | 15 | 2 | 16 | 5 | 10 | 0 | 3 | 0 | 0 | 1 | 11 | 0 | 4 | 0 | 10 | 3 | 2 | 0 | 14 | 1 | 15 | 4 | 1 | 4 | 4 | 4 | 10 | 4 | 8 | 1 | 2 | 1 | 4 | 4 | 14 | 4 | 9
+PIN | A_EXT<23> | 64 | 0 | N/A | 126 | 64 | 2 | 0 | 2 | 10 | 1 | 0 | 1 | 14 | 1 | 9 | 3 | 0 | 3 | 12 | 3 | 7 | 0 | 2 | 0 | 16 | 0 | 12 | 0 | 6 | 5 | 17 | 4 | 17 | 4 | 12 | 4 | 6 | 2 | 14 | 1 | 16 | 1 | 12 | 3 | 16 | 3 | 15 | 3 | 14 | 3 | 10 | 0 | 9 | 2 | 12 | 1 | 7 | 1 | 6 | 3 | 9 | 3 | 5 | 3 | 3 | 5 | 15 | 0 | 8 | 2 | 1 | 2 | 4 | 2 | 5 | 2 | 8 | 2 | 11 | 2 | 13 | 2 | 15 | 2 | 16 | 0 | 3 | 1 | 10 | 1 | 11 | 0 | 4 | 0 | 10 | 0 | 14 | 1 | 15 | 0 | 0 | 0 | 7 | 0 | 13 | 0 | 17 | 1 | 1 | 3 | 1 | 3 | 2 | 3 | 8 | 3 | 13 | 4 | 0 | 4 | 1 | 4 | 4 | 4 | 7 | 4 | 10 | 4 | 13 | 5 | 0 | 5 | 1
+PIN | A_EXT<22> | 64 | 0 | N/A | 42 | 64 | 2 | 0 | 2 | 10 | 1 | 0 | 1 | 14 | 1 | 9 | 3 | 0 | 3 | 12 | 3 | 7 | 0 | 2 | 0 | 16 | 0 | 12 | 0 | 6 | 5 | 17 | 4 | 17 | 4 | 12 | 4 | 6 | 2 | 14 | 1 | 16 | 1 | 12 | 3 | 16 | 3 | 15 | 3 | 14 | 3 | 10 | 0 | 9 | 2 | 12 | 1 | 7 | 1 | 6 | 3 | 9 | 3 | 5 | 3 | 3 | 5 | 15 | 0 | 8 | 2 | 1 | 2 | 4 | 2 | 5 | 2 | 8 | 2 | 11 | 2 | 13 | 2 | 15 | 2 | 16 | 0 | 3 | 1 | 15 | 0 | 4 | 0 | 10 | 0 | 14 | 0 | 0 | 0 | 7 | 0 | 13 | 0 | 17 | 1 | 1 | 1 | 10 | 1 | 11 | 3 | 1 | 3 | 2 | 3 | 8 | 3 | 13 | 4 | 0 | 4 | 1 | 4 | 4 | 4 | 7 | 4 | 10 | 4 | 13 | 5 | 0 | 5 | 1
+PIN | A_EXT<21> | 64 | 0 | N/A | 51 | 64 | 2 | 0 | 2 | 10 | 1 | 0 | 1 | 14 | 1 | 9 | 3 | 0 | 3 | 12 | 3 | 7 | 0 | 2 | 0 | 16 | 0 | 12 | 0 | 6 | 5 | 17 | 4 | 17 | 4 | 12 | 4 | 6 | 2 | 14 | 1 | 16 | 1 | 12 | 3 | 16 | 3 | 15 | 3 | 14 | 3 | 10 | 0 | 9 | 2 | 12 | 1 | 7 | 1 | 6 | 3 | 9 | 3 | 5 | 3 | 3 | 5 | 15 | 0 | 8 | 2 | 1 | 2 | 4 | 2 | 5 | 2 | 8 | 2 | 11 | 2 | 13 | 2 | 15 | 2 | 16 | 0 | 3 | 1 | 15 | 0 | 4 | 0 | 10 | 0 | 14 | 0 | 0 | 0 | 7 | 0 | 13 | 0 | 17 | 1 | 1 | 1 | 10 | 1 | 11 | 3 | 1 | 3 | 2 | 3 | 8 | 3 | 13 | 4 | 0 | 4 | 1 | 4 | 4 | 4 | 7 | 4 | 10 | 4 | 13 | 5 | 0 | 5 | 1
+PIN | A_EXT<20> | 64 | 0 | N/A | 21 | 64 | 2 | 0 | 2 | 10 | 1 | 0 | 1 | 14 | 1 | 9 | 3 | 0 | 3 | 12 | 3 | 7 | 0 | 2 | 0 | 16 | 0 | 12 | 0 | 6 | 5 | 17 | 4 | 17 | 4 | 12 | 4 | 6 | 2 | 14 | 1 | 16 | 1 | 12 | 3 | 16 | 3 | 15 | 3 | 14 | 3 | 10 | 0 | 9 | 2 | 12 | 1 | 7 | 1 | 6 | 3 | 9 | 3 | 5 | 3 | 3 | 5 | 15 | 0 | 8 | 2 | 1 | 2 | 4 | 2 | 5 | 2 | 8 | 2 | 11 | 2 | 13 | 2 | 15 | 2 | 16 | 0 | 3 | 1 | 15 | 0 | 4 | 0 | 10 | 0 | 14 | 0 | 0 | 0 | 7 | 0 | 13 | 0 | 17 | 1 | 1 | 1 | 10 | 1 | 11 | 3 | 1 | 3 | 2 | 3 | 8 | 3 | 13 | 4 | 0 | 4 | 1 | 4 | 4 | 4 | 7 | 4 | 10 | 4 | 13 | 5 | 0 | 5 | 1
+PIN | SYSCLK_EXT | 4096 | 0 | N/A | 29 | 36 | 2 | 0 | 2 | 10 | 1 | 0 | 1 | 14 | 1 | 9 | 3 | 0 | 3 | 12 | 3 | 7 | 0 | 2 | 0 | 16 | 0 | 12 | 0 | 6 | 5 | 17 | 4 | 17 | 4 | 12 | 4 | 6 | 5 | 13 | 5 | 1 | 5 | 2 | 1 | 5 | 2 | 14 | 1 | 16 | 1 | 12 | 3 | 16 | 3 | 15 | 3 | 14 | 3 | 10 | 0 | 9 | 2 | 12 | 1 | 7 | 1 | 6 | 3 | 9 | 3 | 5 | 3 | 3 | 5 | 15 | 0 | 8
+PIN | nRESET_EXT | 65600 | 0 | N/A | 134 | 38 | 4 | 3 | 2 | 0 | 2 | 10 | 1 | 0 | 1 | 14 | 1 | 9 | 3 | 0 | 3 | 12 | 3 | 7 | 0 | 2 | 0 | 16 | 0 | 12 | 0 | 6 | 5 | 17 | 4 | 17 | 4 | 12 | 4 | 6 | 4 | 8 | 1 | 2 | 1 | 4 | 4 | 14 | 4 | 9 | 2 | 14 | 1 | 16 | 1 | 12 | 3 | 16 | 3 | 15 | 3 | 14 | 3 | 10 | 0 | 9 | 2 | 12 | 1 | 7 | 1 | 6 | 3 | 9 | 3 | 5 | 3 | 3 | 5 | 15 | 0 | 8
+PIN | RnW | 64 | 0 | N/A | 20 | 61 | 2 | 0 | 2 | 10 | 1 | 0 | 1 | 14 | 1 | 9 | 3 | 0 | 3 | 12 | 3 | 7 | 0 | 2 | 0 | 16 | 0 | 12 | 0 | 6 | 5 | 17 | 4 | 17 | 4 | 12 | 4 | 6 | 2 | 14 | 1 | 16 | 1 | 12 | 3 | 16 | 3 | 15 | 3 | 14 | 3 | 10 | 0 | 9 | 2 | 12 | 1 | 7 | 1 | 6 | 3 | 9 | 3 | 5 | 3 | 3 | 5 | 15 | 0 | 8 | 0 | 14 | 4 | 3 | 4 | 9 | 4 | 15 | 2 | 1 | 2 | 4 | 2 | 5 | 2 | 8 | 2 | 11 | 2 | 13 | 2 | 15 | 2 | 16 | 4 | 14 | 3 | 4 | 5 | 4 | 5 | 5 | 5 | 7 | 5 | 8 | 4 | 1 | 4 | 4 | 4 | 10 | 1 | 11 | 0 | 0 | 0 | 4 | 0 | 10 | 1 | 2 | 4 | 2 | 4 | 8 | 5 | 1
+PIN | A_EXT<0> | 64 | 0 | N/A | 106 | 63 | 2 | 0 | 2 | 10 | 1 | 0 | 1 | 14 | 1 | 9 | 3 | 0 | 3 | 12 | 3 | 7 | 0 | 2 | 0 | 16 | 0 | 12 | 0 | 6 | 5 | 17 | 4 | 17 | 4 | 12 | 4 | 6 | 2 | 14 | 1 | 16 | 1 | 12 | 3 | 16 | 3 | 15 | 3 | 14 | 3 | 10 | 0 | 9 | 2 | 12 | 1 | 7 | 1 | 6 | 3 | 9 | 3 | 5 | 3 | 3 | 5 | 15 | 0 | 8 | 0 | 17 | 4 | 4 | 4 | 10 | 4 | 15 | 4 | 14 | 3 | 4 | 4 | 1 | 4 | 3 | 4 | 9 | 3 | 1 | 0 | 0 | 0 | 4 | 0 | 7 | 0 | 10 | 0 | 13 | 0 | 14 | 1 | 1 | 1 | 2 | 1 | 10 | 1 | 11 | 2 | 8 | 2 | 16 | 3 | 8 | 3 | 13 | 4 | 0 | 4 | 2 | 4 | 7 | 4 | 8 | 4 | 13 | 5 | 0 | 5 | 1
+PIN | A_EXT<1> | 64 | 0 | N/A | 122 | 49 | 2 | 0 | 2 | 10 | 1 | 0 | 1 | 14 | 1 | 9 | 3 | 0 | 3 | 12 | 3 | 7 | 0 | 2 | 0 | 16 | 0 | 12 | 0 | 6 | 5 | 17 | 4 | 17 | 4 | 12 | 4 | 6 | 2 | 14 | 1 | 16 | 1 | 12 | 3 | 16 | 3 | 15 | 3 | 14 | 3 | 10 | 0 | 9 | 2 | 12 | 1 | 7 | 1 | 6 | 3 | 9 | 3 | 5 | 3 | 3 | 5 | 15 | 0 | 8 | 0 | 14 | 4 | 3 | 4 | 9 | 4 | 15 | 4 | 1 | 4 | 4 | 4 | 10 | 2 | 16 | 0 | 0 | 0 | 4 | 0 | 10 | 1 | 2 | 1 | 11 | 2 | 8 | 4 | 8 | 4 | 14 | 5 | 1
+PIN | A_EXT<24> | 64 | 0 | N/A | 107 | 68 | 2 | 0 | 2 | 10 | 1 | 0 | 1 | 14 | 1 | 9 | 3 | 0 | 3 | 12 | 3 | 7 | 0 | 2 | 0 | 16 | 0 | 12 | 0 | 6 | 5 | 17 | 4 | 17 | 4 | 12 | 4 | 6 | 2 | 14 | 1 | 16 | 1 | 12 | 3 | 16 | 3 | 15 | 3 | 14 | 3 | 10 | 0 | 9 | 2 | 12 | 1 | 7 | 1 | 6 | 3 | 9 | 3 | 5 | 3 | 3 | 5 | 15 | 0 | 8 | 2 | 1 | 2 | 4 | 2 | 5 | 2 | 8 | 2 | 11 | 2 | 13 | 2 | 15 | 2 | 16 | 0 | 3 | 2 | 17 | 1 | 11 | 0 | 5 | 0 | 10 | 3 | 11 | 0 | 14 | 1 | 15 | 0 | 0 | 0 | 1 | 0 | 4 | 0 | 11 | 0 | 15 | 1 | 8 | 1 | 13 | 1 | 17 | 2 | 9 | 3 | 2 | 3 | 6 | 3 | 17 | 4 | 1 | 4 | 4 | 4 | 5 | 4 | 10 | 4 | 11 | 4 | 16 | 5 | 1 | 5 | 16
+PIN | SIZ_1 | 64 | 0 | N/A | 19 | 8 | 4 | 10 | 4 | 2 | 4 | 8 | 4 | 15 | 4 | 1 | 4 | 4 | 1 | 2 | 4 | 14
+PIN | SIZ_0 | 64 | 0 | N/A | 18 | 8 | 4 | 10 | 4 | 3 | 4 | 8 | 4 | 15 | 1 | 2 | 4 | 4 | 4 | 2 | 4 | 14
+PIN | nECS_EXT | 64 | 0 | N/A | 49 | 1 | 4 | 3
+PIN | XLXN_105 | 536871040 | 0 | N/A | 101
+PIN | LLD | 536871040 | 0 | N/A | 129
+PIN | LMD | 536871040 | 0 | N/A | 76
+PIN | UMD | 536871040 | 0 | N/A | 83
+PIN | UUD | 536871040 | 0 | N/A | 81
+PIN | LD | 536871040 | 0 | N/A | 87
+PIN | UD | 536871040 | 0 | N/A | 116
+PIN | RDLL | 536871040 | 0 | N/A | 91
+PIN | RDLM | 536871040 | 0 | N/A | 93
+PIN | RDUM | 536871040 | 0 | N/A | 95
+PIN | RDUU | 536871040 | 0 | N/A | 97
+PIN | WRLL | 536871040 | 0 | N/A | 67
+PIN | WRLM | 536871040 | 0 | N/A | 72
+PIN | WRUM | 536871040 | 0 | N/A | 80
+PIN | WRUU | 536871040 | 0 | N/A | 120
+PIN | XLXN_104 | 536871040 | 0 | N/A | 99
+PIN | n68230CS | 536871040 | 0 | N/A | 26
+PIN | nBOOTCS | 536871040 | 0 | N/A | 112
+PIN | nFLASHCS | 536871040 | 0 | N/A | 10
+PIN | nIOCS0 | 536871040 | 0 | N/A | 23
+PIN | nIOCS1 | 536871040 | 0 | N/A | 27
+PIN | nIOSEL | 536871040 | 0 | N/A | 124
+PIN | nR68561CS | 536871040 | 0 | N/A | 33
+PIN | nRAMCS | 536871040 | 0 | N/A | 15
+PIN | XLXN_100 | 536870976 | 0 | N/A | 104 | 1 | 1 | 5
+PIN | XLXN_101 | 536870976 | 0 | N/A | 88 | 1 | 1 | 5
+PIN | XLXN_102 | 536870976 | 0 | N/A | 89 | 1 | 1 | 5
+PIN | XLXN_103 | 536870976 | 0 | N/A | 2 | 2 | 5 | 11 | 5 | 10
+PIN | D_EXT<0> | 64 | 0 | N/A | 41 | 4 | 2 | 12 | 2 | 8 | 2 | 14 | 2 | 16
+PIN | D_EXT<1> | 64 | 0 | N/A | 46 | 3 | 1 | 7 | 1 | 12 | 1 | 16
+PIN | D_EXT<2> | 64 | 0 | N/A | 47 | 5 | 1 | 7 | 1 | 11 | 1 | 12 | 1 | 6 | 3 | 16
+PIN | D_EXT<3> | 64 | 0 | N/A | 50 | 4 | 3 | 10 | 3 | 5 | 3 | 16 | 3 | 9
+PIN | D_EXT<4> | 64 | 0 | N/A | 53 | 4 | 0 | 0 | 0 | 14 | 3 | 15 | 3 | 5
+PIN | D_EXT<5> | 64 | 0 | N/A | 54 | 4 | 0 | 10 | 0 | 4 | 3 | 14 | 3 | 3
+PIN | D_EXT<6> | 64 | 0 | N/A | 56 | 4 | 5 | 1 | 4 | 1 | 3 | 10 | 5 | 15
+PIN | D_EXT<7> | 64 | 0 | N/A | 65 | 4 | 4 | 10 | 4 | 4 | 0 | 9 | 0 | 8
