@@ -1,9 +1,0 @@
-[Inputs]
-CLK
-RESET
-ECS
-OCS
-AS
-[Outputs]
-=CC[3:0]=
-[BiDir]

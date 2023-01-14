@@ -45,7 +45,7 @@
         "silk_text_upright": false,
         "zones": {
           "45_degree_only": false,
-          "min_clearance": 0.508
+          "min_clearance": 0.4064
         }
       },
       "diff_pair_dimensions": [
@@ -432,7 +432,6 @@
           "/A7",
           "/A8",
           "/A9",
-          "/CLK",
           "/D0",
           "/D1",
           "/D10",
@@ -488,16 +487,10 @@
           "/~{RESET}",
           "/~{RMC}",
           "/~{STERM}",
-          "unconnected-(U1-PadC2)",
           "unconnected-(U1-PadF13)",
           "unconnected-(U1-PadH12)",
-          "unconnected-(U1-PadJ1)",
           "unconnected-(U1-PadJ12)",
           "unconnected-(U1-PadJ13)",
-          "unconnected-(U1-PadK1)",
-          "unconnected-(U1-PadK3)",
-          "unconnected-(U1-PadL1)",
-          "unconnected-(U1-PadL2)",
           "unconnected-(U1-PadM1)",
           "unconnected-(U10-Pad10)",
           "unconnected-(U10-Pad12)",

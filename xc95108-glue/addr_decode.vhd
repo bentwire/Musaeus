@@ -23,6 +23,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 use IEEE.NUMERIC_STD.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx primitives in this code.
@@ -30,11 +32,10 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity addr_decode is
-    Port ( CLK              : in   STD_LOGIC;
+    Port ( 
 	 		  RESET            : in   STD_LOGIC;
            AS               : in   STD_LOGIC;
-           A                : in   STD_LOGIC_VECTOR (31 downto 20);
-			  TAK					 : in	  STD_LOGIC;
+           A                : in   STD_LOGIC_VECTOR (31 downto 0);
            SEL_RAM          : out  STD_LOGIC;
            SEL_BOOT_ROM     : out  STD_LOGIC;
            SEL_FLASH_ROM    : out  STD_LOGIC;
@@ -42,85 +43,97 @@ entity addr_decode is
            SEL_IO_xFF0XXXXX : out  STD_LOGIC;
            SEL_IO_xFF1XXXXX : out  STD_LOGIC;
            SEL_IO_xFF2XXXXX : out  STD_LOGIC;
-           SEL_IO_xFF3XXXXX : out  STD_LOGIC);
+           SEL_IO_xFF3XXXXX : out  STD_LOGIC
+			 );
 end addr_decode;
 
 architecture Behavioral of addr_decode is
-	type bus_state is (idle, xfer, done);
-	signal state_reg, state_next : bus_state;
-	signal cycle_count_reg, cycle_count_next : unsigned(3 downto 0);
+signal boot_cycle_count_reg, boot_cycle_count_next : STD_LOGIC_VECTOR(3 downto 0);
+signal boot_in_progress : STD_LOGIC;
+signal int_boot_rom : STD_LOGIC;
 begin
-	process (CLK, RESET)
+	process (RESET, AS)
 	begin
 		if (RESET = '1') then
-			state_reg <= idle;
-			cycle_count_reg <= (others => '0');
-		elsif (CLK'event and CLK = '1') then
-			state_reg <= state_next;
+			boot_in_progress <= '1';
+			boot_cycle_count_reg <= (others => '0');
+		elsif (rising_edge(AS)) then
+			if (boot_in_progress = '1') then
+				boot_cycle_count_reg <= boot_cycle_count_reg + 1;
+				if (boot_cycle_count_reg = "0111") then
+					boot_in_progress <= '0';
+				end if;
+			end if;
 		end if;
-	end process;
 	
-	process(state_reg, AS, TAK)
+	end process;
+	process (RESET, AS, A)
 	begin
+		if (RESET = '1') then
+			SEL_RAM       <= '0';
+			SEL_BOOT_ROM  <= '0';
+			SEL_FLASH_ROM <= '0';
+			SEL_IO_BASE   <= '0';
+			SEL_IO_xFF0XXXXX <= '0';
+         SEL_IO_xFF1XXXXX <= '0';
+         SEL_IO_xFF2XXXXX <= '0';
+         SEL_IO_xFF3XXXXX <= '0';
+			int_boot_rom <= '0';
+
+		elsif (AS = '1') then
 		
---		if (CLK'event and CLK = '1') then
-			-- Stay in current state unless we are supposed to change
-			state_next <= state_reg; 
-			-- Bus is in xfer mode when device asserts AS.  This lasts until the transfer
-			-- is finished by the assertion of TAK
-			-- All outputs should be negated in done before bus goes idle.
-			case state_reg is
-			
-				when idle =>
-					if (AS = '1') then
-						-- Assert the select outputs here
-						-- IO_BASE starts at xFFnXXXXX 16M window starting at 0xFF000000
-						if (A(31 downto 24) = "11111111") then
-							SEL_IO_BASE   <= '1';
-							if (A(23 downto 20) = "0000") then
-								SEL_IO_xFF0XXXXX <= '1';
-							elsif (A(23 downto 20) = "0001") then
-								SEL_IO_xFF1XXXXX <= '1';
-							elsif (A(23 downto 20) = "0010") then
-								SEL_IO_xFF2XXXXX <= '1';
-							elsif (A(23 downto 20) = "0011") then
-								SEL_IO_xFF3XXXXX <= '1';
-							end if;
-						-- RAM/ROM etc at x00nXXXXX 16M window starting at 0x00000000
-						elsif (A(31 downto 24) = "00000000") then
-							if (A(23 downto 20) = "0000") then
-								SEL_RAM       <= '1'; -- First 1M is RAM
-							elsif (A(23 downto 20) = "1111") then	
-								SEL_BOOT_ROM  <= '1'; -- Last 1M is BOOT ROM
-							elsif (A(23 downto 20) = "0001") then	
-								SEL_FLASH_ROM <= '1'; -- Second 1M is FLASH
-							end if;
-						end if;
-						-- reset the cycle counter
-						cycle_count_next <= (others => '0');
-						state_next <= xfer;
-					end if;
-				when xfer =>
-					if (TAK = '1') then
-						state_next <= done;
-					end if;
-					-- check counter value for required wait and
-					-- then go to done state.
-					-- increment cycle counter.
-					cycle_count_next <= cycle_count_reg + 1;
-				when done =>
-					-- Deassert all selects here.
-					SEL_RAM       <= '0';
-					SEL_BOOT_ROM  <= '0';
-					SEL_FLASH_ROM <= '0';
-					SEL_IO_BASE   <= '0';
-					SEL_IO_xFF0XXXXX <= '0';
-					SEL_IO_xFF1XXXXX <= '0';
-					SEL_IO_xFF2XXXXX <= '0';
-					SEL_IO_xFF3XXXXX <= '0';
-					state_next <= idle;
-			end case;
---		end if;
+			-- Assert the select outputs here
+			-- IO_BASE starts at xFFnXXXXX 16M window starting at 0xFF000000
+			if (A(31 downto 24) = "11111111") then
+				SEL_RAM       <= '0'; -- First 1M is RAM
+				SEL_FLASH_ROM <= '0'; -- Second 1M is FLASH
+				int_boot_rom  <= '0'; -- Last 1M is BOOT ROM
+
+				SEL_IO_BASE      <= '1';
+				SEL_IO_xFF0XXXXX <= '0';
+				SEL_IO_xFF1XXXXX <= '0';
+				SEL_IO_xFF2XXXXX <= '0';
+				SEL_IO_xFF3XXXXX <= '0';
+				if (A(23 downto 20) = "0000") then
+					SEL_IO_xFF0XXXXX <= '1';
+				elsif (A(23 downto 20) = "0001") then
+					SEL_IO_xFF1XXXXX <= '1';
+				elsif (A(23 downto 20) = "0010") then
+					SEL_IO_xFF2XXXXX <= '1';
+				elsif (A(23 downto 20) = "0011") then
+					SEL_IO_xFF3XXXXX <= '1';
+				end if;
+			-- RAM/ROM etc at x00nXXXXX 16M window starting at 0x00000000
+			elsif (A(31 downto 24) = "00000000") then
+				SEL_IO_BASE      <= '0';
+				SEL_IO_xFF0XXXXX <= '0';
+				SEL_IO_xFF1XXXXX <= '0';
+				SEL_IO_xFF2XXXXX <= '0';
+				SEL_IO_xFF3XXXXX <= '0';
+				
+				SEL_RAM       <= '0'; -- First 1M is RAM
+				SEL_FLASH_ROM <= '0'; -- Second 1M is FLASH
+				int_boot_rom  <= '0'; -- Last 1M is BOOT ROM
+				if (A(23 downto 20) = "0000") then
+					SEL_RAM       <= '1'; -- First 1M is RAM
+				elsif (A(23 downto 20) = "0001") then
+					SEL_FLASH_ROM <= '1'; -- Second 1M is FLASH
+				elsif (A(23 downto 20) = "1111") then
+					int_boot_rom  <= '1'; -- Last 1M is BOOT ROM
+				end if;
+			end if;
+			SEL_BOOT_ROM <= int_boot_rom or boot_in_progress;
+		else
+			SEL_RAM       <= '0';
+			SEL_BOOT_ROM  <= '0';
+			SEL_FLASH_ROM <= '0';
+			SEL_IO_BASE   <= '0';
+			SEL_IO_xFF0XXXXX <= '0';
+         SEL_IO_xFF1XXXXX <= '0';
+         SEL_IO_xFF2XXXXX <= '0';
+         SEL_IO_xFF3XXXXX <= '0';
+			int_boot_rom <= '0';
+		end if;
 	end process;
 end Behavioral;
 

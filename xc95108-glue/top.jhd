@@ -1,3 +1,0 @@
-MODULE top
-	SUBMODULE dynamic_sizer
-		INSTANCE XLXI_105
