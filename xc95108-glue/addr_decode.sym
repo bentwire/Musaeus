@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="addr_decode">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2023-1-14T4:1:41</timestamp>
+    <pin polarity="Input" x="0" y="-368" name="RESET" />
+    <pin polarity="Input" x="0" y="-256" name="AS" />
+    <pin polarity="Input" x="0" y="-32" name="A(31:0)" />
+    <pin polarity="Output" x="448" y="-480" name="SEL_RAM" />
+    <pin polarity="Output" x="448" y="-416" name="SEL_BOOT_ROM" />
+    <pin polarity="Output" x="448" y="-352" name="SEL_FLASH_ROM" />
+    <pin polarity="Output" x="448" y="-288" name="SEL_IO_BASE" />
+    <pin polarity="Output" x="448" y="-224" name="SEL_IO_xFF0XXXXX" />
+    <pin polarity="Output" x="448" y="-160" name="SEL_IO_xFF1XXXXX" />
+    <pin polarity="Output" x="448" y="-96" name="SEL_IO_xFF2XXXXX" />
+    <pin polarity="Output" x="448" y="-32" name="SEL_IO_xFF3XXXXX" />
+    <graph>
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="224" y="-520" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-368" type="pin RESET" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-256" type="pin AS" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-32" type="pin A(31:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-480" type="pin SEL_RAM" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-416" type="pin SEL_BOOT_ROM" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-352" type="pin SEL_FLASH_ROM" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-288" type="pin SEL_IO_BASE" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-224" type="pin SEL_IO_xFF0XXXXX" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-160" type="pin SEL_IO_xFF1XXXXX" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-96" type="pin SEL_IO_xFF2XXXXX" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-32" type="pin SEL_IO_xFF3XXXXX" />
+        <rect width="320" x="64" y="-512" height="512" />
+        <line x2="0" y1="-368" y2="-368" x1="64" />
+        <line x2="0" y1="-256" y2="-256" x1="64" />
+        <rect width="64" x="0" y="-44" height="24" />
+        <line x2="0" y1="-32" y2="-32" x1="64" />
+        <line x2="448" y1="-480" y2="-480" x1="384" />
+        <line x2="448" y1="-416" y2="-416" x1="384" />
+        <line x2="448" y1="-352" y2="-352" x1="384" />
+        <line x2="448" y1="-288" y2="-288" x1="384" />
+        <line x2="448" y1="-224" y2="-224" x1="384" />
+        <line x2="448" y1="-160" y2="-160" x1="384" />
+        <line x2="448" y1="-96" y2="-96" x1="384" />
+        <line x2="448" y1="-32" y2="-32" x1="384" />
+    </graph>
+</symbol>

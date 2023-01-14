@@ -1,0 +1,13 @@
+vhdtdtfi -lib work addr_decode.vhd -prj xc95108-glue -o addr_decode.spl -module addr_decode -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500 -w addr_decode.spl /home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/addr_decode.sym 
+vhdtdtfi -lib work addr_decode.vhd -prj xc95108-glue -o addr_decode.spl -module addr_decode -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500 -w addr_decode.spl /home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/addr_decode.sym 
+vhdtdtfi -lib work addr_decode.vhd -prj xc95108-glue -o addr_decode.spl -module addr_decode -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500 -w addr_decode.spl /home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/addr_decode.sym 
+vhdtdtfi -lib work addr_decode.vhd -prj xc95108-glue -o addr_decode.spl -module addr_decode -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500 -w addr_decode.spl /home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/addr_decode.sym 
+vhdtdtfi -prj xc95108-glue -o /home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/addr_decode.tfi -module addr_decode -template /opt/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror -lib work addr_decode.vhd 
+vhdtdtfi -lib work addr_decode.vhd -prj xc95108-glue -o addr_decode.spl -module addr_decode -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500 -w addr_decode.spl /home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/addr_decode.sym 
+vhdtdtfi -lib work addr_decode.vhd -prj xc95108-glue -o addr_decode.spl -module addr_decode -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500 -w addr_decode.spl /home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/addr_decode.sym 

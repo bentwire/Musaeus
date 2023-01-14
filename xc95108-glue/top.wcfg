@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/top_top_sch_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="top_top_sch_tb" />
+            <top_module name="vcomponents" />
+            <top_module name="vl_types" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="33" />
+   <wvobject fp_name="/top_top_sch_tb/siz_0" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">siz_0</obj_property>
+      <obj_property name="ObjectShortName">siz_0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/siz_1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">siz_1</obj_property>
+      <obj_property name="ObjectShortName">siz_1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/rnw" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rnw</obj_property>
+      <obj_property name="ObjectShortName">rnw</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/nds_ext" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">nds_ext</obj_property>
+      <obj_property name="ObjectShortName">nds_ext</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/necs_ext" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">necs_ext</obj_property>
+      <obj_property name="ObjectShortName">necs_ext</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/nocs_ext" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">nocs_ext</obj_property>
+      <obj_property name="ObjectShortName">nocs_ext</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/nrmc_ext" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">nrmc_ext</obj_property>
+      <obj_property name="ObjectShortName">nrmc_ext</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/nciout_ext" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">nciout_ext</obj_property>
+      <obj_property name="ObjectShortName">nciout_ext</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/ncbreq_ext" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ncbreq_ext</obj_property>
+      <obj_property name="ObjectShortName">ncbreq_ext</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/ncback_ext" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ncback_ext</obj_property>
+      <obj_property name="ObjectShortName">ncback_ext</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/uud" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">uud</obj_property>
+      <obj_property name="ObjectShortName">uud</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/umd" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">umd</obj_property>
+      <obj_property name="ObjectShortName">umd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/lmd" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">lmd</obj_property>
+      <obj_property name="ObjectShortName">lmd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/lld" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">lld</obj_property>
+      <obj_property name="ObjectShortName">lld</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/ud" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ud</obj_property>
+      <obj_property name="ObjectShortName">ud</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/ld" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ld</obj_property>
+      <obj_property name="ObjectShortName">ld</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/wruu" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wruu</obj_property>
+      <obj_property name="ObjectShortName">wruu</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/wrum" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wrum</obj_property>
+      <obj_property name="ObjectShortName">wrum</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/wrlm" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wrlm</obj_property>
+      <obj_property name="ObjectShortName">wrlm</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/wrll" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wrll</obj_property>
+      <obj_property name="ObjectShortName">wrll</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/sysclk_ext" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sysclk_ext</obj_property>
+      <obj_property name="ObjectShortName">sysclk_ext</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/nreset_ext" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">nreset_ext</obj_property>
+      <obj_property name="ObjectShortName">nreset_ext</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/nas_ext" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">nas_ext</obj_property>
+      <obj_property name="ObjectShortName">nas_ext</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/a_ext" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">a_ext[31:0]</obj_property>
+      <obj_property name="ObjectShortName">a_ext[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/rduu" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rduu</obj_property>
+      <obj_property name="ObjectShortName">rduu</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/rdum" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rdum</obj_property>
+      <obj_property name="ObjectShortName">rdum</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/rdlm" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rdlm</obj_property>
+      <obj_property name="ObjectShortName">rdlm</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/rdll" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rdll</obj_property>
+      <obj_property name="ObjectShortName">rdll</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/nramcs" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">nramcs</obj_property>
+      <obj_property name="ObjectShortName">nramcs</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/nbootcs" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">nbootcs</obj_property>
+      <obj_property name="ObjectShortName">nbootcs</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/nflashcs" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">nflashcs</obj_property>
+      <obj_property name="ObjectShortName">nflashcs</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/niosel" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">niosel</obj_property>
+      <obj_property name="ObjectShortName">niosel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb/t" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">t</obj_property>
+      <obj_property name="ObjectShortName">t</obj_property>
+   </wvobject>
+</wave_config>
