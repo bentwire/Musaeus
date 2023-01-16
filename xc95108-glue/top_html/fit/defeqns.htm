@@ -38,7 +38,7 @@ FDCPE_DO0\$WA1: FDCPE port map (DO(0)\$WA1,DO_D(0)\$WA1,SYSCLK_EXT,NOT nRESET_EX
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nAS_EXT AND REG0(0).LFBK));
 </td></tr><tr><td>
 FDCPE_DO1\$WA1: FDCPE port map (DO(1)\$WA1,DO_D(1)\$WA1,SYSCLK_EXT,NOT nRESET_EXT,'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_D(1)\$WA1 <= ((REG0(2).EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_D(1)\$WA1 <= ((nRAMCS_OBUF.EXP)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(28) AND REG0(1).LFBK)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(29) AND REG0(1).LFBK)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(30) AND REG0(1).LFBK)
@@ -71,12 +71,12 @@ FDCPE_DO1\$WA0: FDCPE port map (DO(1)\$WA0,DO_D(1)\$WA0,SYSCLK_EXT,NOT nRESET_EX
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nAS_EXT AND REG1(1).LFBK));
 </td></tr><tr><td>
 FDCPE_DO2\$WA1: FDCPE port map (DO(2)\$WA1,DO_D(2)\$WA1,SYSCLK_EXT,NOT nRESET_EXT,'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_D(2)\$WA1 <= ((A_EXT(23) AND REG0(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_D(2)\$WA1 <= ((EXP1_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(23) AND REG0(2))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(22) AND REG0(2))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(21) AND REG0(2))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(20) AND REG0(2))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(0) AND REG0(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (REG0(3).EXP)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(28) AND REG0(2))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(29) AND REG0(2))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(30) AND REG0(2))
@@ -105,147 +105,144 @@ FDCPE_DO2\$WA0: FDCPE port map (DO(2)\$WA0,DO_D(2)\$WA0,SYSCLK_EXT,NOT nRESET_EX
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nAS_EXT AND REG1(2).LFBK));
 </td></tr><tr><td>
 FDCPE_DO3\$WA1: FDCPE port map (DO(3)\$WA1,DO_D(3)\$WA1,SYSCLK_EXT,NOT nRESET_EXT,'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_D(3)\$WA1 <= ((REG1(4).EXP)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(28) AND REG0(3).LFBK)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(29) AND REG0(3).LFBK)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(30) AND REG0(3).LFBK)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(31) AND REG0(3).LFBK)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(24) AND REG0(3).LFBK)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(23) AND REG0(3).LFBK)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(22) AND REG0(3).LFBK)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(21) AND REG0(3).LFBK)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(20) AND REG0(3).LFBK)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(0) AND REG0(3).LFBK)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(27) AND REG0(3).LFBK)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(26) AND REG0(3).LFBK)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(25) AND REG0(3).LFBK)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nAS_EXT AND REG0(3).LFBK));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_D(3)\$WA1 <= ((n68230CS_OBUF.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(28) AND REG0(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(29) AND REG0(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(30) AND REG0(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(31) AND REG0(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (REG0(3) AND NOT A_EXT(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(23) AND REG0(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(22) AND REG0(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(21) AND REG0(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(20) AND REG0(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(27) AND REG0(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(26) AND REG0(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(25) AND REG0(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nAS_EXT AND REG0(3)));
 </td></tr><tr><td>
 FDCPE_DO3\$WA0: FDCPE port map (DO(3)\$WA0,DO_D(3)\$WA0,SYSCLK_EXT,NOT nRESET_EXT,'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_D(3)\$WA0 <= ((REG0(6).EXP)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(28) AND REG1(3).LFBK)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(29) AND REG1(3).LFBK)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(30) AND REG1(3).LFBK)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(31) AND REG1(3).LFBK)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(24) AND REG1(3).LFBK)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(23) AND REG1(3).LFBK)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(22) AND REG1(3).LFBK)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(21) AND REG1(3).LFBK)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(20) AND REG1(3).LFBK)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(0) AND REG1(3).LFBK)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(27) AND REG1(3).LFBK)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(26) AND REG1(3).LFBK)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(25) AND REG1(3).LFBK)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nAS_EXT AND REG1(3).LFBK));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_D(3)\$WA0 <= ((NOT A_EXT(28) AND REG1(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(29) AND REG1(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(30) AND REG1(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(31) AND REG1(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (REG1(3) AND NOT A_EXT(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nIOCS1_OBUF.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(23) AND REG1(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(22) AND REG1(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(21) AND REG1(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(20) AND REG1(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(0) AND REG1(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(27) AND REG1(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(26) AND REG1(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(25) AND REG1(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nAS_EXT AND REG1(3)));
 </td></tr><tr><td>
 FDCPE_DO4\$WA1: FDCPE port map (DO(4)\$WA1,DO_D(4)\$WA1,SYSCLK_EXT,NOT nRESET_EXT,'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_D(4)\$WA1 <= ((nR68561CS_OBUF.EXP)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(28) AND REG0(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(29) AND REG0(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(30) AND REG0(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(31) AND REG0(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (REG0(4) AND NOT A_EXT(24))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(23) AND REG0(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(22) AND REG0(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(21) AND REG0(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(20) AND REG0(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(0) AND REG0(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(27) AND REG0(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(26) AND REG0(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(25) AND REG0(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nAS_EXT AND REG0(4)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_D(4)\$WA1 <= ((A_EXT(23) AND REG0(4).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(22) AND REG0(4).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(21) AND REG0(4).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (REG0(4).EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(28) AND REG0(4).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(29) AND REG0(4).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(30) AND REG0(4).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(31) AND REG0(4).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(24) AND REG0(4).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(27) AND REG0(4).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(26) AND REG0(4).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(25) AND REG0(4).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nAS_EXT AND REG0(4).LFBK));
 </td></tr><tr><td>
 FDCPE_DO4\$WA0: FDCPE port map (DO(4)\$WA0,DO_D(4)\$WA0,SYSCLK_EXT,NOT nRESET_EXT,'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_D(4)\$WA0 <= ((EXP0_.EXP)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(28) AND REG1(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(29) AND REG1(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(30) AND REG1(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(31) AND REG1(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (REG1(4) AND NOT A_EXT(24))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(23) AND REG1(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(22) AND REG1(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(21) AND REG1(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(20) AND REG1(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(27) AND REG1(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(26) AND REG1(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(25) AND REG1(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nAS_EXT AND REG1(4)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_D(4)\$WA0 <= ((nBOOTCS_OBUF.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(28) AND REG1(4).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(29) AND REG1(4).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(30) AND REG1(4).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(31) AND REG1(4).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(24) AND REG1(4).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(23) AND REG1(4).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(22) AND REG1(4).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(21) AND REG1(4).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(20) AND REG1(4).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(0) AND REG1(4).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(27) AND REG1(4).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(26) AND REG1(4).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(25) AND REG1(4).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nAS_EXT AND REG1(4).LFBK));
 </td></tr><tr><td>
 FDCPE_DO5\$WA1: FDCPE port map (DO(5)\$WA1,DO_D(5)\$WA1,SYSCLK_EXT,NOT nRESET_EXT,'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_D(5)\$WA1 <= ((EXP2_.EXP)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(28) AND REG0(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(29) AND REG0(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(30) AND REG0(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(31) AND REG0(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (REG0(5) AND NOT A_EXT(24))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(23) AND REG0(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(22) AND REG0(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(21) AND REG0(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(20) AND REG0(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(0) AND REG0(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(27) AND REG0(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(26) AND REG0(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(25) AND REG0(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nAS_EXT AND REG0(5)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_D(5)\$WA1 <= ((A_EXT(23) AND REG0(5).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(22) AND REG0(5).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(21) AND REG0(5).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(20) AND REG0(5).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (REG0(5).EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(28) AND REG0(5).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(29) AND REG0(5).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(30) AND REG0(5).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(31) AND REG0(5).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(24) AND REG0(5).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(27) AND REG0(5).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(26) AND REG0(5).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(25) AND REG0(5).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nAS_EXT AND REG0(5).LFBK));
 </td></tr><tr><td>
 FDCPE_DO5\$WA0: FDCPE port map (DO(5)\$WA0,DO_D(5)\$WA0,SYSCLK_EXT,NOT nRESET_EXT,'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_D(5)\$WA0 <= ((nIOCS1_OBUF.EXP)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(28) AND REG1(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(29) AND REG1(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(30) AND REG1(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(31) AND REG1(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (REG1(5) AND NOT A_EXT(24))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(23) AND REG1(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(22) AND REG1(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(21) AND REG1(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(20) AND REG1(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(0) AND REG1(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(27) AND REG1(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(26) AND REG1(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(25) AND REG1(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nAS_EXT AND REG1(5)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_D(5)\$WA0 <= ((EXP25_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(28) AND REG1(5).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(29) AND REG1(5).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(30) AND REG1(5).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(31) AND REG1(5).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(24) AND REG1(5).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(23) AND REG1(5).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(22) AND REG1(5).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(21) AND REG1(5).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(20) AND REG1(5).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(27) AND REG1(5).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(26) AND REG1(5).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(25) AND REG1(5).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nAS_EXT AND REG1(5).LFBK));
 </td></tr><tr><td>
 FDCPE_DO6\$WA0: FDCPE port map (DO(6)\$WA0,DO_D(6)\$WA0,SYSCLK_EXT,NOT nRESET_EXT,'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_D(6)\$WA0 <= ((XLXN_101_OBUF.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_D(6)\$WA0 <= ((NOT A_EXT(28) AND REG1(6).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(29) AND REG1(6).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(30) AND REG1(6).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(31) AND REG1(6).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(24) AND REG1(6).LFBK)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (WRUU_OBUF.EXP)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(23) AND REG1(6).LFBK)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(22) AND REG1(6).LFBK)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(21) AND REG1(6).LFBK)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(20) AND REG1(6).LFBK)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(0) AND REG1(6).LFBK)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(28) AND REG1(6).LFBK)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(29) AND REG1(6).LFBK)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(30) AND REG1(6).LFBK)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(31) AND REG1(6).LFBK)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(24) AND REG1(6).LFBK)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(27) AND REG1(6).LFBK)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(26) AND REG1(6).LFBK)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(25) AND REG1(6).LFBK)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nAS_EXT AND REG1(6).LFBK));
 </td></tr><tr><td>
 FDCPE_DO6\$WA1: FDCPE port map (DO(6)\$WA1,DO_D(6)\$WA1,SYSCLK_EXT,NOT nRESET_EXT,'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_D(6)\$WA1 <= ((WRLL_OBUF.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_D(6)\$WA1 <= ((NOT A_EXT(28) AND REG0(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(29) AND REG0(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(30) AND REG0(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(31) AND REG0(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (REG0(6) AND NOT A_EXT(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (EXP15_.EXP)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(23) AND REG0(6))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(22) AND REG0(6))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(21) AND REG0(6))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(20) AND REG0(6))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(0) AND REG0(6))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(28) AND REG0(6))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(29) AND REG0(6))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(30) AND REG0(6))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(31) AND REG0(6))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (REG0(6) AND NOT A_EXT(24))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(27) AND REG0(6))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(26) AND REG0(6))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(25) AND REG0(6))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nAS_EXT AND REG0(6)));
 </td></tr><tr><td>
 FDCPE_DO7\$WA1: FDCPE port map (DO(7)\$WA1,DO_D(7)\$WA1,SYSCLK_EXT,NOT nRESET_EXT,'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_D(7)\$WA1 <= ((WRLM_OBUF.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_D(7)\$WA1 <= ((EXP16_.EXP)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(28) AND REG0(7))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(29) AND REG0(7))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(30) AND REG0(7))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(31) AND REG0(7))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (REG0(7) AND NOT A_EXT(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XLXI_158/boot_cycle_count_reg(1).EXP)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(23) AND REG0(7))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(22) AND REG0(7))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(21) AND REG0(7))
@@ -257,7 +254,7 @@ FDCPE_DO7\$WA1: FDCPE port map (DO(7)\$WA1,DO_D(7)\$WA1,SYSCLK_EXT,NOT nRESET_EX
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nAS_EXT AND REG0(7)));
 </td></tr><tr><td>
 FDCPE_DO7\$WA0: FDCPE port map (DO(7)\$WA0,DO_D(7)\$WA0,SYSCLK_EXT,NOT nRESET_EXT,'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_D(7)\$WA0 <= ((WRUM_OBUF.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO_D(7)\$WA0 <= ((XLXN_102_OBUF/XLXN_102_OBUF_RSTF__$INT.EXP)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(28) AND REG1(7))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(29) AND REG1(7))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(30) AND REG1(7))
@@ -328,6 +325,10 @@ D_EXT_I(7) <= DO(7);
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D_EXT_OE(7) <= (A_EXT(28) AND A_EXT(29) AND A_EXT(30) AND A_EXT(31) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A_EXT(27) AND A_EXT(26) AND A_EXT(25) AND NOT nAS_EXT AND NOT A_EXT(23) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND RnW AND A_EXT(24));
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
 </td></tr><tr><td>
 </td></tr><tr><td>
 </td></tr><tr><td>
@@ -579,10 +580,10 @@ UUD <= ((RnW)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A_EXT(0) AND NOT A_EXT(1)));
 </td></tr><tr><td>
 </td></tr><tr><td>
-WRLL <= ((NOT RnW AND NOT SIZ_1 AND NOT SIZ_0)
+WRLL <= ((A_EXT(1) AND NOT RnW AND SIZ_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RnW AND NOT SIZ_1 AND NOT SIZ_0)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(0) AND NOT RnW AND SIZ_1 AND SIZ_0)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(0) AND A_EXT(1) AND NOT RnW)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(1) AND NOT RnW AND SIZ_1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (A_EXT(0) AND A_EXT(1) AND NOT RnW));
 </td></tr><tr><td>
 </td></tr><tr><td>
 WRLM <= ((NOT A_EXT(0) AND A_EXT(1) AND NOT RnW)
@@ -601,21 +602,21 @@ WRUU <= (NOT A_EXT(0) AND NOT A_EXT(1) AND NOT RnW);
 FTCPE_XLXI_158/boot_cycle_count_reg0: FTCPE port map (XLXI_158/boot_cycle_count_reg(0),XLXI_158/boot_in_progress,NOT nAS_EXT,NOT nRESET_EXT,'0');
 </td></tr><tr><td>
 FTCPE_XLXI_158/boot_cycle_count_reg1: FTCPE port map (XLXI_158/boot_cycle_count_reg(1),XLXI_158/boot_cycle_count_reg_T(1),NOT nAS_EXT,NOT nRESET_EXT,'0');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_158/boot_cycle_count_reg_T(1) <= (XLXI_158/boot_in_progress AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_158/boot_cycle_count_reg(0).LFBK);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_158/boot_cycle_count_reg_T(1) <= (XLXI_158/boot_cycle_count_reg(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_158/boot_in_progress.LFBK);
 </td></tr><tr><td>
 FTCPE_XLXI_158/boot_cycle_count_reg2: FTCPE port map (XLXI_158/boot_cycle_count_reg(2),XLXI_158/boot_cycle_count_reg_T(2),NOT nAS_EXT,NOT nRESET_EXT,'0');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_158/boot_cycle_count_reg_T(2) <= (XLXI_158/boot_cycle_count_reg(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_158/boot_cycle_count_reg(1) AND XLXI_158/boot_in_progress.LFBK);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_158/boot_in_progress.LFBK AND XLXI_158/boot_cycle_count_reg(1).LFBK);
 </td></tr><tr><td>
 FTCPE_XLXI_158/boot_cycle_count_reg3: FTCPE port map (XLXI_158/boot_cycle_count_reg(3),XLXI_158/boot_cycle_count_reg_T(3),NOT nAS_EXT,NOT nRESET_EXT,'0');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_158/boot_cycle_count_reg_T(3) <= (XLXI_158/boot_cycle_count_reg(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_158/boot_cycle_count_reg(1) AND XLXI_158/boot_in_progress.LFBK AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_158/boot_in_progress.LFBK AND XLXI_158/boot_cycle_count_reg(1).LFBK AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_158/boot_cycle_count_reg(2).LFBK);
 </td></tr><tr><td>
 FTCPE_XLXI_158/boot_in_progress: FTCPE port map (XLXI_158/boot_in_progress,XLXI_158/boot_in_progress_T,NOT nAS_EXT,'0',NOT nRESET_EXT);
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXI_158/boot_in_progress_T <= (NOT XLXI_158/boot_cycle_count_reg(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_158/boot_cycle_count_reg(1) AND XLXI_158/boot_in_progress.LFBK AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XLXI_158/boot_in_progress.LFBK AND NOT XLXI_158/boot_cycle_count_reg(1).LFBK AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XLXI_158/boot_cycle_count_reg(2).LFBK AND XLXI_158/boot_cycle_count_reg(3).LFBK);
 </td></tr><tr><td>
 FTCPE_XLXN_100: FTCPE port map (XLXN_100,nAS_EXT,SYSCLK_EXT,NOT XLXN_102_OBUF/XLXN_102_OBUF_RSTF__$INT,'0');

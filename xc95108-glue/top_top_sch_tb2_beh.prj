@@ -1,0 +1,6 @@
+vhdl work "m030_bus_state_decoder.vhd"
+vhdl work "dynamic_sizer.vhd"
+vhdl work "addr_decode_combi.vhd"
+verilog work "top.vf"
+vhdl work "top_bench_2.vhd"
+verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

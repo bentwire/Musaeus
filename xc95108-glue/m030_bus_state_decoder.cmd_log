@@ -1,0 +1,8 @@
+vhdtdtfi -lib work m030_bus_state_decoder.vhd -prj xc95108-glue -o m030_bus_state_decoder.spl -module m030_bus_state_decoder -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500 -w m030_bus_state_decoder.spl /home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/m030_bus_state_decoder.sym 
+vhdtdtfi -lib work m030_bus_state_decoder.vhd -prj xc95108-glue -o m030_bus_state_decoder.spl -module m030_bus_state_decoder -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500 -w m030_bus_state_decoder.spl /home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/m030_bus_state_decoder.sym 
+vhdtdtfi -lib work m030_bus_state_decoder.vhd -prj xc95108-glue -o m030_bus_state_decoder.spl -module m030_bus_state_decoder -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500 -w m030_bus_state_decoder.spl /home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/m030_bus_state_decoder.sym 
+vhdtdtfi -lib work m030_bus_state_decoder.vhd -prj xc95108-glue -o m030_bus_state_decoder.spl -module m030_bus_state_decoder -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500 -w m030_bus_state_decoder.spl /home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/m030_bus_state_decoder.sym 

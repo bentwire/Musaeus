@@ -41,12 +41,7 @@ ARCHITECTURE behavioral OF top_top_sch_tb IS
           LLD	:	OUT	STD_LOGIC; 
           UD	:	OUT	STD_LOGIC; 
           LD	:	OUT	STD_LOGIC; 
-          XLXN_100	:	OUT	STD_LOGIC; 
-          XLXN_101	:	OUT	STD_LOGIC; 
-          XLXN_102	:	OUT	STD_LOGIC; 
-          XLXN_103	:	OUT	STD_LOGIC; 
-          XLXN_104	:	OUT	STD_LOGIC; 
-          XLXN_105	:	OUT	STD_LOGIC; 
+
           WRUU	:	OUT	STD_LOGIC; 
           WRUM	:	OUT	STD_LOGIC; 
           WRLM	:	OUT	STD_LOGIC; 
@@ -62,10 +57,7 @@ ARCHITECTURE behavioral OF top_top_sch_tb IS
           nBOOTCS	:	OUT	STD_LOGIC; 
           nFLASHCS	:	OUT	STD_LOGIC; 
           nIOSEL	:	OUT	STD_LOGIC; 
-          XLXN_240	:	OUT	STD_LOGIC; 
-          XLXN_241	:	OUT	STD_LOGIC; 
-          XLXN_242	:	OUT	STD_LOGIC; 
-          XLXN_243	:	OUT	STD_LOGIC; 
+
           nCIIN_EXT	:	OUT	STD_LOGIC);
    END COMPONENT;
 
@@ -107,10 +99,7 @@ ARCHITECTURE behavioral OF top_top_sch_tb IS
    SIGNAL nBOOTCS	:	STD_LOGIC;
    SIGNAL nFLASHCS	:	STD_LOGIC;
    SIGNAL nIOSEL	:	STD_LOGIC;
-   SIGNAL XLXN_240	:	STD_LOGIC;
-   SIGNAL XLXN_241	:	STD_LOGIC;
-   SIGNAL XLXN_242	:	STD_LOGIC;
-   SIGNAL XLXN_243	:	STD_LOGIC;
+
    SIGNAL nCIIN_EXT	:	STD_LOGIC;
 	
 	constant T : time := 40 ns;
@@ -134,12 +123,6 @@ BEGIN
 		LLD => LLD, 
 		UD => UD, 
 		LD => LD, 
-		XLXN_100 => XLXN_100, 
-		XLXN_101 => XLXN_101, 
-		XLXN_102 => XLXN_102, 
-		XLXN_103 => XLXN_103, 
-		XLXN_104 => XLXN_104, 
-		XLXN_105 => XLXN_105, 
 		WRUU => WRUU, 
 		WRUM => WRUM, 
 		WRLM => WRLM, 
@@ -155,10 +138,6 @@ BEGIN
 		nBOOTCS => nBOOTCS, 
 		nFLASHCS => nFLASHCS, 
 		nIOSEL => nIOSEL, 
-		XLXN_240 => XLXN_240, 
-		XLXN_241 => XLXN_241, 
-		XLXN_242 => XLXN_242, 
-		XLXN_243 => XLXN_243, 
 		nCIIN_EXT => nCIIN_EXT
    );
 
@@ -186,110 +165,20 @@ BEGIN
 		nRESET_EXT <= '1';
 		wait for T*10;
 		
-		nAS_EXT <= '0';
-		wait for T*4;
-		nAS_EXT <= '1';
-		wait for T/2;
-		A_EXT <= A_EXT + 1;
-		wait for T*2;
+		for l in 0 to 16 loop
+			wait for T/4 * 3;
+			nECS_EXT <= '0';
+			wait for T/2;
+			nECS_EXT <= '1';
+			nAS_EXT <= '0';
+			wait for T/4;
+			wait for T*32;
+			nAS_EXT <= '1';
+			wait for T/2;
+			A_EXT <= A_EXT + 1;
+			wait for T;
+		end loop;
 
-		nAS_EXT <= '0';
-		wait for T*4;
-		nAS_EXT <= '1';
-		wait for T/2;
-		A_EXT <= A_EXT + 1;
-		wait for T*2;
-
-		nAS_EXT <= '0';
-		wait for T*4;
-		nAS_EXT <= '1';
-		wait for T/2;
-		A_EXT <= A_EXT + 1;
-		wait for T*2;
-
-		nAS_EXT <= '0';
-		wait for T*4;
-		nAS_EXT <= '1';
-		wait for T/2;
-		A_EXT <= A_EXT + 1;
-		wait for T*2;
-
-		nAS_EXT <= '0';
-		wait for T*4;
-		nAS_EXT <= '1';
-		wait for T/2;
-		A_EXT <= A_EXT + 1;
-		wait for T*2;
-
-		nAS_EXT <= '0';
-		wait for T*4;
-		nAS_EXT <= '1';
-		wait for T/2;
-		A_EXT <= A_EXT + 1;
-		wait for T*2;
-
-		nAS_EXT <= '0';
-		wait for T*4;
-		nAS_EXT <= '1';
-		wait for T/2;
-		A_EXT <= A_EXT + 1;
-		wait for T*2;
-
-		nAS_EXT <= '0';
-		wait for T*4;
-		nAS_EXT <= '1';
-		wait for T/2;
-		A_EXT <= A_EXT + 1;
-		wait for T*2;
-
-		nAS_EXT <= '0';
-		wait for T*4;
-		nAS_EXT <= '1';
-		wait for T/2;
-		A_EXT <= A_EXT + 1;
-		wait for T*2;
-
-		nAS_EXT <= '0';
-		wait for T*4;
-		nAS_EXT <= '1';
-		wait for T/2;
-		A_EXT <= A_EXT + 1;
-		wait for T*2;
-
-		nAS_EXT <= '0';
-		wait for T*4;
-		nAS_EXT <= '1';
-		wait for T/2;
-		A_EXT <= A_EXT + 1;
-		wait for T*2;
-
-		nAS_EXT <= '0';
-		wait for T*4;
-		nAS_EXT <= '1';
-		wait for T/2;
-		A_EXT <= A_EXT + 1;
-		wait for T*2;
-
-		nAS_EXT <= '0';
-		wait for T*4;
-		nAS_EXT <= '1';
-		wait for T/2;
-		A_EXT <= A_EXT + 1;
-		wait for T*2;
-
-		nAS_EXT <= '0';
-		wait for T*4;
-		nAS_EXT <= '1';
-		wait for T/2;
-		A_EXT <= A_EXT + 1;
-		wait for T*2;
-
-		nAS_EXT <= '0';
-		wait for T*4;
-		nAS_EXT <= '1';
-		wait for T/2;
-		A_EXT <= A_EXT + 1;
-		wait for T*2;
 
 		
       WAIT; -- will wait forever

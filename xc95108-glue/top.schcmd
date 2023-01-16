@@ -1,0 +1,9 @@
+add instance obufe 3856 5296 R0 -sn=1
+select figure at 2830 4257 8 -wires -sn=1
+select all in 2830 4257 3731 5381 -wires -enclosed -sn=1
+select figure at 2816 4279 8 -wires -sn=1
+select figure at 2800 4267 8 -wires -sn=1
+select all in 2800 4267 3684 5436 -wires -enclosed -sn=1
+move selection by 688 0 -keepConn -sn=1
+select figure at 3964 5278 8 -wires -sn=1
+move instance at 3856 5296 to 2992 4928 R0 -keepConn -sn=1
