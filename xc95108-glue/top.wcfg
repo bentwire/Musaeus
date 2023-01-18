@@ -16,7 +16,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="15" />
+   <WVObjectSize size="31" />
    <wvobject fp_name="/top_top_sch_tb2/nas_ext" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">nas_ext</obj_property>
       <obj_property name="ObjectShortName">nas_ext</obj_property>
@@ -49,32 +49,96 @@
       <obj_property name="ElementShortName">ndsack1</obj_property>
       <obj_property name="ObjectShortName">ndsack1</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_top_sch_tb2/UUT/XLXI_185/d8_ack" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">d8_ack</obj_property>
-      <obj_property name="ObjectShortName">d8_ack</obj_property>
+   <wvobject fp_name="/top_top_sch_tb2/UUT/XLXI_198/C" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">C</obj_property>
+      <obj_property name="ObjectShortName">C</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_top_sch_tb2/UUT/XLXI_185/d16_ack" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">d16_ack</obj_property>
-      <obj_property name="ObjectShortName">d16_ack</obj_property>
+   <wvobject fp_name="/top_top_sch_tb2/UUT/XLXI_198/CE" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CE</obj_property>
+      <obj_property name="ObjectShortName">CE</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_top_sch_tb2/UUT/XLXI_185/d32_ack" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">d32_ack</obj_property>
-      <obj_property name="ObjectShortName">d32_ack</obj_property>
+   <wvobject fp_name="/top_top_sch_tb2/UUT/XLXI_198/CLR" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLR</obj_property>
+      <obj_property name="ObjectShortName">CLR</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_top_sch_tb2/UUT/XLXI_185/s_ack" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">s_ack</obj_property>
-      <obj_property name="ObjectShortName">s_ack</obj_property>
+   <wvobject fp_name="/top_top_sch_tb2/UUT/XLXI_198/D0" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">D0</obj_property>
+      <obj_property name="ObjectShortName">D0</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_top_sch_tb2/UUT/XLXI_185/cycle" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">cycle[4:0]</obj_property>
-      <obj_property name="ObjectShortName">cycle[4:0]</obj_property>
+   <wvobject fp_name="/top_top_sch_tb2/UUT/XLXI_198/D1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">D1</obj_property>
+      <obj_property name="ObjectShortName">D1</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_top_sch_tb2/UUT/XLXI_185/state_reg" type="other" db_ref_id="1">
-      <obj_property name="ElementShortName">state_reg</obj_property>
-      <obj_property name="ObjectShortName">state_reg</obj_property>
+   <wvobject fp_name="/top_top_sch_tb2/UUT/XLXI_198/D2" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">D2</obj_property>
+      <obj_property name="ObjectShortName">D2</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_top_sch_tb2/UUT/XLXI_185/cycle_counter" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">cycle_counter[4:0]</obj_property>
-      <obj_property name="ObjectShortName">cycle_counter[4:0]</obj_property>
+   <wvobject fp_name="/top_top_sch_tb2/UUT/XLXI_198/D3" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">D3</obj_property>
+      <obj_property name="ObjectShortName">D3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb2/UUT/XLXI_198/L" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">L</obj_property>
+      <obj_property name="ObjectShortName">L</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb2/UUT/XLXI_198/CEO" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CEO</obj_property>
+      <obj_property name="ObjectShortName">CEO</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb2/UUT/XLXI_198/Q0" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Q0</obj_property>
+      <obj_property name="ObjectShortName">Q0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb2/UUT/XLXI_198/Q1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Q1</obj_property>
+      <obj_property name="ObjectShortName">Q1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb2/UUT/XLXI_198/Q2" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Q2</obj_property>
+      <obj_property name="ObjectShortName">Q2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb2/UUT/XLXI_198/Q3" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Q3</obj_property>
+      <obj_property name="ObjectShortName">Q3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb2/UUT/XLXI_198/TC" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">TC</obj_property>
+      <obj_property name="ObjectShortName">TC</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb2/UUT/XLXI_198/OR_CE_L" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">OR_CE_L</obj_property>
+      <obj_property name="ObjectShortName">OR_CE_L</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb2/UUT/XLXI_198/T2" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">T2</obj_property>
+      <obj_property name="ObjectShortName">T2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb2/UUT/XLXI_198/T3" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">T3</obj_property>
+      <obj_property name="ObjectShortName">T3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb2/UUT/XLXI_198/XLXN_1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">XLXN_1</obj_property>
+      <obj_property name="ObjectShortName">XLXN_1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb2/UUT/XLXI_198/Q0_DUMMY" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Q0_DUMMY</obj_property>
+      <obj_property name="ObjectShortName">Q0_DUMMY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb2/UUT/XLXI_198/Q1_DUMMY" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Q1_DUMMY</obj_property>
+      <obj_property name="ObjectShortName">Q1_DUMMY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb2/UUT/XLXI_198/Q2_DUMMY" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Q2_DUMMY</obj_property>
+      <obj_property name="ObjectShortName">Q2_DUMMY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb2/UUT/XLXI_198/Q3_DUMMY" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Q3_DUMMY</obj_property>
+      <obj_property name="ObjectShortName">Q3_DUMMY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_top_sch_tb2/UUT/XLXI_198/TC_DUMMY" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">TC_DUMMY</obj_property>
+      <obj_property name="ObjectShortName">TC_DUMMY</obj_property>
    </wvobject>
 </wave_config>
