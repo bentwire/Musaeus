@@ -1,0 +1,1292 @@
+ 
+cpldfit:  version P.20131013                        Xilinx Inc.
+                                  Fitter Report
+Design Name: top                                 Date:  1-21-2023,  6:37AM
+Device Used: XC95108-7-TQ100
+Fitting Status: Successful
+
+*************************  Mapped Resource Summary  **************************
+
+Macrocells     Product Terms    Function Block   Registers      Pins           
+Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
+106/108 ( 98%) 281 /540  ( 52%) 170/216 ( 79%)   62 /108 ( 57%) 61 /81  ( 75%)
+
+** Function Block Resources **
+
+Function    Mcells      FB Inps     Signals     Pterms      IO          
+Block       Used/Tot    Used/Tot    Used        Used/Tot    Used/Tot    
+FB1          18/18*      34/36       34          40/90       3/14
+FB2          16/18       21/36       21          62/90       7/14
+FB3          18/18*      30/36       30          37/90       4/14
+FB4          18/18*      33/36       33          47/90       1/13
+FB5          18/18*      34/36       58          39/90      13/13*
+FB6          18/18*      18/36       18          56/90      11/13
+             -----       -----                   -----       -----     
+            106/108     170/216                 281/540     39/81 
+
+* - Resource is exhausted
+
+** Global Control Resources **
+
+Signal 'SYSCLK_EXT' mapped onto global clock net GCK1.
+The complement of 'nAS_EXT' mapped onto global clock net GCK2.
+The complement of 'SYSCLK_EXT' mapped onto global clock net GCK3.
+Global output enable net(s) unused.
+The complement of 'nRESET_EXT' mapped onto global set/reset net GSR.
+
+** Pin Resources **
+
+Signal Type    Required     Mapped  |  Pin Type            Used    Total 
+------------------------------------|------------------------------------
+Input         :   19          19    |  I/O              :    58      75
+Output        :   30          30    |  GCK/IO           :     2       3
+Bidirectional :    9           9    |  GTS/IO           :     0       2
+GCK           :    2           2    |  GSR/IO           :     1       1
+GTS           :    0           0    |
+GSR           :    1           1    |
+                 ----        ----
+        Total     61          61
+
+** Power Data **
+
+There are 106 macrocells in high performance mode (MCHP).
+There are 0 macrocells in low power mode (MCLP).
+End of Mapped Resource Summary
+**************************  Errors and Warnings  ***************************
+
+INFO:Cpld:994 - Exhaustive fitting is trying pterm limit: 90 and input limit: 17
+*************************  Summary of Mapped Logic  ************************
+
+** 39 Outputs **
+
+Signal                            Total Total Loc     Pin  Pin     Pin     Pwr  Slew Reg Init
+Name                              Pts   Inps          No.  Type    Use     Mode Rate State
+UUD                               2     3     FB1_4   19   I/O     O       STD  FAST 
+RDUU                              1     1     FB1_8   17   I/O     O       STD  FAST 
+nRD                               1     1     FB1_11  20   I/O     O       STD  FAST 
+nCBACK_EXT                        0     0     FB2_2   96   I/O     O       STD  SLOW 
+nWR                               1     1     FB2_6   1    I/O     O       STD  FAST 
+nDSACK1                           1     1     FB2_10  7    I/O     O       STD  SLOW 
+nDSACK0                           1     1     FB2_11  6    I/O     O       STD  SLOW 
+nSTERM                            0     0     FB2_12  8    I/O     O       STD  SLOW 
+nHALT                             0     0     FB2_14  9    I/O     O       STD  SLOW 
+nBERR                             1     1     FB2_15  10   I/O     O       STD  SLOW 
+WRUU                              1     3     FB3_2   29   I/O     O       STD  FAST 
+nIOCS0                            1     5     FB3_6   33   I/O     O       STD  FAST 
+nIOCS1                            1     5     FB3_11  37   I/O     O       STD  FAST 
+nIOSEL                            1     9     FB3_16  42   I/O     I/O     STD  FAST 
+nCIIN_EXT                         3     6     FB4_4   80   I/O     O       STD  SLOW 
+D_EXT<1>                          2     10    FB5_2   50   I/O     I/O     STD  FAST 
+D_EXT<2>                          2     10    FB5_3   52   I/O     I/O     STD  FAST 
+D_EXT<0>                          2     10    FB5_4   46   I/O     I/O     STD  FAST 
+D_EXT<3>                          2     10    FB5_5   53   I/O     I/O     STD  FAST 
+D_EXT<4>                          2     10    FB5_6   54   I/O     I/O     STD  FAST 
+D_EXT<5>                          2     10    FB5_8   55   I/O     I/O     STD  FAST 
+D_EXT<6>                          2     10    FB5_9   56   I/O     I/O     STD  FAST 
+D_EXT<7>                          2     10    FB5_11  58   I/O     I/O     STD  FAST 
+nFLASHCS                          1     10    FB5_12  60   I/O     O       STD  FAST 
+nBOOTCS                           2     7     FB5_14  61   I/O     O       STD  FAST 
+n68561CS                          1     5     FB5_15  63   I/O     O       STD  FAST 
+nRAMCS                            1     11    FB5_16  59   I/O     O       STD  FAST 
+n68230CS                          1     5     FB5_17  64   I/O     O       STD  FAST 
+LLD                               4     5     FB6_2   65   I/O     O       STD  FAST 
+WRLL                              4     5     FB6_3   66   I/O     O       STD  FAST 
+WRLM                              4     5     FB6_4   73   I/O     O       STD  FAST 
+LMD                               3     5     FB6_5   67   I/O     O       STD  FAST 
+WRUM                              3     5     FB6_6   68   I/O     O       STD  FAST 
+UMD                               2     5     FB6_8   70   I/O     O       STD  FAST 
+LD                                1     4     FB6_9   71   I/O     O       STD  FAST 
+RDLL                              1     1     FB6_11  72   I/O     O       STD  FAST 
+RDLM                              1     1     FB6_15  77   I/O     O       STD  FAST 
+RDUM                              1     1     FB6_16  79   I/O     O       STD  FAST 
+UD                                1     2     FB6_17  78   I/O     O       STD  FAST 
+
+** 67 Buried Nodes **
+
+Signal                            Total Total Loc     Pwr  Reg Init
+Name                              Pts   Inps          Mode State
+XLXI_158/boot_cycle_count_reg<2>  1     3     FB1_1   STD  RESET
+XLXI_158/boot_cycle_count_reg<1>  1     2     FB1_2   STD  RESET
+XLXI_158/boot_cycle_count_reg<0>  1     1     FB1_3   STD  RESET
+BCC<3>/BCC<3>_RSTF                1     2     FB1_5   STD  
+REG2<6>                           2     3     FB1_6   STD  RESET
+REG0<6>                           2     10    FB1_7   STD  RESET
+LOAD$BUF2/LOAD$BUF2_TRST          2     9     FB1_9   STD  
+BUS_TIMEOUT                       2     7     FB1_10  STD  RESET
+BCC<4>                            2     6     FB1_12  STD  RESET
+BCC<3>                            2     5     FB1_13  STD  RESET
+BCC<2>                            2     4     FB1_14  STD  RESET
+BCC<1>                            2     3     FB1_15  STD  RESET
+BCC<0>                            2     2     FB1_16  STD  RESET
+LOAD$BUF3/LOAD$BUF3_TRST__$INT    3     10    FB1_17  STD  
+ACK_CS0                           11    12    FB1_18  STD  RESET
+DO<2>\$WA1                        10    10    FB2_1   STD  RESET
+REG0<5>                           2     10    FB2_3   STD  RESET
+REG0<4>                           2     10    FB2_4   STD  RESET
+REG0<3>                           2     10    FB2_5   STD  RESET
+DO<5>\$WA1                        10    10    FB2_7   STD  RESET
+DO<6>\$WA1                        10    10    FB2_9   STD  RESET
+DO<4>\$WA1                        10    10    FB2_13  STD  RESET
+DO<3>\$WA1                        10    10    FB2_16  STD  RESET
+REG0<2>                           2     10    FB2_18  STD  RESET
+XLXN_630/XLXN_630_D2              1     8     FB3_1   STD  
+XLXN_281/XLXN_281_D2              1     8     FB3_3   STD  
+REG2<1>                           2     3     FB3_4   STD  RESET
+REG2<0>                           2     3     FB3_5   STD  RESET
+REG1<2>                           2     3     FB3_7   STD  RESET
+REG1<1>                           2     3     FB3_8   STD  RESET
+REG1<0>                           2     3     FB3_9   STD  RESET
+DO<3>\$WA0                        3     11    FB3_10  STD  RESET
+DO<2>\$WA2                        3     11    FB3_12  STD  RESET
+DO<2>\$WA0                        3     11    FB3_13  STD  RESET
+DO<1>\$WA2                        3     11    FB3_14  STD  RESET
+DO<1>\$WA0                        3     11    FB3_15  STD  RESET
+DO<0>\$WA2                        3     11    FB3_17  STD  RESET
+DO<0>\$WA0                        3     11    FB3_18  STD  RESET
+REG2<5>                           2     3     FB4_1   STD  RESET
+REG2<4>                           2     3     FB4_2   STD  RESET
+
+Signal                            Total Total Loc     Pwr  Reg Init
+Name                              Pts   Inps          Mode State
+REG2<3>                           2     3     FB4_3   STD  RESET
+REG2<2>                           2     3     FB4_5   STD  RESET
+REG1<6>                           2     3     FB4_6   STD  RESET
+REG1<5>                           2     3     FB4_7   STD  RESET
+REG1<4>                           2     3     FB4_8   STD  RESET
+REG1<3>                           2     3     FB4_9   STD  RESET
+DO<7>\$WA0                        3     11    FB4_10  STD  RESET
+DO<6>\$WA2                        3     11    FB4_11  STD  RESET
+DO<6>\$WA0                        3     11    FB4_12  STD  RESET
+DO<5>\$WA2                        3     11    FB4_13  STD  RESET
+DO<5>\$WA0                        3     11    FB4_14  STD  RESET
+DO<4>\$WA2                        3     11    FB4_15  STD  RESET
+DO<4>\$WA0                        3     11    FB4_16  STD  RESET
+DO<3>\$WA2                        3     11    FB4_17  STD  RESET
+ACK_BOOT                          4     11    FB4_18  STD  RESET
+XLXI_158/boot_in_progress         1     5     FB5_1   STD  RESET
+XLXI_158/boot_cycle_count_reg<3>  1     4     FB5_7   STD  RESET
+REG0<0>                           2     10    FB5_10  STD  RESET
+ACK_RAM_ROM                       3     13    FB5_13  STD  RESET
+DO<0>\$WA1                        10    10    FB5_18  STD  RESET
+REG2<7>                           2     3     FB6_1   STD  RESET
+REG1<7>                           2     3     FB6_7   STD  RESET
+REG0<7>                           2     10    FB6_10  STD  RESET
+REG0<1>                           2     10    FB6_12  STD  RESET
+DO<7>\$WA2                        3     11    FB6_13  STD  RESET
+DO<7>\$WA1                        10    10    FB6_14  STD  RESET
+DO<1>\$WA1                        10    10    FB6_18  STD  RESET
+
+** 22 Inputs **
+
+Signal                            Loc     Pin  Pin     Pin     
+Name                                      No.  Type    Use     
+SIZ_0                             FB1_2   13   I/O     I
+SIZ_1                             FB1_3   14   I/O     I
+SYSCLK_EXT                        FB1_12  22   GCK/I/O GCK
+nAS_EXT                           FB1_14  23   GCK/I/O GCK/I
+RnW                               FB2_3   97   I/O     I
+nRESET_EXT                        FB2_5   99   GSR/I/O GSR/I
+nECS_EXT                          FB2_16  11   I/O     I
+nCIOUT_EXT                        FB3_5   32   I/O     I
+A_EXT<28>                         FB4_2   81   I/O     I
+A_EXT<24>                         FB4_3   82   I/O     I
+A_EXT<29>                         FB4_5   85   I/O     I
+A_EXT<23>                         FB4_6   86   I/O     I
+A_EXT<20>                         FB4_8   87   I/O     I
+A_EXT<21>                         FB4_9   89   I/O     I
+A_EXT<22>                         FB4_11  90   I/O     I
+A_EXT<25>                         FB4_12  91   I/O     I
+A_EXT<27>                         FB4_14  93   I/O     I
+A_EXT<31>                         FB4_15  94   I/O     I
+A_EXT<26>                         FB4_16  92   I/O     I
+A_EXT<30>                         FB4_17  95   I/O     I
+A_EXT<1>                          FB6_12  74   I/O     I
+A_EXT<0>                          FB6_14  76   I/O     I
+
+Legend:
+Pin No. - ~ - User Assigned
+**************************  Function Block Details  ************************
+Legend:
+Total Pt     - Total product terms used by the macrocell signal
+Imp Pt       - Product terms imported from other macrocells
+Exp Pt       - Product terms exported to other macrocells
+               in direction shown
+Unused Pt    - Unused local product terms remaining in macrocell
+Loc          - Location where logic was mapped in device
+Pin Type/Use - I  - Input             GCK - Global Clock
+               O  - Output            GTS - Global Output Enable
+              (b) - Buried macrocell  GSR - Global Set/Reset
+X(@)         - Signal used as input (wire-AND input) to the macrocell logic.
+               The number of Signals Used may exceed the number of FB Inputs
+               Used due to wire-ANDing in the switch matrix.
+Pin No.      - ~  - User Assigned
+*********************************** FB1  ***********************************
+Number of function block inputs used/remaining:               34/2
+Number of signals used by logic mapping into function block:  34
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+XLXI_158/boot_cycle_count_reg<2>
+                      1       0   /\4   0     FB1_1         (b)     (b)
+XLXI_158/boot_cycle_count_reg<1>
+                      1       0     0   4     FB1_2   13    I/O     I
+XLXI_158/boot_cycle_count_reg<0>
+                      1       0     0   4     FB1_3   14    I/O     I
+UUD                   2       0     0   3     FB1_4   19    I/O     O
+BCC<3>/BCC<3>_RSTF    1       0     0   4     FB1_5   15    I/O     (b)
+REG2<6>               2       0     0   3     FB1_6   16    I/O     (b)
+REG0<6>               2       0     0   3     FB1_7         (b)     (b)
+RDUU                  1       0     0   4     FB1_8   17    I/O     O
+LOAD$BUF2/LOAD$BUF2_TRST
+                      2       0     0   3     FB1_9   18    I/O     (b)
+BUS_TIMEOUT           2       0     0   3     FB1_10  24    I/O     (b)
+nRD                   1       0     0   4     FB1_11  20    I/O     O
+BCC<4>                2       0     0   3     FB1_12  22    GCK/I/O GCK
+BCC<3>                2       0     0   3     FB1_13        (b)     (b)
+BCC<2>                2       0     0   3     FB1_14  23    GCK/I/O GCK/I
+BCC<1>                2       0     0   3     FB1_15  25    I/O     (b)
+BCC<0>                2       0     0   3     FB1_16  27    GCK/I/O (b)
+LOAD$BUF3/LOAD$BUF3_TRST__$INT
+                      3       0   \/2   0     FB1_17  28    I/O     (b)
+ACK_CS0              11       6<-   0   0     FB1_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: A_EXT<0>          13: BCC<3>.LFBK              24: REG0<5> 
+  2: A_EXT<1>          14: BCC<3>/BCC<3>_RSTF.LFBK  25: REG0<6>.LFBK 
+  3: A_EXT<20>         15: BCC<4>.LFBK              26: REG2<6>.LFBK 
+  4: A_EXT<21>         16: BUS_TIMEOUT.LFBK         27: XLXI_158/boot_cycle_count_reg<0>.LFBK 
+  5: A_EXT<22>         17: D_EXT<6>.PIN             28: XLXI_158/boot_cycle_count_reg<1>.LFBK 
+  6: A_EXT<23>         18: RnW                      29: XLXI_158/boot_in_progress 
+  7: ACK_BOOT          19: REG0<0>                  30: XLXN_630/XLXN_630_D2 
+  8: ACK_CS0.LFBK      20: REG0<1>                  31: nAS_EXT 
+  9: ACK_RAM_ROM       21: REG0<2>                  32: nECS_EXT 
+ 10: BCC<0>.LFBK       22: REG0<3>                  33: nIOSEL.PIN 
+ 11: BCC<1>.LFBK       23: REG0<4>                  34: nRESET_EXT 
+ 12: BCC<2>.LFBK      
+
+Signal                        1         2         3         4 Signals FB
+Name                0----+----0----+----0----+----0----+----0 Used    Inputs
+XLXI_158/boot_cycle_count_reg<2> 
+                     ..........................XXX........... 3       3
+XLXI_158/boot_cycle_count_reg<1> 
+                     ..........................X.X........... 2       2
+XLXI_158/boot_cycle_count_reg<0> 
+                     ............................X........... 1       1
+UUD                  XX...............X...................... 3       3
+BCC<3>/BCC<3>_RSTF   ...............................X.X...... 2       2
+REG2<6>              ................X........X...X.......... 3       3
+REG0<6>              XXXXXX..........XX......X.......X....... 10      10
+RDUU                 .................X...................... 1       1
+LOAD$BUF2/LOAD$BUF2_TRST 
+                     ..XXXX.XX..............XX.......X....... 9       9
+BUS_TIMEOUT          .........XXXX.XX..............X......... 7       7
+nRD                  .................X...................... 1       1
+BCC<4>               .........XXXXX................X......... 6       6
+BCC<3>               .........XXX.X................X......... 5       5
+BCC<2>               .........XX..X................X......... 4       4
+BCC<1>               .........X...X................X......... 3       3
+BCC<0>               .............X................X......... 2       2
+LOAD$BUF3/LOAD$BUF3_TRST__$INT 
+                     ..XXXXXXX..............XX.......X....... 10      10
+ACK_CS0              .......X.XXXX.X...XXXXX.......X......... 12      12
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB2  ***********************************
+Number of function block inputs used/remaining:               21/15
+Number of signals used by logic mapping into function block:  21
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+DO<2>\$WA1           10       5<-   0   0     FB2_1         (b)     (b)
+nCBACK_EXT            0       0   /\2   3     FB2_2   96    I/O     O
+REG0<5>               2       0     0   3     FB2_3   97    I/O     I
+REG0<4>               2       0     0   3     FB2_4   2     I/O     (b)
+REG0<3>               2       0   \/1   2     FB2_5   99    GSR/I/O GSR/I
+nWR                   1       1<- \/5   0     FB2_6   1     I/O     O
+DO<5>\$WA1           10       5<-   0   0     FB2_7         (b)     (b)
+(unused)              0       0   \/5   0     FB2_8   3     GTS/I/O (b)
+DO<6>\$WA1           10       5<-   0   0     FB2_9   4     GTS/I/O (b)
+nDSACK1               1       0     0   4     FB2_10  7     I/O     O
+nDSACK0               1       0     0   4     FB2_11  6     I/O     O
+nSTERM                0       0   \/3   2     FB2_12  8     I/O     O
+DO<4>\$WA1           10       5<-   0   0     FB2_13        (b)     (b)
+nHALT                 0       0   /\2   3     FB2_14  9     I/O     O
+nBERR                 1       0   \/1   3     FB2_15  10    I/O     O
+DO<3>\$WA1           10       5<-   0   0     FB2_16  11    I/O     I
+(unused)              0       0   /\4   1     FB2_17  12    I/O     (b)
+REG0<2>               2       0   \/3   0     FB2_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: A_EXT<0>           8: D_EXT<2>.PIN                    15: RnW 
+  2: A_EXT<1>           9: D_EXT<3>.PIN                    16: REG0<2>.LFBK 
+  3: A_EXT<20>         10: D_EXT<4>.PIN                    17: REG0<3>.LFBK 
+  4: A_EXT<21>         11: D_EXT<5>.PIN                    18: REG0<4>.LFBK 
+  5: A_EXT<22>         12: D_EXT<6>.PIN                    19: REG0<5>.LFBK 
+  6: A_EXT<23>         13: LOAD$BUF2/LOAD$BUF2_TRST        20: REG0<6> 
+  7: BUS_TIMEOUT       14: LOAD$BUF3/LOAD$BUF3_TRST__$INT  21: nIOSEL.PIN 
+
+Signal                        1         2         3         4 Signals FB
+Name                0----+----0----+----0----+----0----+----0 Used    Inputs
+DO<2>\$WA1           XXXXXX.X......XX....X................... 10      10
+nCBACK_EXT           ........................................ 0       0
+REG0<5>              XXXXXX....X...X...X.X................... 10      10
+REG0<4>              XXXXXX...X....X..X..X................... 10      10
+REG0<3>              XXXXXX..X.....X.X...X................... 10      10
+nWR                  ..............X......................... 1       1
+DO<5>\$WA1           XXXXXX....X...X...X.X................... 10      10
+DO<6>\$WA1           XXXXXX.....X..X....XX................... 10      10
+nDSACK1              ............X........................... 1       1
+nDSACK0              .............X.......................... 1       1
+nSTERM               ........................................ 0       0
+DO<4>\$WA1           XXXXXX...X....X..X..X................... 10      10
+nHALT                ........................................ 0       0
+nBERR                ......X................................. 1       1
+DO<3>\$WA1           XXXXXX..X.....X.X...X................... 10      10
+REG0<2>              XXXXXX.X......XX....X................... 10      10
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB3  ***********************************
+Number of function block inputs used/remaining:               30/6
+Number of signals used by logic mapping into function block:  30
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+XLXN_630/XLXN_630_D2
+                      1       0     0   4     FB3_1         (b)     (b)
+WRUU                  1       0     0   4     FB3_2   29    I/O     O
+XLXN_281/XLXN_281_D2
+                      1       0     0   4     FB3_3   30    I/O     (b)
+REG2<1>               2       0     0   3     FB3_4   34    I/O     (b)
+REG2<0>               2       0     0   3     FB3_5   32    I/O     I
+nIOCS0                1       0     0   4     FB3_6   33    I/O     O
+REG1<2>               2       0     0   3     FB3_7         (b)     (b)
+REG1<1>               2       0     0   3     FB3_8   35    I/O     (b)
+REG1<0>               2       0     0   3     FB3_9   36    I/O     (b)
+DO<3>\$WA0            3       0     0   2     FB3_10  43    I/O     (b)
+nIOCS1                1       0     0   4     FB3_11  37    I/O     O
+DO<2>\$WA2            3       0     0   2     FB3_12  39    I/O     (b)
+DO<2>\$WA0            3       0     0   2     FB3_13        (b)     (b)
+DO<1>\$WA2            3       0     0   2     FB3_14  40    I/O     (b)
+DO<1>\$WA0            3       0     0   2     FB3_15  41    I/O     (b)
+nIOSEL                1       0     0   4     FB3_16  42    I/O     I/O
+DO<0>\$WA2            3       0     0   2     FB3_17  49    I/O     (b)
+DO<0>\$WA0            3       0     0   2     FB3_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: A_EXT<0>          11: A_EXT<28>         21: REG1<1>.LFBK 
+  2: A_EXT<1>          12: A_EXT<29>         22: REG1<2>.LFBK 
+  3: A_EXT<20>         13: A_EXT<30>         23: REG2<0>.LFBK 
+  4: A_EXT<21>         14: A_EXT<31>         24: REG2<1>.LFBK 
+  5: A_EXT<22>         15: D_EXT<0>.PIN      25: REG2<2> 
+  6: A_EXT<23>         16: D_EXT<1>.PIN      26: REG2<3> 
+  7: A_EXT<24>         17: D_EXT<2>.PIN      27: XLXN_281/XLXN_281_D2.LFBK 
+  8: A_EXT<25>         18: D_EXT<3>.PIN      28: XLXN_630/XLXN_630_D2.LFBK 
+  9: A_EXT<26>         19: RnW               29: nAS_EXT 
+ 10: A_EXT<27>         20: REG1<0>.LFBK      30: nIOSEL_OBUF.LFBK 
+
+Signal                        1         2         3         4 Signals FB
+Name                0----+----0----+----0----+----0----+----0 Used    Inputs
+XLXN_630/XLXN_630_D2 
+                     XXXXXX............X..........X.......... 8       8
+WRUU                 XX................X..................... 3       3
+XLXN_281/XLXN_281_D2 
+                     XXXXXX............X..........X.......... 8       8
+REG2<1>              ...............X.......X...X............ 3       3
+REG2<0>              ..............X.......X....X............ 3       3
+nIOCS0               ..XXXX.......................X.......... 5       5
+REG1<2>              ................X....X....X............. 3       3
+REG1<1>              ...............X....X.....X............. 3       3
+REG1<0>              ..............X....X......X............. 3       3
+DO<3>\$WA0           XXXXXX...........XX......X.X.X.......... 11      11
+nIOCS1               ..XXXX.......................X.......... 5       5
+DO<2>\$WA2           XXXXXX..........X.X..X....X..X.......... 11      11
+DO<2>\$WA0           XXXXXX..........X.X.....X..X.X.......... 11      11
+DO<1>\$WA2           XXXXXX.........X..X.X.....X..X.......... 11      11
+DO<1>\$WA0           XXXXXX.........X..X....X...X.X.......... 11      11
+nIOSEL               ......XXXXXXXX..............X........... 9       9
+DO<0>\$WA2           XXXXXX........X...XX......X..X.......... 11      11
+DO<0>\$WA0           XXXXXX........X...X...X....X.X.......... 11      11
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB4  ***********************************
+Number of function block inputs used/remaining:               33/3
+Number of signals used by logic mapping into function block:  33
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+REG2<5>               2       0     0   3     FB4_1         (b)     (b)
+REG2<4>               2       0     0   3     FB4_2   81    I/O     I
+REG2<3>               2       0     0   3     FB4_3   82    I/O     I
+nCIIN_EXT             3       0     0   2     FB4_4   80    I/O     O
+REG2<2>               2       0     0   3     FB4_5   85    I/O     I
+REG1<6>               2       0     0   3     FB4_6   86    I/O     I
+REG1<5>               2       0     0   3     FB4_7         (b)     (b)
+REG1<4>               2       0     0   3     FB4_8   87    I/O     I
+REG1<3>               2       0     0   3     FB4_9   89    I/O     I
+DO<7>\$WA0            3       0     0   2     FB4_10        (b)     (b)
+DO<6>\$WA2            3       0     0   2     FB4_11  90    I/O     I
+DO<6>\$WA0            3       0     0   2     FB4_12  91    I/O     I
+DO<5>\$WA2            3       0     0   2     FB4_13        (b)     (b)
+DO<5>\$WA0            3       0     0   2     FB4_14  93    I/O     I
+DO<4>\$WA2            3       0     0   2     FB4_15  94    I/O     I
+DO<4>\$WA0            3       0     0   2     FB4_16  92    I/O     I
+DO<3>\$WA2            3       0     0   2     FB4_17  95    I/O     I
+ACK_BOOT              4       0     0   1     FB4_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: A_EXT<0>          12: D_EXT<3>.PIN      23: REG2<3>.LFBK 
+  2: A_EXT<1>          13: D_EXT<4>.PIN      24: REG2<4>.LFBK 
+  3: A_EXT<20>         14: D_EXT<5>.PIN      25: REG2<5>.LFBK 
+  4: A_EXT<21>         15: D_EXT<6>.PIN      26: REG2<6> 
+  5: A_EXT<22>         16: D_EXT<7>.PIN      27: REG2<7> 
+  6: A_EXT<23>         17: RnW               28: XLXI_158/boot_in_progress 
+  7: ACK_BOOT.LFBK     18: REG1<3>.LFBK      29: XLXN_281/XLXN_281_D2 
+  8: BCC<0>            19: REG1<4>.LFBK      30: XLXN_630/XLXN_630_D2 
+  9: BCC<1>            20: REG1<5>.LFBK      31: nAS_EXT 
+ 10: BCC<2>            21: REG1<6>.LFBK      32: nCIOUT_EXT 
+ 11: D_EXT<2>.PIN      22: REG2<2>.LFBK      33: nIOSEL.PIN 
+
+Signal                        1         2         3         4 Signals FB
+Name                0----+----0----+----0----+----0----+----0 Used    Inputs
+REG2<5>              .............X..........X....X.......... 3       3
+REG2<4>              ............X..........X.....X.......... 3       3
+REG2<3>              ...........X..........X......X.......... 3       3
+nCIIN_EXT            ..XXXX.........................XX....... 6       6
+REG2<2>              ..........X..........X.......X.......... 3       3
+REG1<6>              ..............X.....X.......X........... 3       3
+REG1<5>              .............X.....X........X........... 3       3
+REG1<4>              ............X.....X.........X........... 3       3
+REG1<3>              ...........X.....X..........X........... 3       3
+DO<7>\$WA0           XXXXXX.........XX.........X..X..X....... 11      11
+DO<6>\$WA2           XXXXXX........X.X...X.......X...X....... 11      11
+DO<6>\$WA0           XXXXXX........X.X........X...X..X....... 11      11
+DO<5>\$WA2           XXXXXX.......X..X..X........X...X....... 11      11
+DO<5>\$WA0           XXXXXX.......X..X.......X....X..X....... 11      11
+DO<4>\$WA2           XXXXXX......X...X.X.........X...X....... 11      11
+DO<4>\$WA0           XXXXXX......X...X......X.....X..X....... 11      11
+DO<3>\$WA2           XXXXXX.....X....XX..........X...X....... 11      11
+ACK_BOOT             ..XXXXXXXX.................X..X.X....... 11      11
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB5  ***********************************
+Number of function block inputs used/remaining:               34/2
+Number of signals used by logic mapping into function block:  58
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+XLXI_158/boot_in_progress
+                      1       0   /\1   3     FB5_1         (b)     (b)
+D_EXT<1>              2       0     0   3     FB5_2   50    I/O     I/O
+D_EXT<2>              2       0     0   3     FB5_3   52    I/O     I/O
+D_EXT<0>              2       0     0   3     FB5_4   46    I/O     I/O
+D_EXT<3>              2       0     0   3     FB5_5   53    I/O     I/O
+D_EXT<4>              2       0     0   3     FB5_6   54    I/O     I/O
+XLXI_158/boot_cycle_count_reg<3>
+                      1       0     0   4     FB5_7         (b)     (b)
+D_EXT<5>              2       0     0   3     FB5_8   55    I/O     I/O
+D_EXT<6>              2       0     0   3     FB5_9   56    I/O     I/O
+REG0<0>               2       0     0   3     FB5_10        (b)     (b)
+D_EXT<7>              2       0     0   3     FB5_11  58    I/O     I/O
+nFLASHCS              1       0     0   4     FB5_12  60    I/O     O
+ACK_RAM_ROM           3       0     0   2     FB5_13        (b)     (b)
+nBOOTCS               2       0     0   3     FB5_14  61    I/O     O
+n68561CS              1       0     0   4     FB5_15  63    I/O     O
+nRAMCS                1       0     0   4     FB5_16  59    I/O     O
+n68230CS              1       0   \/4   0     FB5_17  64    I/O     O
+DO<0>\$WA1           10       5<-   0   0     FB5_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: A_EXT<0>          21: DO<0>\$WA2        40: DO<5>\$WA1 
+  2: A_EXT<1>          22: DO<1>             41: DO<5>\$WA2 
+  3: A_EXT<20>         23: DO<1>\$WA0        42: DO<6> 
+  4: A_EXT<21>         24: DO<1>\$WA1        43: DO<6>\$WA0 
+  5: A_EXT<22>         25: DO<1>\$WA2        44: DO<6>\$WA1 
+  6: A_EXT<23>         26: DO<2>             45: DO<6>\$WA2 
+  7: A_EXT<24>         27: DO<2>\$WA0        46: DO<7> 
+  8: A_EXT<25>         28: DO<2>\$WA1        47: DO<7>\$WA0 
+  9: A_EXT<26>         29: DO<2>\$WA2        48: DO<7>\$WA1 
+ 10: A_EXT<27>         30: DO<3>             49: DO<7>\$WA2 
+ 11: A_EXT<28>         31: DO<3>\$WA0        50: RnW 
+ 12: A_EXT<29>         32: DO<3>\$WA1        51: REG0<0>.LFBK 
+ 13: A_EXT<30>         33: DO<3>\$WA2        52: XLXI_158/boot_cycle_count_reg<0> 
+ 14: A_EXT<31>         34: DO<4>             53: XLXI_158/boot_cycle_count_reg<1> 
+ 15: ACK_RAM_ROM.LFBK  35: DO<4>\$WA0        54: XLXI_158/boot_cycle_count_reg<2> 
+ 16: BCC<0>            36: DO<4>\$WA1        55: XLXI_158/boot_cycle_count_reg<3>.LFBK 
+ 17: D_EXT<0>.PIN      37: DO<4>\$WA2        56: XLXI_158/boot_in_progress.LFBK 
+ 18: DO<0>             38: DO<5>             57: nAS_EXT 
+ 19: DO<0>\$WA0        39: DO<5>\$WA0        58: nIOSEL.PIN 
+ 20: DO<0>\$WA1       
+
+Signal                        1         2         3         4         5         6 Signals FB
+Name                0----+----0----+----0----+----0----+----0----+----0----+----0 Used    Inputs
+XLXI_158/boot_in_progress 
+                     ...................................................XXXXX.... 5       5
+D_EXT<1>             ..XXXX...............X@@@........................X.......X.. 10      7
+D_EXT<2>             ..XXXX...................X@@@....................X.......X.. 10      7
+D_EXT<0>             ..XXXX...........X@@@............................X.......X.. 10      7
+D_EXT<3>             ..XXXX.......................X@@@................X.......X.. 10      7
+D_EXT<4>             ..XXXX...........................X@@@............X.......X.. 10      7
+XLXI_158/boot_cycle_count_reg<3> 
+                     ...................................................XXX.X.... 4       4
+D_EXT<5>             ..XXXX...............................X@@@........X.......X.. 10      7
+D_EXT<6>             ..XXXX...................................X@@@....X.......X.. 10      7
+REG0<0>              XXXXXX..........X................................XX......X.. 10      10
+D_EXT<7>             ..XXXX.......................................X@@@X.......X.. 10      7
+nFLASHCS             .....XXXXXXXXX..........................................X... 10      10
+ACK_RAM_ROM          .....XXXXXXXXXXX.......................................XX... 13      13
+nBOOTCS              ..XXXX.................................................XXX.. 7       7
+n68561CS             ..XXXX...................................................X.. 5       5
+nRAMCS               .....XXXXXXXXX.........................................XX... 11      11
+n68230CS             ..XXXX...................................................X.. 5       5
+DO<0>\$WA1           XXXXXX..........X................................XX......X.. 10      10
+                    0----+----1----+----2----+----3----+----4----+----5----+----6
+                              0         0         0         0         0         0
+*********************************** FB6  ***********************************
+Number of function block inputs used/remaining:               18/18
+Number of signals used by logic mapping into function block:  18
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+REG2<7>               2       0   /\1   2     FB6_1         (b)     (b)
+LLD                   4       0     0   1     FB6_2   65    I/O     O
+WRLL                  4       0     0   1     FB6_3   66    I/O     O
+WRLM                  4       0     0   1     FB6_4   73    I/O     O
+LMD                   3       0     0   2     FB6_5   67    I/O     O
+WRUM                  3       0     0   2     FB6_6   68    I/O     O
+REG1<7>               2       0     0   3     FB6_7         (b)     (b)
+UMD                   2       0     0   3     FB6_8   70    I/O     O
+LD                    1       0     0   4     FB6_9   71    I/O     O
+REG0<7>               2       0     0   3     FB6_10        (b)     (b)
+RDLL                  1       0     0   4     FB6_11  72    I/O     O
+REG0<1>               2       0     0   3     FB6_12  74    I/O     I
+DO<7>\$WA2            3       0   \/1   1     FB6_13        (b)     (b)
+DO<7>\$WA1           10       5<-   0   0     FB6_14  76    I/O     I
+RDLM                  1       0   /\4   0     FB6_15  77    I/O     O
+RDUM                  1       0     0   4     FB6_16  79    I/O     O
+UD                    1       0   \/4   0     FB6_17  78    I/O     O
+DO<1>\$WA1           10       5<-   0   0     FB6_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: A_EXT<0>           7: D_EXT<1>.PIN      13: REG2<7>.LFBK 
+  2: A_EXT<1>           8: D_EXT<7>.PIN      14: SIZ_0 
+  3: A_EXT<20>          9: RnW               15: SIZ_1 
+  4: A_EXT<21>         10: REG0<1>.LFBK      16: XLXN_281/XLXN_281_D2 
+  5: A_EXT<22>         11: REG0<7>.LFBK      17: XLXN_630/XLXN_630_D2 
+  6: A_EXT<23>         12: REG1<7>.LFBK      18: nIOSEL.PIN 
+
+Signal                        1         2         3         4 Signals FB
+Name                0----+----0----+----0----+----0----+----0 Used    Inputs
+REG2<7>              .......X....X...X....................... 3       3
+LLD                  XX......X....XX......................... 5       5
+WRLL                 XX......X....XX......................... 5       5
+WRLM                 XX......X....XX......................... 5       5
+LMD                  XX......X....XX......................... 5       5
+WRUM                 XX......X....XX......................... 5       5
+REG1<7>              .......X...X...X........................ 3       3
+UMD                  XX......X....XX......................... 5       5
+LD                   X.......X....XX......................... 4       4
+REG0<7>              XXXXXX.XX.X......X...................... 10      10
+RDLL                 ........X............................... 1       1
+REG0<1>              XXXXXXX.XX.......X...................... 10      10
+DO<7>\$WA2           XXXXXX.XX..X...X.X...................... 11      11
+DO<7>\$WA1           XXXXXX.XX.X......X...................... 10      10
+RDLM                 ........X............................... 1       1
+RDUM                 ........X............................... 1       1
+UD                   X.......X............................... 2       2
+DO<1>\$WA1           XXXXXXX.XX.......X...................... 10      10
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*******************************  Equations  ********************************
+
+********** Mapped Logic **********
+
+FDCPE_ACK_BOOT: FDCPE port map (ACK_BOOT,ACK_BOOT_D,NOT SYSCLK_EXT,'0','0');
+ACK_BOOT_D <= ((NOT nAS_EXT AND ACK_BOOT.LFBK)
+	OR (NOT nAS_EXT AND XLXI_158/boot_in_progress AND BCC(0) AND 
+	BCC(1) AND BCC(2))
+	OR (A_EXT(23) AND A_EXT(22) AND A_EXT(21) AND A_EXT(20) AND 
+	BCC(0) AND BCC(1) AND BCC(2) AND NOT nIOSEL.PIN)
+	OR (NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	BCC(0) AND BCC(1) AND BCC(2) AND NOT nIOSEL.PIN));
+
+FDCPE_ACK_CS0: FDCPE port map (ACK_CS0,ACK_CS0_D,SYSCLK_EXT,'0','0');
+ACK_CS0_D <= ((nAS_EXT)
+	OR (REG0(0) AND NOT BCC(0).LFBK AND NOT ACK_CS0.LFBK)
+	OR (NOT REG0(0) AND BCC(0).LFBK AND NOT ACK_CS0.LFBK)
+	OR (REG0(3) AND NOT BCC(3).LFBK AND NOT ACK_CS0.LFBK)
+	OR (NOT REG0(3) AND BCC(3).LFBK AND NOT ACK_CS0.LFBK)
+	OR (REG0(2) AND NOT BCC(2).LFBK AND NOT ACK_CS0.LFBK)
+	OR (NOT REG0(2) AND BCC(2).LFBK AND NOT ACK_CS0.LFBK)
+	OR (REG0(1) AND NOT BCC(1).LFBK AND NOT ACK_CS0.LFBK)
+	OR (NOT REG0(1) AND BCC(1).LFBK AND NOT ACK_CS0.LFBK)
+	OR (REG0(4) AND NOT ACK_CS0.LFBK AND NOT BCC(4).LFBK)
+	OR (NOT REG0(4) AND NOT ACK_CS0.LFBK AND BCC(4).LFBK));
+
+FDCPE_ACK_RAM_ROM: FDCPE port map (ACK_RAM_ROM,ACK_RAM_ROM_D,NOT SYSCLK_EXT,'0','0');
+ACK_RAM_ROM_D <= ((NOT nAS_EXT AND ACK_RAM_ROM.LFBK)
+	OR (NOT A_EXT(28) AND NOT A_EXT(29) AND NOT A_EXT(30) AND NOT A_EXT(31) AND 
+	NOT A_EXT(27) AND NOT A_EXT(26) AND NOT A_EXT(25) AND NOT nAS_EXT AND A_EXT(23) AND 
+	BCC(0) AND NOT A_EXT(24))
+	OR (NOT A_EXT(28) AND NOT A_EXT(29) AND NOT A_EXT(30) AND NOT A_EXT(31) AND 
+	NOT A_EXT(27) AND NOT A_EXT(26) AND NOT A_EXT(25) AND NOT nAS_EXT AND BCC(0) AND 
+	NOT A_EXT(24) AND NOT XLXI_158/boot_in_progress.LFBK));
+
+FTCPE_BCC0: FTCPE port map (BCC(0),nAS_EXT,NOT SYSCLK_EXT,NOT BCC(3)/BCC(3)_RSTF.LFBK,'0');
+
+FTCPE_BCC1: FTCPE port map (BCC(1),BCC_T(1),NOT SYSCLK_EXT,NOT BCC(3)/BCC(3)_RSTF.LFBK,'0');
+BCC_T(1) <= (NOT nAS_EXT AND BCC(0).LFBK);
+
+FTCPE_BCC2: FTCPE port map (BCC(2),BCC_T(2),NOT SYSCLK_EXT,NOT BCC(3)/BCC(3)_RSTF.LFBK,'0');
+BCC_T(2) <= (NOT nAS_EXT AND BCC(0).LFBK AND BCC(1).LFBK);
+
+
+BCC(3)/BCC(3)_RSTF <= (nRESET_EXT AND nECS_EXT);
+
+FTCPE_BCC3: FTCPE port map (BCC(3),BCC_T(3),NOT SYSCLK_EXT,NOT BCC(3)/BCC(3)_RSTF.LFBK,'0');
+BCC_T(3) <= (NOT nAS_EXT AND BCC(0).LFBK AND BCC(1).LFBK AND 
+	BCC(2).LFBK);
+
+FTCPE_BCC4: FTCPE port map (BCC(4),BCC_T(4),NOT SYSCLK_EXT,NOT BCC(3)/BCC(3)_RSTF.LFBK,'0');
+BCC_T(4) <= (NOT nAS_EXT AND BCC(0).LFBK AND BCC(1).LFBK AND 
+	BCC(2).LFBK AND BCC(3).LFBK);
+
+FDCPE_BUS_TIMEOUT: FDCPE port map (BUS_TIMEOUT,BUS_TIMEOUT_D,NOT SYSCLK_EXT,'0','0');
+BUS_TIMEOUT_D <= ((NOT nAS_EXT AND BUS_TIMEOUT.LFBK)
+	OR (NOT nAS_EXT AND BCC(0).LFBK AND BCC(1).LFBK AND 
+	BCC(2).LFBK AND BCC(3).LFBK AND BCC(4).LFBK));
+
+FDCPE_DO0\$WA2: FDCPE port map (DO(0)\$WA2,DO_D(0)\$WA2,SYSCLK_EXT,NOT nRESET_EXT,'0');
+DO_D(0)\$WA2 <= ((D_EXT(0).PIN AND XLXN_281/XLXN_281_D2.LFBK)
+	OR (REG1(0).LFBK AND NOT XLXN_281/XLXN_281_D2.LFBK));
+
+FDCPE_DO0\$WA1: FDCPE port map (DO(0)\$WA1,DO_D(0)\$WA1,SYSCLK_EXT,NOT nRESET_EXT,'0');
+DO_D(0)\$WA1 <= ((NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	NOT A_EXT(0) AND NOT A_EXT(1) AND NOT RnW AND D_EXT(0).PIN AND NOT nIOSEL.PIN)
+	OR (A_EXT(23) AND REG0(0).LFBK)
+	OR (A_EXT(21) AND REG0(0).LFBK)
+	OR (A_EXT(20) AND REG0(0).LFBK)
+	OR (REG0(0).LFBK AND nIOSEL.PIN)
+	OR (NOT A_EXT(22) AND REG0(0).LFBK)
+	OR (A_EXT(0) AND REG0(0).LFBK)
+	OR (A_EXT(1) AND REG0(0).LFBK)
+	OR (RnW AND REG0(0).LFBK));
+
+FDCPE_DO0\$WA0: FDCPE port map (DO(0)\$WA0,DO_D(0)\$WA0,SYSCLK_EXT,NOT nRESET_EXT,'0');
+DO_D(0)\$WA0 <= ((D_EXT(0).PIN AND XLXN_630/XLXN_630_D2.LFBK)
+	OR (NOT XLXN_630/XLXN_630_D2.LFBK AND REG2(0).LFBK));
+
+FDCPE_DO1\$WA2: FDCPE port map (DO(1)\$WA2,DO_D(1)\$WA2,SYSCLK_EXT,NOT nRESET_EXT,'0');
+DO_D(1)\$WA2 <= ((D_EXT(1).PIN AND XLXN_281/XLXN_281_D2.LFBK)
+	OR (NOT XLXN_281/XLXN_281_D2.LFBK AND REG1(1).LFBK));
+
+FDCPE_DO1\$WA1: FDCPE port map (DO(1)\$WA1,DO_D(1)\$WA1,SYSCLK_EXT,NOT nRESET_EXT,'0');
+DO_D(1)\$WA1 <= ((NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	NOT A_EXT(0) AND NOT A_EXT(1) AND NOT RnW AND D_EXT(1).PIN AND NOT nIOSEL.PIN)
+	OR (A_EXT(23) AND REG0(1).LFBK)
+	OR (A_EXT(21) AND REG0(1).LFBK)
+	OR (A_EXT(20) AND REG0(1).LFBK)
+	OR (REG0(1).LFBK AND nIOSEL.PIN)
+	OR (NOT A_EXT(22) AND REG0(1).LFBK)
+	OR (A_EXT(0) AND REG0(1).LFBK)
+	OR (A_EXT(1) AND REG0(1).LFBK)
+	OR (RnW AND REG0(1).LFBK));
+
+FDCPE_DO1\$WA0: FDCPE port map (DO(1)\$WA0,DO_D(1)\$WA0,SYSCLK_EXT,NOT nRESET_EXT,'0');
+DO_D(1)\$WA0 <= ((D_EXT(1).PIN AND XLXN_630/XLXN_630_D2.LFBK)
+	OR (NOT XLXN_630/XLXN_630_D2.LFBK AND REG2(1).LFBK));
+
+FDCPE_DO2\$WA2: FDCPE port map (DO(2)\$WA2,DO_D(2)\$WA2,SYSCLK_EXT,NOT nRESET_EXT,'0');
+DO_D(2)\$WA2 <= ((D_EXT(2).PIN AND XLXN_281/XLXN_281_D2.LFBK)
+	OR (NOT XLXN_281/XLXN_281_D2.LFBK AND REG1(2).LFBK));
+
+FDCPE_DO2\$WA0: FDCPE port map (DO(2)\$WA0,DO_D(2)\$WA0,SYSCLK_EXT,NOT nRESET_EXT,'0');
+DO_D(2)\$WA0 <= ((REG2(2) AND NOT XLXN_630/XLXN_630_D2.LFBK)
+	OR (D_EXT(2).PIN AND XLXN_630/XLXN_630_D2.LFBK));
+
+FDCPE_DO2\$WA1: FDCPE port map (DO(2)\$WA1,DO_D(2)\$WA1,SYSCLK_EXT,NOT nRESET_EXT,'0');
+DO_D(2)\$WA1 <= ((A_EXT(21) AND REG0(2).LFBK)
+	OR (NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	NOT A_EXT(0) AND NOT A_EXT(1) AND NOT RnW AND D_EXT(2).PIN AND NOT nIOSEL.PIN)
+	OR (A_EXT(23) AND REG0(2).LFBK)
+	OR (A_EXT(20) AND REG0(2).LFBK)
+	OR (REG0(2).LFBK AND nIOSEL.PIN)
+	OR (NOT A_EXT(22) AND REG0(2).LFBK)
+	OR (A_EXT(0) AND REG0(2).LFBK)
+	OR (A_EXT(1) AND REG0(2).LFBK)
+	OR (RnW AND REG0(2).LFBK));
+
+FDCPE_DO3\$WA0: FDCPE port map (DO(3)\$WA0,DO_D(3)\$WA0,SYSCLK_EXT,NOT nRESET_EXT,'0');
+DO_D(3)\$WA0 <= ((REG2(3) AND NOT XLXN_630/XLXN_630_D2.LFBK)
+	OR (D_EXT(3).PIN AND XLXN_630/XLXN_630_D2.LFBK));
+
+FDCPE_DO3\$WA2: FDCPE port map (DO(3)\$WA2,DO_D(3)\$WA2,SYSCLK_EXT,NOT nRESET_EXT,'0');
+DO_D(3)\$WA2 <= ((D_EXT(3).PIN AND XLXN_281/XLXN_281_D2)
+	OR (NOT XLXN_281/XLXN_281_D2 AND REG1(3).LFBK));
+
+FDCPE_DO3\$WA1: FDCPE port map (DO(3)\$WA1,DO_D(3)\$WA1,SYSCLK_EXT,NOT nRESET_EXT,'0');
+DO_D(3)\$WA1 <= ((A_EXT(23) AND REG0(3).LFBK)
+	OR (A_EXT(21) AND REG0(3).LFBK)
+	OR (A_EXT(20) AND REG0(3).LFBK)
+	OR (REG0(3).LFBK AND nIOSEL.PIN)
+	OR (NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	NOT A_EXT(0) AND NOT A_EXT(1) AND NOT RnW AND D_EXT(3).PIN AND NOT nIOSEL.PIN)
+	OR (NOT A_EXT(22) AND REG0(3).LFBK)
+	OR (A_EXT(0) AND REG0(3).LFBK)
+	OR (A_EXT(1) AND REG0(3).LFBK)
+	OR (RnW AND REG0(3).LFBK));
+
+FDCPE_DO4\$WA2: FDCPE port map (DO(4)\$WA2,DO_D(4)\$WA2,SYSCLK_EXT,NOT nRESET_EXT,'0');
+DO_D(4)\$WA2 <= ((D_EXT(4).PIN AND XLXN_281/XLXN_281_D2)
+	OR (NOT XLXN_281/XLXN_281_D2 AND REG1(4).LFBK));
+
+FDCPE_DO4\$WA0: FDCPE port map (DO(4)\$WA0,DO_D(4)\$WA0,SYSCLK_EXT,NOT nRESET_EXT,'0');
+DO_D(4)\$WA0 <= ((D_EXT(4).PIN AND XLXN_630/XLXN_630_D2)
+	OR (NOT XLXN_630/XLXN_630_D2 AND REG2(4).LFBK));
+
+FDCPE_DO4\$WA1: FDCPE port map (DO(4)\$WA1,DO_D(4)\$WA1,SYSCLK_EXT,NOT nRESET_EXT,'0');
+DO_D(4)\$WA1 <= ((A_EXT(23) AND REG0(4).LFBK)
+	OR (A_EXT(20) AND REG0(4).LFBK)
+	OR (REG0(4).LFBK AND nIOSEL.PIN)
+	OR (A_EXT(21) AND REG0(4).LFBK)
+	OR (NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	NOT A_EXT(0) AND NOT A_EXT(1) AND NOT RnW AND D_EXT(4).PIN AND NOT nIOSEL.PIN)
+	OR (NOT A_EXT(22) AND REG0(4).LFBK)
+	OR (A_EXT(0) AND REG0(4).LFBK)
+	OR (A_EXT(1) AND REG0(4).LFBK)
+	OR (RnW AND REG0(4).LFBK));
+
+FDCPE_DO5\$WA0: FDCPE port map (DO(5)\$WA0,DO_D(5)\$WA0,SYSCLK_EXT,NOT nRESET_EXT,'0');
+DO_D(5)\$WA0 <= ((D_EXT(5).PIN AND XLXN_630/XLXN_630_D2)
+	OR (NOT XLXN_630/XLXN_630_D2 AND REG2(5).LFBK));
+
+FDCPE_DO5\$WA2: FDCPE port map (DO(5)\$WA2,DO_D(5)\$WA2,SYSCLK_EXT,NOT nRESET_EXT,'0');
+DO_D(5)\$WA2 <= ((D_EXT(5).PIN AND XLXN_281/XLXN_281_D2)
+	OR (NOT XLXN_281/XLXN_281_D2 AND REG1(5).LFBK));
+
+FDCPE_DO5\$WA1: FDCPE port map (DO(5)\$WA1,DO_D(5)\$WA1,SYSCLK_EXT,NOT nRESET_EXT,'0');
+DO_D(5)\$WA1 <= ((A_EXT(23) AND REG0(5).LFBK)
+	OR (A_EXT(21) AND REG0(5).LFBK)
+	OR (A_EXT(20) AND REG0(5).LFBK)
+	OR (REG0(5).LFBK AND nIOSEL.PIN)
+	OR (NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	NOT A_EXT(0) AND NOT A_EXT(1) AND NOT RnW AND D_EXT(5).PIN AND NOT nIOSEL.PIN)
+	OR (NOT A_EXT(22) AND REG0(5).LFBK)
+	OR (A_EXT(0) AND REG0(5).LFBK)
+	OR (A_EXT(1) AND REG0(5).LFBK)
+	OR (RnW AND REG0(5).LFBK));
+
+FDCPE_DO6\$WA1: FDCPE port map (DO(6)\$WA1,DO_D(6)\$WA1,SYSCLK_EXT,NOT nRESET_EXT,'0');
+DO_D(6)\$WA1 <= ((A_EXT(23) AND REG0(6))
+	OR (A_EXT(21) AND REG0(6))
+	OR (A_EXT(20) AND REG0(6))
+	OR (REG0(6) AND nIOSEL.PIN)
+	OR (NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	NOT A_EXT(0) AND NOT A_EXT(1) AND NOT RnW AND D_EXT(6).PIN AND NOT nIOSEL.PIN)
+	OR (NOT A_EXT(22) AND REG0(6))
+	OR (REG0(6) AND A_EXT(0))
+	OR (REG0(6) AND A_EXT(1))
+	OR (REG0(6) AND RnW));
+
+FDCPE_DO6\$WA2: FDCPE port map (DO(6)\$WA2,DO_D(6)\$WA2,SYSCLK_EXT,NOT nRESET_EXT,'0');
+DO_D(6)\$WA2 <= ((D_EXT(6).PIN AND XLXN_281/XLXN_281_D2)
+	OR (NOT XLXN_281/XLXN_281_D2 AND REG1(6).LFBK));
+
+FDCPE_DO6\$WA0: FDCPE port map (DO(6)\$WA0,DO_D(6)\$WA0,SYSCLK_EXT,NOT nRESET_EXT,'0');
+DO_D(6)\$WA0 <= ((REG2(6) AND NOT XLXN_630/XLXN_630_D2)
+	OR (D_EXT(6).PIN AND XLXN_630/XLXN_630_D2));
+
+FDCPE_DO7\$WA1: FDCPE port map (DO(7)\$WA1,DO_D(7)\$WA1,SYSCLK_EXT,NOT nRESET_EXT,'0');
+DO_D(7)\$WA1 <= ((A_EXT(23) AND REG0(7).LFBK)
+	OR (A_EXT(21) AND REG0(7).LFBK)
+	OR (A_EXT(20) AND REG0(7).LFBK)
+	OR (REG0(7).LFBK AND nIOSEL.PIN)
+	OR (NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	NOT A_EXT(0) AND NOT A_EXT(1) AND NOT RnW AND D_EXT(7).PIN AND NOT nIOSEL.PIN)
+	OR (NOT A_EXT(22) AND REG0(7).LFBK)
+	OR (A_EXT(0) AND REG0(7).LFBK)
+	OR (A_EXT(1) AND REG0(7).LFBK)
+	OR (RnW AND REG0(7).LFBK));
+
+FDCPE_DO7\$WA2: FDCPE port map (DO(7)\$WA2,DO_D(7)\$WA2,SYSCLK_EXT,NOT nRESET_EXT,'0');
+DO_D(7)\$WA2 <= ((D_EXT(7).PIN AND XLXN_281/XLXN_281_D2)
+	OR (NOT XLXN_281/XLXN_281_D2 AND REG1(7).LFBK));
+
+FDCPE_DO7\$WA0: FDCPE port map (DO(7)\$WA0,DO_D(7)\$WA0,SYSCLK_EXT,NOT nRESET_EXT,'0');
+DO_D(7)\$WA0 <= ((REG2(7) AND NOT XLXN_630/XLXN_630_D2)
+	OR (D_EXT(7).PIN AND XLXN_630/XLXN_630_D2));
+
+
+D_EXT_I(0) <= DO(0);
+D_EXT(0) <= D_EXT_I(0) when D_EXT_OE(0) = '1' else 'Z';
+D_EXT_OE(0) <= (NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	RnW AND NOT nIOSEL.PIN);
+
+
+D_EXT_I(1) <= DO(1);
+D_EXT(1) <= D_EXT_I(1) when D_EXT_OE(1) = '1' else 'Z';
+D_EXT_OE(1) <= (NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	RnW AND NOT nIOSEL.PIN);
+
+
+D_EXT_I(2) <= DO(2);
+D_EXT(2) <= D_EXT_I(2) when D_EXT_OE(2) = '1' else 'Z';
+D_EXT_OE(2) <= (NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	RnW AND NOT nIOSEL.PIN);
+
+
+D_EXT_I(3) <= DO(3);
+D_EXT(3) <= D_EXT_I(3) when D_EXT_OE(3) = '1' else 'Z';
+D_EXT_OE(3) <= (NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	RnW AND NOT nIOSEL.PIN);
+
+
+D_EXT_I(4) <= DO(4);
+D_EXT(4) <= D_EXT_I(4) when D_EXT_OE(4) = '1' else 'Z';
+D_EXT_OE(4) <= (NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	RnW AND NOT nIOSEL.PIN);
+
+
+D_EXT_I(5) <= DO(5);
+D_EXT(5) <= D_EXT_I(5) when D_EXT_OE(5) = '1' else 'Z';
+D_EXT_OE(5) <= (NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	RnW AND NOT nIOSEL.PIN);
+
+
+D_EXT_I(6) <= DO(6);
+D_EXT(6) <= D_EXT_I(6) when D_EXT_OE(6) = '1' else 'Z';
+D_EXT_OE(6) <= (NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	RnW AND NOT nIOSEL.PIN);
+
+
+D_EXT_I(7) <= DO(7);
+D_EXT(7) <= D_EXT_I(7) when D_EXT_OE(7) = '1' else 'Z';
+D_EXT_OE(7) <= (NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	RnW AND NOT nIOSEL.PIN);
+
+
+
+
+
+
+LD <= NOT ((NOT A_EXT(0) AND NOT RnW AND NOT SIZ_1 AND SIZ_0));
+
+
+LLD <= NOT (((NOT A_EXT(0) AND NOT A_EXT(1) AND NOT RnW AND SIZ_1)
+	OR (NOT A_EXT(0) AND NOT RnW AND NOT SIZ_1 AND SIZ_0)
+	OR (NOT A_EXT(1) AND NOT RnW AND SIZ_1 AND NOT SIZ_0)
+	OR (NOT A_EXT(1) AND NOT RnW AND NOT SIZ_1 AND SIZ_0)));
+
+
+LMD <= NOT (((A_EXT(0) AND A_EXT(1) AND NOT RnW)
+	OR (NOT A_EXT(1) AND NOT RnW AND NOT SIZ_1 AND SIZ_0)
+	OR (NOT A_EXT(0) AND NOT A_EXT(1) AND NOT RnW AND SIZ_1 AND NOT SIZ_0)));
+
+
+LOAD$BUF2/LOAD$BUF2_TRST <= ((ACK_RAM_ROM)
+	OR (NOT A_EXT(23) AND NOT A_EXT(22) AND A_EXT(21) AND NOT A_EXT(20) AND 
+	REG0(5) AND ACK_CS0.LFBK AND NOT REG0(6).LFBK AND NOT nIOSEL.PIN));
+
+
+LOAD$BUF3/LOAD$BUF3_TRST__$INT <= ((ACK_RAM_ROM)
+	OR (ACK_BOOT)
+	OR (NOT A_EXT(23) AND NOT A_EXT(22) AND A_EXT(21) AND NOT A_EXT(20) AND 
+	REG0(5) AND ACK_CS0.LFBK AND REG0(6).LFBK AND NOT nIOSEL.PIN));
+
+
+RDLL <= RnW;
+
+
+RDLM <= RnW;
+
+
+RDUM <= RnW;
+
+
+RDUU <= RnW;
+
+FTCPE_REG00: FTCPE port map (REG0(0),REG0_T(0),SYSCLK_EXT,NOT nRESET_EXT,'0');
+REG0_T(0) <= ((NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	NOT A_EXT(0) AND NOT A_EXT(1) AND NOT RnW AND D_EXT(0).PIN AND NOT REG0(0).LFBK AND 
+	NOT nIOSEL.PIN)
+	OR (NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	NOT A_EXT(0) AND NOT A_EXT(1) AND NOT RnW AND NOT D_EXT(0).PIN AND REG0(0).LFBK AND 
+	NOT nIOSEL.PIN));
+
+FTCPE_REG01: FTCPE port map (REG0(1),REG0_T(1),SYSCLK_EXT,NOT nRESET_EXT,'0');
+REG0_T(1) <= ((NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	NOT A_EXT(0) AND NOT A_EXT(1) AND NOT RnW AND D_EXT(1).PIN AND NOT REG0(1).LFBK AND 
+	NOT nIOSEL.PIN)
+	OR (NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	NOT A_EXT(0) AND NOT A_EXT(1) AND NOT RnW AND NOT D_EXT(1).PIN AND REG0(1).LFBK AND 
+	NOT nIOSEL.PIN));
+
+FTCPE_REG02: FTCPE port map (REG0(2),REG0_T(2),SYSCLK_EXT,NOT nRESET_EXT,'0');
+REG0_T(2) <= ((NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	NOT A_EXT(0) AND NOT A_EXT(1) AND NOT RnW AND D_EXT(2).PIN AND NOT REG0(2).LFBK AND 
+	NOT nIOSEL.PIN)
+	OR (NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	NOT A_EXT(0) AND NOT A_EXT(1) AND NOT RnW AND NOT D_EXT(2).PIN AND REG0(2).LFBK AND 
+	NOT nIOSEL.PIN));
+
+FTCPE_REG03: FTCPE port map (REG0(3),REG0_T(3),SYSCLK_EXT,NOT nRESET_EXT,'0');
+REG0_T(3) <= ((NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	NOT A_EXT(0) AND NOT A_EXT(1) AND NOT RnW AND D_EXT(3).PIN AND NOT REG0(3).LFBK AND 
+	NOT nIOSEL.PIN)
+	OR (NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	NOT A_EXT(0) AND NOT A_EXT(1) AND NOT RnW AND NOT D_EXT(3).PIN AND REG0(3).LFBK AND 
+	NOT nIOSEL.PIN));
+
+FTCPE_REG04: FTCPE port map (REG0(4),REG0_T(4),SYSCLK_EXT,NOT nRESET_EXT,'0');
+REG0_T(4) <= ((NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	NOT A_EXT(0) AND NOT A_EXT(1) AND NOT RnW AND D_EXT(4).PIN AND NOT REG0(4).LFBK AND 
+	NOT nIOSEL.PIN)
+	OR (NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	NOT A_EXT(0) AND NOT A_EXT(1) AND NOT RnW AND NOT D_EXT(4).PIN AND REG0(4).LFBK AND 
+	NOT nIOSEL.PIN));
+
+FTCPE_REG05: FTCPE port map (REG0(5),REG0_T(5),SYSCLK_EXT,NOT nRESET_EXT,'0');
+REG0_T(5) <= ((NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	NOT A_EXT(0) AND NOT A_EXT(1) AND NOT RnW AND D_EXT(5).PIN AND NOT REG0(5).LFBK AND 
+	NOT nIOSEL.PIN)
+	OR (NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	NOT A_EXT(0) AND NOT A_EXT(1) AND NOT RnW AND NOT D_EXT(5).PIN AND REG0(5).LFBK AND 
+	NOT nIOSEL.PIN));
+
+FTCPE_REG06: FTCPE port map (REG0(6),REG0_T(6),SYSCLK_EXT,NOT nRESET_EXT,'0');
+REG0_T(6) <= ((NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	NOT A_EXT(0) AND NOT A_EXT(1) AND NOT RnW AND D_EXT(6).PIN AND NOT REG0(6).LFBK AND 
+	NOT nIOSEL.PIN)
+	OR (NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	NOT A_EXT(0) AND NOT A_EXT(1) AND NOT RnW AND NOT D_EXT(6).PIN AND REG0(6).LFBK AND 
+	NOT nIOSEL.PIN));
+
+FTCPE_REG07: FTCPE port map (REG0(7),REG0_T(7),SYSCLK_EXT,NOT nRESET_EXT,'0');
+REG0_T(7) <= ((NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	NOT A_EXT(0) AND NOT A_EXT(1) AND NOT RnW AND D_EXT(7).PIN AND NOT REG0(7).LFBK AND 
+	NOT nIOSEL.PIN)
+	OR (NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	NOT A_EXT(0) AND NOT A_EXT(1) AND NOT RnW AND NOT D_EXT(7).PIN AND REG0(7).LFBK AND 
+	NOT nIOSEL.PIN));
+
+FDCPE_REG10: FDCPE port map (REG1(0),REG1_D(0),SYSCLK_EXT,NOT nRESET_EXT,'0');
+REG1_D(0) <= ((D_EXT(0).PIN AND XLXN_281/XLXN_281_D2.LFBK)
+	OR (REG1(0).LFBK AND NOT XLXN_281/XLXN_281_D2.LFBK));
+
+FDCPE_REG11: FDCPE port map (REG1(1),REG1_D(1),SYSCLK_EXT,NOT nRESET_EXT,'0');
+REG1_D(1) <= ((D_EXT(1).PIN AND XLXN_281/XLXN_281_D2.LFBK)
+	OR (NOT XLXN_281/XLXN_281_D2.LFBK AND REG1(1).LFBK));
+
+FDCPE_REG12: FDCPE port map (REG1(2),REG1_D(2),SYSCLK_EXT,NOT nRESET_EXT,'0');
+REG1_D(2) <= ((D_EXT(2).PIN AND XLXN_281/XLXN_281_D2.LFBK)
+	OR (NOT XLXN_281/XLXN_281_D2.LFBK AND REG1(2).LFBK));
+
+FDCPE_REG13: FDCPE port map (REG1(3),REG1_D(3),SYSCLK_EXT,NOT nRESET_EXT,'0');
+REG1_D(3) <= ((D_EXT(3).PIN AND XLXN_281/XLXN_281_D2)
+	OR (NOT XLXN_281/XLXN_281_D2 AND REG1(3).LFBK));
+
+FDCPE_REG14: FDCPE port map (REG1(4),REG1_D(4),SYSCLK_EXT,NOT nRESET_EXT,'0');
+REG1_D(4) <= ((D_EXT(4).PIN AND XLXN_281/XLXN_281_D2)
+	OR (NOT XLXN_281/XLXN_281_D2 AND REG1(4).LFBK));
+
+FDCPE_REG15: FDCPE port map (REG1(5),REG1_D(5),SYSCLK_EXT,NOT nRESET_EXT,'0');
+REG1_D(5) <= ((D_EXT(5).PIN AND XLXN_281/XLXN_281_D2)
+	OR (NOT XLXN_281/XLXN_281_D2 AND REG1(5).LFBK));
+
+FDCPE_REG16: FDCPE port map (REG1(6),REG1_D(6),SYSCLK_EXT,NOT nRESET_EXT,'0');
+REG1_D(6) <= ((D_EXT(6).PIN AND XLXN_281/XLXN_281_D2)
+	OR (NOT XLXN_281/XLXN_281_D2 AND REG1(6).LFBK));
+
+FDCPE_REG17: FDCPE port map (REG1(7),REG1_D(7),SYSCLK_EXT,NOT nRESET_EXT,'0');
+REG1_D(7) <= ((D_EXT(7).PIN AND XLXN_281/XLXN_281_D2)
+	OR (NOT XLXN_281/XLXN_281_D2 AND REG1(7).LFBK));
+
+FDCPE_REG20: FDCPE port map (REG2(0),REG2_D(0),SYSCLK_EXT,NOT nRESET_EXT,'0');
+REG2_D(0) <= ((D_EXT(0).PIN AND XLXN_630/XLXN_630_D2.LFBK)
+	OR (NOT XLXN_630/XLXN_630_D2.LFBK AND REG2(0).LFBK));
+
+FDCPE_REG21: FDCPE port map (REG2(1),REG2_D(1),SYSCLK_EXT,NOT nRESET_EXT,'0');
+REG2_D(1) <= ((D_EXT(1).PIN AND XLXN_630/XLXN_630_D2.LFBK)
+	OR (NOT XLXN_630/XLXN_630_D2.LFBK AND REG2(1).LFBK));
+
+FDCPE_REG22: FDCPE port map (REG2(2),REG2_D(2),SYSCLK_EXT,NOT nRESET_EXT,'0');
+REG2_D(2) <= ((D_EXT(2).PIN AND XLXN_630/XLXN_630_D2)
+	OR (NOT XLXN_630/XLXN_630_D2 AND REG2(2).LFBK));
+
+FDCPE_REG23: FDCPE port map (REG2(3),REG2_D(3),SYSCLK_EXT,NOT nRESET_EXT,'0');
+REG2_D(3) <= ((D_EXT(3).PIN AND XLXN_630/XLXN_630_D2)
+	OR (NOT XLXN_630/XLXN_630_D2 AND REG2(3).LFBK));
+
+FDCPE_REG24: FDCPE port map (REG2(4),REG2_D(4),SYSCLK_EXT,NOT nRESET_EXT,'0');
+REG2_D(4) <= ((D_EXT(4).PIN AND XLXN_630/XLXN_630_D2)
+	OR (NOT XLXN_630/XLXN_630_D2 AND REG2(4).LFBK));
+
+FDCPE_REG25: FDCPE port map (REG2(5),REG2_D(5),SYSCLK_EXT,NOT nRESET_EXT,'0');
+REG2_D(5) <= ((D_EXT(5).PIN AND XLXN_630/XLXN_630_D2)
+	OR (NOT XLXN_630/XLXN_630_D2 AND REG2(5).LFBK));
+
+FDCPE_REG26: FDCPE port map (REG2(6),REG2_D(6),SYSCLK_EXT,NOT nRESET_EXT,'0');
+REG2_D(6) <= ((D_EXT(6).PIN AND XLXN_630/XLXN_630_D2)
+	OR (NOT XLXN_630/XLXN_630_D2 AND REG2(6).LFBK));
+
+FDCPE_REG27: FDCPE port map (REG2(7),REG2_D(7),SYSCLK_EXT,NOT nRESET_EXT,'0');
+REG2_D(7) <= ((D_EXT(7).PIN AND XLXN_630/XLXN_630_D2)
+	OR (NOT XLXN_630/XLXN_630_D2 AND REG2(7).LFBK));
+
+
+UD <= NOT ((A_EXT(0) AND NOT RnW));
+
+
+UMD <= NOT (((A_EXT(1) AND NOT RnW)
+	OR (NOT A_EXT(0) AND NOT RnW AND NOT SIZ_1 AND SIZ_0)));
+
+
+UUD <= ((RnW)
+	OR (NOT A_EXT(0) AND NOT A_EXT(1)));
+
+
+WRLL <= ((A_EXT(0) AND A_EXT(1) AND NOT RnW)
+	OR (A_EXT(1) AND NOT RnW AND SIZ_1)
+	OR (NOT RnW AND NOT SIZ_1 AND NOT SIZ_0)
+	OR (A_EXT(0) AND NOT RnW AND SIZ_1 AND SIZ_0));
+
+
+WRLM <= ((NOT A_EXT(0) AND A_EXT(1) AND NOT RnW)
+	OR (A_EXT(0) AND NOT A_EXT(1) AND NOT RnW AND NOT SIZ_0)
+	OR (NOT A_EXT(1) AND NOT RnW AND SIZ_1 AND SIZ_0)
+	OR (NOT A_EXT(1) AND NOT RnW AND NOT SIZ_1 AND NOT SIZ_0));
+
+
+WRUM <= ((A_EXT(0) AND NOT A_EXT(1) AND NOT RnW)
+	OR (NOT A_EXT(1) AND NOT RnW AND SIZ_1)
+	OR (NOT A_EXT(1) AND NOT RnW AND NOT SIZ_0));
+
+
+WRUU <= (NOT A_EXT(0) AND NOT A_EXT(1) AND NOT RnW);
+
+FTCPE_XLXI_158/boot_cycle_count_reg0: FTCPE port map (XLXI_158/boot_cycle_count_reg(0),XLXI_158/boot_in_progress,NOT nAS_EXT,NOT nRESET_EXT,'0');
+
+FTCPE_XLXI_158/boot_cycle_count_reg1: FTCPE port map (XLXI_158/boot_cycle_count_reg(1),XLXI_158/boot_cycle_count_reg_T(1),NOT nAS_EXT,NOT nRESET_EXT,'0');
+XLXI_158/boot_cycle_count_reg_T(1) <= (XLXI_158/boot_in_progress AND 
+	XLXI_158/boot_cycle_count_reg(0).LFBK);
+
+FTCPE_XLXI_158/boot_cycle_count_reg2: FTCPE port map (XLXI_158/boot_cycle_count_reg(2),XLXI_158/boot_cycle_count_reg_T(2),NOT nAS_EXT,NOT nRESET_EXT,'0');
+XLXI_158/boot_cycle_count_reg_T(2) <= (XLXI_158/boot_in_progress AND 
+	XLXI_158/boot_cycle_count_reg(0).LFBK AND XLXI_158/boot_cycle_count_reg(1).LFBK);
+
+FTCPE_XLXI_158/boot_cycle_count_reg3: FTCPE port map (XLXI_158/boot_cycle_count_reg(3),XLXI_158/boot_cycle_count_reg_T(3),NOT nAS_EXT,NOT nRESET_EXT,'0');
+XLXI_158/boot_cycle_count_reg_T(3) <= (XLXI_158/boot_cycle_count_reg(0) AND 
+	XLXI_158/boot_cycle_count_reg(1) AND XLXI_158/boot_cycle_count_reg(2) AND 
+	XLXI_158/boot_in_progress.LFBK);
+
+FTCPE_XLXI_158/boot_in_progress: FTCPE port map (XLXI_158/boot_in_progress,XLXI_158/boot_in_progress_T,NOT nAS_EXT,'0',NOT nRESET_EXT);
+XLXI_158/boot_in_progress_T <= (NOT XLXI_158/boot_cycle_count_reg(0) AND 
+	NOT XLXI_158/boot_cycle_count_reg(1) AND NOT XLXI_158/boot_cycle_count_reg(2) AND 
+	XLXI_158/boot_in_progress.LFBK AND XLXI_158/boot_cycle_count_reg(3).LFBK);
+
+
+XLXN_281/XLXN_281_D2 <= (NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	A_EXT(0) AND NOT A_EXT(1) AND NOT RnW AND NOT nIOSEL_OBUF.LFBK);
+
+
+XLXN_630/XLXN_630_D2 <= (NOT A_EXT(23) AND A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	NOT A_EXT(0) AND A_EXT(1) AND NOT RnW AND NOT nIOSEL_OBUF.LFBK);
+
+
+n68230CS <= NOT ((NOT A_EXT(23) AND NOT A_EXT(22) AND NOT A_EXT(21) AND NOT A_EXT(20) AND 
+	NOT nIOSEL.PIN));
+
+
+n68561CS <= NOT ((NOT A_EXT(23) AND NOT A_EXT(22) AND NOT A_EXT(21) AND A_EXT(20) AND 
+	NOT nIOSEL.PIN));
+
+
+nBERR_I <= '0';
+nBERR <= nBERR_I when nBERR_OE = '1' else 'Z';
+nBERR_OE <= BUS_TIMEOUT;
+
+
+nBOOTCS <= NOT (((NOT nAS_EXT AND XLXI_158/boot_in_progress.LFBK)
+	OR (A_EXT(23) AND A_EXT(22) AND A_EXT(21) AND A_EXT(20) AND 
+	NOT nIOSEL.PIN)));
+
+
+nCBACK_EXT <= '1';
+
+
+nCIIN_EXT <= NOT (((NOT nCIOUT_EXT)
+	OR (NOT A_EXT(23) AND NOT A_EXT(22) AND NOT nIOSEL.PIN)
+	OR (NOT A_EXT(23) AND NOT A_EXT(21) AND NOT A_EXT(20) AND NOT nIOSEL.PIN)));
+
+
+nDSACK0_I <= '0';
+nDSACK0 <= nDSACK0_I when nDSACK0_OE = '1' else 'Z';
+nDSACK0_OE <= LOAD$BUF3/LOAD$BUF3_TRST__$INT;
+
+
+nDSACK1_I <= '0';
+nDSACK1 <= nDSACK1_I when nDSACK1_OE = '1' else 'Z';
+nDSACK1_OE <= LOAD$BUF2/LOAD$BUF2_TRST;
+
+
+nFLASHCS <= NOT ((NOT A_EXT(28) AND NOT A_EXT(29) AND NOT A_EXT(30) AND NOT A_EXT(31) AND 
+	NOT A_EXT(27) AND NOT A_EXT(26) AND NOT A_EXT(25) AND NOT nAS_EXT AND A_EXT(23) AND 
+	NOT A_EXT(24)));
+
+
+nHALT_I <= '0';
+nHALT <= nHALT_I when nHALT_OE = '1' else 'Z';
+nHALT_OE <= '0';
+
+
+nIOCS0 <= NOT ((NOT A_EXT(23) AND NOT A_EXT(22) AND A_EXT(21) AND NOT A_EXT(20) AND 
+	NOT nIOSEL_OBUF.LFBK));
+
+
+nIOCS1 <= NOT ((NOT A_EXT(23) AND NOT A_EXT(22) AND A_EXT(21) AND A_EXT(20) AND 
+	NOT nIOSEL_OBUF.LFBK));
+
+
+nIOSEL <= NOT ((A_EXT(28) AND A_EXT(29) AND A_EXT(30) AND A_EXT(31) AND 
+	A_EXT(27) AND A_EXT(26) AND A_EXT(25) AND NOT nAS_EXT AND A_EXT(24)));
+
+
+nRAMCS <= NOT ((NOT A_EXT(28) AND NOT A_EXT(29) AND NOT A_EXT(30) AND NOT A_EXT(31) AND 
+	NOT A_EXT(27) AND NOT A_EXT(26) AND NOT A_EXT(25) AND NOT nAS_EXT AND NOT A_EXT(23) AND 
+	NOT A_EXT(24) AND NOT XLXI_158/boot_in_progress.LFBK));
+
+
+nRD <= NOT RnW;
+
+
+nSTERM_I <= '0';
+nSTERM <= nSTERM_I when nSTERM_OE = '1' else 'Z';
+nSTERM_OE <= '0';
+
+
+nWR <= RnW;
+
+Register Legend:
+ FDCPE (Q,D,C,CLR,PRE); 
+ FTCPE (Q,D,C,CLR,PRE); 
+ LDCP  (Q,D,G,CLR,PRE); 
+
+******************************  Device Pin Out *****************************
+
+Device : XC95108-7-TQ100
+
+
+   --------------------------------------------------  
+  /100 98  96  94  92  90  88  86  84  82  80  78  76  \
+ |   99  97  95  93  91  89  87  85  83  81  79  77    |
+ | 1                                               75  | 
+ | 2                                               74  | 
+ | 3                                               73  | 
+ | 4                                               72  | 
+ | 5                                               71  | 
+ | 6                                               70  | 
+ | 7                                               69  | 
+ | 8                                               68  | 
+ | 9                                               67  | 
+ | 10                                              66  | 
+ | 11                                              65  | 
+ | 12                                              64  | 
+ | 13                XC95108-7-TQ100               63  | 
+ | 14                                              62  | 
+ | 15                                              61  | 
+ | 16                                              60  | 
+ | 17                                              59  | 
+ | 18                                              58  | 
+ | 19                                              57  | 
+ | 20                                              56  | 
+ | 21                                              55  | 
+ | 22                                              54  | 
+ | 23                                              53  | 
+ | 24                                              52  | 
+ | 25                                              51  | 
+ |   27  29  31  33  35  37  39  41  43  45  47  49    |
+  \26  28  30  32  34  36  38  40  42  44  46  48  50  /
+   --------------------------------------------------  
+
+
+Pin Signal                         Pin Signal                        
+No. Name                           No. Name                          
+  1 nWR                              51 VCC                           
+  2 PGND                             52 D_EXT<2>                      
+  3 PGND                             53 D_EXT<3>                      
+  4 PGND                             54 D_EXT<4>                      
+  5 VCC                              55 D_EXT<5>                      
+  6 nDSACK0                          56 D_EXT<6>                      
+  7 nDSACK1                          57 VCC                           
+  8 nSTERM                           58 D_EXT<7>                      
+  9 nHALT                            59 nRAMCS                        
+ 10 nBERR                            60 nFLASHCS                      
+ 11 nECS_EXT                         61 nBOOTCS                       
+ 12 PGND                             62 GND                           
+ 13 SIZ_0                            63 n68561CS                      
+ 14 SIZ_1                            64 n68230CS                      
+ 15 PGND                             65 LLD                           
+ 16 PGND                             66 WRLL                          
+ 17 RDUU                             67 LMD                           
+ 18 PGND                             68 WRUM                          
+ 19 UUD                              69 GND                           
+ 20 nRD                              70 UMD                           
+ 21 GND                              71 LD                            
+ 22 SYSCLK_EXT                       72 RDLL                          
+ 23 nAS_EXT                          73 WRLM                          
+ 24 PGND                             74 A_EXT<1>                      
+ 25 PGND                             75 GND                           
+ 26 VCC                              76 A_EXT<0>                      
+ 27 PGND                             77 RDLM                          
+ 28 PGND                             78 UD                            
+ 29 WRUU                             79 RDUM                          
+ 30 PGND                             80 nCIIN_EXT                     
+ 31 GND                              81 A_EXT<28>                     
+ 32 nCIOUT_EXT                       82 A_EXT<24>                     
+ 33 nIOCS0                           83 TDO                           
+ 34 PGND                             84 GND                           
+ 35 PGND                             85 A_EXT<29>                     
+ 36 PGND                             86 A_EXT<23>                     
+ 37 nIOCS1                           87 A_EXT<20>                     
+ 38 VCC                              88 VCC                           
+ 39 PGND                             89 A_EXT<21>                     
+ 40 PGND                             90 A_EXT<22>                     
+ 41 PGND                             91 A_EXT<25>                     
+ 42 nIOSEL                           92 A_EXT<26>                     
+ 43 PGND                             93 A_EXT<27>                     
+ 44 GND                              94 A_EXT<31>                     
+ 45 TDI                              95 A_EXT<30>                     
+ 46 D_EXT<0>                         96 nCBACK_EXT                    
+ 47 TMS                              97 RnW                           
+ 48 TCK                              98 VCC                           
+ 49 PGND                             99 nRESET_EXT                    
+ 50 D_EXT<1>                        100 GND                           
+
+
+Legend :  NC  = Not Connected, unbonded pin
+         PGND = Unused I/O configured as additional Ground pin
+         TIE  = Unused I/O floating -- must tie to VCC, GND or other signal
+         VCC  = Dedicated Power Pin
+         GND  = Dedicated Ground Pin
+         TDI  = Test Data In, JTAG pin
+         TDO  = Test Data Out, JTAG pin
+         TCK  = Test Clock, JTAG pin
+         TMS  = Test Mode Select, JTAG pin
+  PROHIBITED  = User reserved pin
+****************************  Compiler Options  ****************************
+
+Following is a list of all global compiler options used by the fitter run.
+
+Device(s) Specified                         : xc95108-7-TQ100
+Optimization Method                         : DENSITY
+Multi-Level Logic Optimization              : ON
+Ignore Timing Specifications                : OFF
+Default Register Power Up Value             : LOW
+Keep User Location Constraints              : ON
+What-You-See-Is-What-You-Get                : OFF
+Exhaustive Fitting                          : ON
+Keep Unused Inputs                          : OFF
+Slew Rate                                   : FAST
+Power Mode                                  : STD
+Ground on Unused IOs                        : ON
+Global Clock Optimization                   : ON
+Global Set/Reset Optimization               : ON
+Global Ouput Enable Optimization            : ON
+FASTConnect/UIM optimzation                 : ON
+Local Feedback                              : ON
+Pin Feedback                                : ON
+Input Limit                                 : 17
+Pterm Limit                                 : 90

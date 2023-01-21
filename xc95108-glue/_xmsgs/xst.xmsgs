@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="2591" delta="old" ><arg fmt="%s" index="1">&quot;top.vf&quot; line 873:</arg> <arg fmt="%s" index="2">attribute on instance</arg> &lt;<arg fmt="%s" index="3">SLEW</arg>&gt; overrides <arg fmt="%s" index="4">generic/parameter on entity</arg>. It is possible that simulator will not take this attribute into account.
+</msg>
+
+<msg type="warning" file="Xst" num="2591" delta="old" ><arg fmt="%s" index="1">&quot;top.vf&quot; line 876:</arg> <arg fmt="%s" index="2">attribute on instance</arg> &lt;<arg fmt="%s" index="3">SLEW</arg>&gt; overrides <arg fmt="%s" index="4">generic/parameter on entity</arg>. It is possible that simulator will not take this attribute into account.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">A&lt;19:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">XLXN_750</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">XLXN_286</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">XLXN_285</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">DS</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+</messages>
+

@@ -1,0 +1,3 @@
+vhdl work "dynamic_sizer.vhd"
+vhdl work "addr_decode_combi.vhd"
+verilog work "top.vf"

@@ -1,0 +1,129 @@
+Release 8.1i - Fit P.20131013
+Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
+
+ 1-21-2023  6:37AM
+
+NOTE: This file is designed to be imported into a spreadsheet program
+such as Microsoft Excel for viewing, printing and sorting. The comma ','
+character is used as the data field separator.
+This file is also designed to support parsing.
+
+Input file:  top.ngd
+output file: top_pad.csv
+Part type:   xc95108
+Speed grade: -7
+Package:     tq100
+
+Pinout by Pin Number:
+
+-----,-----,-----,-----,-----,-----,-----,-----,-----,-----,
+Pin Number,Signal Name,Pin Usage,Pin Name,Direction,IO Standard,IO Bank Number,{blank},Slew Rate,Termination,{blank},Voltage,Constraint,
+P1,nWR,O,I/O,OUTPUT,,,,,,,,,
+P2,PGND,,I/O,,,,,,,,,,
+P3,PGND,,I/O/GTS1,,,,,,,,,,
+P4,PGND,,I/O/GTS2,,,,,,,,,,
+P5,VCC,,VCCINT,,,,,,,,,,
+P6,nDSACK0,O,I/O,OUTPUT,,,,,,,,,
+P7,nDSACK1,O,I/O,OUTPUT,,,,,,,,,
+P8,nSTERM,O,I/O,OUTPUT,,,,,,,,,
+P9,nHALT,O,I/O,OUTPUT,,,,,,,,,
+P10,nBERR,O,I/O,OUTPUT,,,,,,,,,
+P11,nECS_EXT,I,I/O,INPUT,,,,,,,,,
+P12,PGND,,I/O,,,,,,,,,,
+P13,SIZ_0,I,I/O,INPUT,,,,,,,,,
+P14,SIZ_1,I,I/O,INPUT,,,,,,,,,
+P15,PGND,,I/O,,,,,,,,,,
+P16,PGND,,I/O,,,,,,,,,,
+P17,RDUU,O,I/O,OUTPUT,,,,,,,,,
+P18,PGND,,I/O,,,,,,,,,,
+P19,UUD,O,I/O,OUTPUT,,,,,,,,,
+P20,nRD,O,I/O,OUTPUT,,,,,,,,,
+P21,GND,,GND,,,,,,,,,,
+P22,SYSCLK_EXT,GCK,I/O/GCK1,,,,,,,,,,
+P23,nAS_EXT,GCK/I,I/O/GCK2,,,,,,,,,,
+P24,PGND,,I/O,,,,,,,,,,
+P25,PGND,,I/O,,,,,,,,,,
+P26,VCC,,VCCIO,,,,,,,,,,
+P27,PGND,,I/O/GCK3,,,,,,,,,,
+P28,PGND,,I/O,,,,,,,,,,
+P29,WRUU,O,I/O,OUTPUT,,,,,,,,,
+P30,PGND,,I/O,,,,,,,,,,
+P31,GND,,GND,,,,,,,,,,
+P32,nCIOUT_EXT,I,I/O,INPUT,,,,,,,,,
+P33,nIOCS0,O,I/O,OUTPUT,,,,,,,,,
+P34,PGND,,I/O,,,,,,,,,,
+P35,PGND,,I/O,,,,,,,,,,
+P36,PGND,,I/O,,,,,,,,,,
+P37,nIOCS1,O,I/O,OUTPUT,,,,,,,,,
+P38,VCC,,VCCIO,,,,,,,,,,
+P39,PGND,,I/O,,,,,,,,,,
+P40,PGND,,I/O,,,,,,,,,,
+P41,PGND,,I/O,,,,,,,,,,
+P42,nIOSEL,I/O,I/O,BIDIR,,,,,,,,,
+P43,PGND,,I/O,,,,,,,,,,
+P44,GND,,GND,,,,,,,,,,
+P45,TDI,,TDI,,,,,,,,,,
+P46,D_EXT<0>,I/O,I/O,BIDIR,,,,,,,,,
+P47,TMS,,TMS,,,,,,,,,,
+P48,TCK,,TCK,,,,,,,,,,
+P49,PGND,,I/O,,,,,,,,,,
+P50,D_EXT<1>,I/O,I/O,BIDIR,,,,,,,,,
+P51,VCC,,VCCIO,,,,,,,,,,
+P52,D_EXT<2>,I/O,I/O,BIDIR,,,,,,,,,
+P53,D_EXT<3>,I/O,I/O,BIDIR,,,,,,,,,
+P54,D_EXT<4>,I/O,I/O,BIDIR,,,,,,,,,
+P55,D_EXT<5>,I/O,I/O,BIDIR,,,,,,,,,
+P56,D_EXT<6>,I/O,I/O,BIDIR,,,,,,,,,
+P57,VCC,,VCCINT,,,,,,,,,,
+P58,D_EXT<7>,I/O,I/O,BIDIR,,,,,,,,,
+P59,nRAMCS,O,I/O,OUTPUT,,,,,,,,,
+P60,nFLASHCS,O,I/O,OUTPUT,,,,,,,,,
+P61,nBOOTCS,O,I/O,OUTPUT,,,,,,,,,
+P62,GND,,GND,,,,,,,,,,
+P63,n68561CS,O,I/O,OUTPUT,,,,,,,,,
+P64,n68230CS,O,I/O,OUTPUT,,,,,,,,,
+P65,LLD,O,I/O,OUTPUT,,,,,,,,,
+P66,WRLL,O,I/O,OUTPUT,,,,,,,,,
+P67,LMD,O,I/O,OUTPUT,,,,,,,,,
+P68,WRUM,O,I/O,OUTPUT,,,,,,,,,
+P69,GND,,GND,,,,,,,,,,
+P70,UMD,O,I/O,OUTPUT,,,,,,,,,
+P71,LD,O,I/O,OUTPUT,,,,,,,,,
+P72,RDLL,O,I/O,OUTPUT,,,,,,,,,
+P73,WRLM,O,I/O,OUTPUT,,,,,,,,,
+P74,A_EXT<1>,I,I/O,INPUT,,,,,,,,,
+P75,GND,,GND,,,,,,,,,,
+P76,A_EXT<0>,I,I/O,INPUT,,,,,,,,,
+P77,RDLM,O,I/O,OUTPUT,,,,,,,,,
+P78,UD,O,I/O,OUTPUT,,,,,,,,,
+P79,RDUM,O,I/O,OUTPUT,,,,,,,,,
+P80,nCIIN_EXT,O,I/O,OUTPUT,,,,,,,,,
+P81,A_EXT<28>,I,I/O,INPUT,,,,,,,,,
+P82,A_EXT<24>,I,I/O,INPUT,,,,,,,,,
+P83,TDO,,TDO,,,,,,,,,,
+P84,GND,,GND,,,,,,,,,,
+P85,A_EXT<29>,I,I/O,INPUT,,,,,,,,,
+P86,A_EXT<23>,I,I/O,INPUT,,,,,,,,,
+P87,A_EXT<20>,I,I/O,INPUT,,,,,,,,,
+P88,VCC,,VCCIO,,,,,,,,,,
+P89,A_EXT<21>,I,I/O,INPUT,,,,,,,,,
+P90,A_EXT<22>,I,I/O,INPUT,,,,,,,,,
+P91,A_EXT<25>,I,I/O,INPUT,,,,,,,,,
+P92,A_EXT<26>,I,I/O,INPUT,,,,,,,,,
+P93,A_EXT<27>,I,I/O,INPUT,,,,,,,,,
+P94,A_EXT<31>,I,I/O,INPUT,,,,,,,,,
+P95,A_EXT<30>,I,I/O,INPUT,,,,,,,,,
+P96,nCBACK_EXT,O,I/O,OUTPUT,,,,,,,,,
+P97,RnW,I,I/O,INPUT,,,,,,,,,
+P98,VCC,,VCCINT,,,,,,,,,,
+P99,nRESET_EXT,GSR/I,I/O/GSR,,,,,,,,,,
+P100,GND,,GND,,,,,,,,,,
+
+To preserve the pinout above for future design iterations in
+Project Navigator simply execute the (Lock Pins) process
+located under the (Implement Design) process in a toolbox named
+(Optional Implementation Tools) or invoke PIN2UCF from the
+command line. The location constraints will be written into your
+specified UCF file
+
+

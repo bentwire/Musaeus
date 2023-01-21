@@ -5,5 +5,80 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="Cpld" num="822" delta="old" >Timespec <arg fmt="%s" index="1">OFFSET</arg> = <arg fmt="%s" index="2">IN:40.000nS:VALID:40.000nS:BEFORE:SYSCLK_EXT:RISING</arg> is invalid for CPLD designs. This constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Cpld" num="822" delta="old" >Timespec <arg fmt="%s" index="1">OFFSET</arg> = <arg fmt="%s" index="2">IN:40.000nS:VALID:40.000nS:BEFORE:SYSCLK_EXT:RISING</arg> is invalid for CPLD designs. This constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Cpld" num="822" delta="old" >Timespec <arg fmt="%s" index="1">OFFSET</arg> = <arg fmt="%s" index="2">IN:40.000nS:VALID:40.000nS:BEFORE:SYSCLK_EXT:RISING</arg> is invalid for CPLD designs. This constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Cpld" num="822" delta="old" >Timespec <arg fmt="%s" index="1">OFFSET</arg> = <arg fmt="%s" index="2">IN:40.000nS:VALID:40.000nS:BEFORE:SYSCLK_EXT:RISING</arg> is invalid for CPLD designs. This constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Cpld" num="822" delta="old" >Timespec <arg fmt="%s" index="1">OFFSET</arg> = <arg fmt="%s" index="2">IN:40.000nS:VALID:40.000nS:BEFORE:SYSCLK_EXT:RISING</arg> is invalid for CPLD designs. This constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Cpld" num="822" delta="old" >Timespec <arg fmt="%s" index="1">OFFSET</arg> = <arg fmt="%s" index="2">IN:40.000nS:VALID:40.000nS:BEFORE:SYSCLK_EXT:RISING</arg> is invalid for CPLD designs. This constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Cpld" num="822" delta="old" >Timespec <arg fmt="%s" index="1">OFFSET</arg> = <arg fmt="%s" index="2">IN:40.000nS:VALID:40.000nS:BEFORE:SYSCLK_EXT:RISING</arg> is invalid for CPLD designs. This constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Cpld" num="822" delta="old" >Timespec <arg fmt="%s" index="1">OFFSET</arg> = <arg fmt="%s" index="2">IN:40.000nS:VALID:40.000nS:BEFORE:SYSCLK_EXT:RISING</arg> is invalid for CPLD designs. This constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Cpld" num="822" delta="old" >Timespec <arg fmt="%s" index="1">OFFSET</arg> = <arg fmt="%s" index="2">IN:40.000nS:VALID:40.000nS:BEFORE:SYSCLK_EXT:RISING</arg> is invalid for CPLD designs. This constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Cpld" num="822" delta="old" >Timespec <arg fmt="%s" index="1">OFFSET</arg> = <arg fmt="%s" index="2">IN:40.000nS:VALID:40.000nS:BEFORE:SYSCLK_EXT:RISING</arg> is invalid for CPLD designs. This constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Cpld" num="822" delta="old" >Timespec <arg fmt="%s" index="1">OFFSET</arg> = <arg fmt="%s" index="2">IN:40.000nS:VALID:40.000nS:BEFORE:SYSCLK_EXT:RISING</arg> is invalid for CPLD designs. This constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Cpld" num="822" delta="old" >Timespec <arg fmt="%s" index="1">OFFSET</arg> = <arg fmt="%s" index="2">IN:40.000nS:VALID:40.000nS:BEFORE:SYSCLK_EXT:RISING</arg> is invalid for CPLD designs. This constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Cpld" num="822" delta="old" >Timespec <arg fmt="%s" index="1">OFFSET</arg> = <arg fmt="%s" index="2">IN:40.000nS:VALID:40.000nS:BEFORE:SYSCLK_EXT:RISING</arg> is invalid for CPLD designs. This constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Cpld" num="822" delta="old" >Timespec <arg fmt="%s" index="1">OFFSET</arg> = <arg fmt="%s" index="2">IN:40.000nS:VALID:40.000nS:BEFORE:SYSCLK_EXT:RISING</arg> is invalid for CPLD designs. This constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Cpld" num="822" delta="old" >Timespec <arg fmt="%s" index="1">OFFSET</arg> = <arg fmt="%s" index="2">IN:40.000nS:VALID:40.000nS:BEFORE:SYSCLK_EXT:RISING</arg> is invalid for CPLD designs. This constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Cpld" num="822" delta="old" >Timespec <arg fmt="%s" index="1">OFFSET</arg> = <arg fmt="%s" index="2">IN:40.000nS:VALID:40.000nS:BEFORE:SYSCLK_EXT:RISING</arg> is invalid for CPLD designs. This constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Cpld" num="822" delta="old" >Timespec <arg fmt="%s" index="1">OFFSET</arg> = <arg fmt="%s" index="2">IN:40.000nS:VALID:40.000nS:BEFORE:SYSCLK_EXT:RISING</arg> is invalid for CPLD designs. This constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Cpld" num="822" delta="old" >Timespec <arg fmt="%s" index="1">OFFSET</arg> = <arg fmt="%s" index="2">IN:40.000nS:VALID:40.000nS:BEFORE:SYSCLK_EXT:RISING</arg> is invalid for CPLD designs. This constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Cpld" num="822" delta="old" >Timespec <arg fmt="%s" index="1">OFFSET</arg> = <arg fmt="%s" index="2">IN:40.000nS:VALID:40.000nS:BEFORE:SYSCLK_EXT:RISING</arg> is invalid for CPLD designs. This constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Cpld" num="822" delta="old" >Timespec <arg fmt="%s" index="1">OFFSET</arg> = <arg fmt="%s" index="2">IN:40.000nS:VALID:40.000nS:BEFORE:SYSCLK_EXT:RISING</arg> is invalid for CPLD designs. This constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Cpld" num="822" delta="old" >Timespec <arg fmt="%s" index="1">OFFSET</arg> = <arg fmt="%s" index="2">IN:40.000nS:VALID:40.000nS:BEFORE:SYSCLK_EXT:RISING</arg> is invalid for CPLD designs. This constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Cpld" num="822" delta="old" >Timespec <arg fmt="%s" index="1">OFFSET</arg> = <arg fmt="%s" index="2">IN:40.000nS:VALID:40.000nS:BEFORE:SYSCLK_EXT:RISING</arg> is invalid for CPLD designs. This constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Cpld" num="822" delta="old" >Timespec <arg fmt="%s" index="1">OFFSET</arg> = <arg fmt="%s" index="2">IN:10.000nS:VALID:40.000nS:BEFORE:SYSCLK_EXT:FALLING</arg> is invalid for CPLD designs. This constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Cpld" num="310" delta="old" >Cannot apply TIMESPEC <arg fmt="%s" index="1">AUTO_TS_2003</arg> = <arg fmt="%s" index="2">FROM:INT_CLK_SYSCLK_EXT:TO:INT_TNM_n68230CS:40.0</arg> because of one of the following: (a) a signal name was not found; (b) a signal was removed or renamed due to optimization; (c) there is no path between the FROM node and TO node in the TIMESPEC.
+</msg>
+
+<msg type="warning" file="Cpld" num="158" delta="old" >We have detected that a large number of internal signals may be switching at the same time. To avoid potential simultaneous switching/ground bounce issues, please contact Xilinx customer support for more information.
+</msg>
+
 </messages>
 

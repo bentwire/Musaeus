@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2023-01-18T17:53:36</DateModified>
+  <DateModified>2023-01-21T14:06:39</DateModified>
   <ModuleName>top</ModuleName>
-  <SummaryTimeStamp>2023-01-17T18:09:31</SummaryTimeStamp>
+  <SummaryTimeStamp>2023-01-21T06:35:11</SummaryTimeStamp>
   <SavedFilePath>/home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/iseconfig/top.xreport</SavedFilePath>
   <ImplementationReportsDirectory>/home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/</ImplementationReportsDirectory>
   <DateInitialized>2022-12-31T22:08:42</DateInitialized>
@@ -11,7 +11,7 @@
  </header>
  <body>
   <viewgroup label="Design Overview" >
-   <view inputState="Unknown" program="implementation" ShowPartitionData="false" type="FPGASummary" file="top_summary.html" label="Summary" >
+   <view inputState="Unknown" program="implementation" ShowPartitionData="false" ExpandConstraints="true" type="FPGASummary" file="top_summary.html" label="Summary" ExpandClockNets="true" >
     <toc-item title="Design Overview" target="Design Overview" />
     <toc-item title="Design Utilization Summary" target="Design Utilization Summary" />
     <toc-item title="Performance Summary" target="Performance Summary" />

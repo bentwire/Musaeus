@@ -1,0 +1,48 @@
+Release 14.7 ngdbuild P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -intstyle
+ise -dd _ngo -uc top.ucf -p xc95108-TQ100-7 top.ngc top.ngd
+
+Reading NGO file
+"/home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/top.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "top.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+WARNING:ConstraintSystem:119 - Constraint <NET "nCLK"       LOC="P27";>
+   [top.ucf(11)]: This constraint cannot be distributed from the design objects
+   matching 'NET "nCLK"' because those design objects do not contain or drive
+   any instances of the correct type.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "nCLK"       LOC="P27";> [top.ucf(11)]' could not be found and so the
+   Locate constraint will be removed.
+
+WARNING:NgdBuild:1012 - The constraint <INST /top/EXPANDED/top/DO_BUF SLEW =
+   FAST> is overridden on the design object DO_BUF by the constraint <INST
+   "DO_BUF" FAST;> [top.ucf(14)].
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   3
+
+Total memory usage is 391148 kilobytes
+
+Writing NGD file "top.ngd" ...
+Total REAL time to NGDBUILD completion:  1 sec
+Total CPU time to NGDBUILD completion:   1 sec
+
+Writing NGDBUILD log file "top.bld"...
