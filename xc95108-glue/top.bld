@@ -5,7 +5,7 @@ Command Line: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -intstyle
 ise -dd _ngo -uc top.ucf -p xc95108-TQ100-7 top.ngc top.ngd
 
 Reading NGO file
-"/home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/top.ngc" ...
+"/home/mike/devel/embedded/m68k/m68030-bbb-clone/xc95108-glue/top.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
@@ -39,7 +39,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   3
 
-Total memory usage is 391112 kilobytes
+Total memory usage is 391124 kilobytes
 
 Writing NGD file "top.ngd" ...
 Total REAL time to NGDBUILD completion:  1 sec

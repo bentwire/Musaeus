@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : top.vf
-// /___/   /\     Timestamp : 01/21/2023 14:15:50
+// /___/   /\     Timestamp : 01/21/2023 15:08:38
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family xc9500 -verilog /home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/top.vf -w /home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/top.sch
+//Command: sch2hdl -intstyle ise -family xc9500 -verilog /home/mike/devel/embedded/m68k/m68030-bbb-clone/xc95108-glue/top.vf -w /home/mike/devel/embedded/m68k/m68030-bbb-clone/xc95108-glue/top.sch
 //Design Name: top
 //Device: xc9500
 //Purpose:

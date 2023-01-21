@@ -5,7 +5,7 @@
 <design name='top'/>
 <rptdir name='top'/>
 <xilinx path='/opt/Xilinx/14.7/ISE_DS/ISE:'/>
-<projDir path='/home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue'/>
+<projDir path='/home/mike/devel/embedded/m68k/m68030-bbb-clone/xc95108-glue'/>
 <xslDir path='chipviewer/data/xsl'/>
 <fileDir path='/chipviewer/data/html'/>
 <dataFile file='index.htm'/>
