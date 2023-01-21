@@ -1,1 +1,7 @@
 *.wdb
+*.err
+*.jhd
+*.schlog
+xst
+_ngo
+_xmsgs
