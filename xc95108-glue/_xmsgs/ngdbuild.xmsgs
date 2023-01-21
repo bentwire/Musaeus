@@ -11,7 +11,7 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;nCLK&quot;       LOC=&quot;P27&quot;;&gt; [top.ucf(11)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;INST /top/EXPANDED/top/DO_BUF SLEW = FAST&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">DO_BUF</arg> by the constraint <arg fmt="%s" index="3">&lt;INST &quot;DO_BUF&quot; FAST;&gt; [top.ucf(14)]</arg>.
+<msg type="warning" file="NgdBuild" num="1012" delta="new" >The constraint <arg fmt="%s" index="1">&lt;INST /top/EXPANDED/top/DO_BUF SLEW = FAST&gt;</arg> is overridden on the design object <arg fmt="%s" index="2">DO_BUF</arg> by the constraint <arg fmt="%s" index="3">&lt;INST &quot;DO_BUF&quot; FAST;&gt; [top.ucf(14)]</arg>.
 </msg>
 
 </messages>

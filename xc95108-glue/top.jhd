@@ -1,5 +1,0 @@
-MODULE top
-	SUBMODULE dynamic_sizer
-		INSTANCE XLXI_105
-	SUBMODULE addr_decode_combi
-		INSTANCE XLXI_158

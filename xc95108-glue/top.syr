@@ -12,7 +12,7 @@ Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.02 secs
  
 --> 
 Reading design: top.prj
@@ -78,9 +78,11 @@ wysiwyg                            : NO
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "/home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/addr_decode_combi.vhd" in Library work.
-Architecture behavioral of Entity addr_decode_combi is up to date.
+Entity <addr_decode_combi> compiled.
+Entity <addr_decode_combi> (Architecture <Behavioral>) compiled.
 Compiling vhdl file "/home/mike/devel/embedded/m68k/m68030-bbb/xc95108-glue/dynamic_sizer.vhd" in Library work.
-Architecture behavioral of Entity dynamic_sizer is up to date.
+Entity <dynamic_sizer> compiled.
+Entity <dynamic_sizer> (Architecture <Behavioral>) compiled.
 Compiling verilog file "top.vf" in library work
 Module <FD_MXILINX_top> compiled
 Module <FDSE_MXILINX_top> compiled
@@ -126,9 +128,9 @@ Analyzing hierarchy for module <FD8CE_MXILINX_top> in library <work>.
 
 Analyzing hierarchy for module <FD8CE_MXILINX_top> in library <work>.
 
-Analyzing hierarchy for entity <dynamic_sizer> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <dynamic_sizer> in library <work> (architecture <Behavioral>).
 
-Analyzing hierarchy for entity <addr_decode_combi> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <addr_decode_combi> in library <work> (architecture <Behavioral>).
 
 Analyzing hierarchy for module <D2_4E_MXILINX_top> in library <work>.
 
@@ -589,10 +591,10 @@ Module <FD8CE_MXILINX_top.4> is correct for synthesis.
     Set user-defined property "INIT =  0" for instance <Q5> in unit <FD8CE_MXILINX_top.4>.
     Set user-defined property "INIT =  0" for instance <Q6> in unit <FD8CE_MXILINX_top.4>.
     Set user-defined property "INIT =  0" for instance <Q7> in unit <FD8CE_MXILINX_top.4>.
-Analyzing Entity <dynamic_sizer> in library <work> (Architecture <behavioral>).
+Analyzing Entity <dynamic_sizer> in library <work> (Architecture <Behavioral>).
 Entity <dynamic_sizer> analyzed. Unit <dynamic_sizer> generated.
 
-Analyzing Entity <addr_decode_combi> in library <work> (Architecture <behavioral>).
+Analyzing Entity <addr_decode_combi> in library <work> (Architecture <Behavioral>).
 Entity <addr_decode_combi> analyzed. Unit <addr_decode_combi> generated.
 
 Analyzing module <D2_4E_MXILINX_top> in library <work>.
@@ -1122,12 +1124,12 @@ Cell Usage :
 
 
 Total REAL time to Xst completion: 2.00 secs
-Total CPU time to Xst completion: 2.24 secs
+Total CPU time to Xst completion: 2.21 secs
  
 --> 
 
 
-Total memory usage is 531008 kilobytes
+Total memory usage is 530972 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    7 (   0 filtered)
