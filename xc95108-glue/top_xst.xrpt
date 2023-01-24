@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Sat Jan 21 15:08:40 2023">
+  <application stringID="Xst" timeStamp="Mon Jan 23 17:33:17 2023">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -33,7 +33,7 @@
         <column stringID="speed"/>
         <row stringID="row" value="0">
           <item stringID="arch" value="Intel(R) Core(TM) i7-9700K CPU @ 3.60GHz"/>
-          <item stringID="speed" value="4700.603 MHz"/>
+          <item stringID="speed" value="4699.677 MHz"/>
         </row>
       </table>
     </section>
@@ -74,8 +74,8 @@
       <item dataType="int" stringID="XST_COUNTERS" value="1">
         <item dataType="int" stringID="XST_4BIT_UP_COUNTER" value="1"/>
       </item>
-      <item dataType="int" stringID="XST_REGISTERS" value="42">
-        <item dataType="int" stringID="XST_FLIPFLOPS" value="42"/>
+      <item dataType="int" stringID="XST_REGISTERS" value="26">
+        <item dataType="int" stringID="XST_FLIPFLOPS" value="26"/>
       </item>
     </section>
     <section stringID="XST_PARTITION_REPORT">
@@ -92,29 +92,29 @@
         <item stringID="XST_KEEP_HIERARCHY" value="Yes"/>
       </section>
       <section stringID="XST_DESIGN_STATISTICS">
-        <item stringID="XST_IOS" value="83"/>
+        <item stringID="XST_IOS" value="91"/>
       </section>
       <section stringID="XST_CELL_USAGE">
-        <item dataType="int" stringID="XST_BELS" value="234">
-          <item dataType="int" stringID="XST_AND2" value="65"/>
+        <item dataType="int" stringID="XST_BELS" value="245">
+          <item dataType="int" stringID="XST_AND2" value="61"/>
           <item dataType="int" stringID="XST_AND3" value="10"/>
           <item dataType="int" stringID="XST_AND4" value="4"/>
           <item dataType="int" stringID="XST_GND" value="5"/>
-          <item dataType="int" stringID="XST_INV" value="72"/>
-          <item dataType="int" stringID="XST_OR2" value="41"/>
+          <item dataType="int" stringID="XST_INV" value="85"/>
+          <item dataType="int" stringID="XST_OR2" value="43"/>
           <item dataType="int" stringID="XST_VCC" value="6"/>
           <item dataType="int" stringID="XST_XOR2" value="13"/>
         </item>
-        <item dataType="int" stringID="XST_FLIPFLOPSLATCHES" value="46">
+        <item dataType="int" stringID="XST_FLIPFLOPSLATCHES" value="30">
           <item dataType="int" stringID="XST_FDC" value="4"/>
-          <item dataType="int" stringID="XST_FDCE" value="37"/>
+          <item dataType="int" stringID="XST_FDCE" value="21"/>
           <item dataType="int" stringID="XST_FDP" value="1"/>
         </item>
-        <item dataType="int" stringID="XST_TRISTATES" value="32"></item>
-        <item dataType="int" stringID="XST_IO_BUFFERS" value="91">
-          <item dataType="int" stringID="XST_IBUF" value="52"/>
-          <item dataType="int" stringID="XST_OBUF" value="26"/>
-          <item dataType="int" stringID="XST_OBUFT" value="13"/>
+        <item dataType="int" stringID="XST_TRISTATES" value="16"></item>
+        <item dataType="int" stringID="XST_IO_BUFFERS" value="99">
+          <item dataType="int" stringID="XST_IBUF" value="54"/>
+          <item dataType="int" stringID="XST_OBUF" value="31"/>
+          <item dataType="int" stringID="XST_OBUFT" value="14"/>
         </item>
         <item dataType="int" stringID="XST_OTHERS" value="17">
           <item dataType="int" stringID="XST_AND2B1" value="13"/>
@@ -123,7 +123,7 @@
     </section>
     <section stringID="XST_ERRORS_STATISTICS">
       <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_ERRORS" value="0"/>
-      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_WARNINGS" value="7"/>
+      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_WARNINGS" value="5"/>
       <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_INFOS" value="0"/>
     </section>
   </application>

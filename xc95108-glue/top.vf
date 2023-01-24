@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : sch2hdl
 //  /   /         Filename : top.vf
-// /___/   /\     Timestamp : 01/21/2023 15:08:38
+// /___/   /\     Timestamp : 01/23/2023 17:33:15
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -18,6 +18,60 @@
 //    This verilog netlist is translated from an ECS schematic.It can be 
 //    synthesized and simulated, but it should not be modified. 
 //
+`timescale 1ns / 1ps
+
+module D2_4E_MXILINX_top(A0, 
+                         A1, 
+                         E, 
+                         D0, 
+                         D1, 
+                         D2, 
+                         D3);
+
+    input A0;
+    input A1;
+    input E;
+   output D0;
+   output D1;
+   output D2;
+   output D3;
+   
+   
+   AND3  I_36_30 (.I0(A1), 
+                 .I1(A0), 
+                 .I2(E), 
+                 .O(D3));
+   AND3B1  I_36_31 (.I0(A0), 
+                   .I1(A1), 
+                   .I2(E), 
+                   .O(D2));
+   AND3B1  I_36_32 (.I0(A1), 
+                   .I1(A0), 
+                   .I2(E), 
+                   .O(D1));
+   AND3B2  I_36_33 (.I0(A0), 
+                   .I1(A1), 
+                   .I2(E), 
+                   .O(D0));
+endmodule
+`timescale 1ns / 1ps
+
+module OBUFE_MXILINX_top(E, 
+                         I, 
+                         O);
+
+    input E;
+    input I;
+   output O;
+   
+   wire T;
+   
+   OBUFT  I_36_10 (.I(I), 
+                  .T(T), 
+                  .O(O));
+   INV  I_36_12 (.I(E), 
+                .O(T));
+endmodule
 `timescale 1ns / 1ps
 
 module FD_MXILINX_top(C, 
@@ -121,98 +175,6 @@ module FTSRE_MXILINX_top(C,
    OR2  I_36_77 (.I0(CE), 
                 .I1(R), 
                 .O(CE_R));
-endmodule
-`timescale 1ns / 1ps
-
-module FD8CE_MXILINX_top(C, 
-                         CE, 
-                         CLR, 
-                         D, 
-                         Q);
-
-    input C;
-    input CE;
-    input CLR;
-    input [7:0] D;
-   output [7:0] Q;
-   
-   
-   FDCE #( .INIT(1'b0) ) Q0 (.C(C), 
-            .CE(CE), 
-            .CLR(CLR), 
-            .D(D[0]), 
-            .Q(Q[0]));
-   FDCE #( .INIT(1'b0) ) Q1 (.C(C), 
-            .CE(CE), 
-            .CLR(CLR), 
-            .D(D[1]), 
-            .Q(Q[1]));
-   FDCE #( .INIT(1'b0) ) Q2 (.C(C), 
-            .CE(CE), 
-            .CLR(CLR), 
-            .D(D[2]), 
-            .Q(Q[2]));
-   FDCE #( .INIT(1'b0) ) Q3 (.C(C), 
-            .CE(CE), 
-            .CLR(CLR), 
-            .D(D[3]), 
-            .Q(Q[3]));
-   FDCE #( .INIT(1'b0) ) Q4 (.C(C), 
-            .CE(CE), 
-            .CLR(CLR), 
-            .D(D[4]), 
-            .Q(Q[4]));
-   FDCE #( .INIT(1'b0) ) Q5 (.C(C), 
-            .CE(CE), 
-            .CLR(CLR), 
-            .D(D[5]), 
-            .Q(Q[5]));
-   FDCE #( .INIT(1'b0) ) Q6 (.C(C), 
-            .CE(CE), 
-            .CLR(CLR), 
-            .D(D[6]), 
-            .Q(Q[6]));
-   FDCE #( .INIT(1'b0) ) Q7 (.C(C), 
-            .CE(CE), 
-            .CLR(CLR), 
-            .D(D[7]), 
-            .Q(Q[7]));
-endmodule
-`timescale 1ns / 1ps
-
-module BUFE8_MXILINX_top(E, 
-                         I, 
-                         O);
-
-    input E;
-    input [7:0] I;
-   output [7:0] O;
-   
-   
-   BUFE  I_36_30 (.E(E), 
-                 .I(I[0]), 
-                 .O(O[0]));
-   BUFE  I_36_31 (.E(E), 
-                 .I(I[1]), 
-                 .O(O[1]));
-   BUFE  I_36_32 (.E(E), 
-                 .I(I[2]), 
-                 .O(O[2]));
-   BUFE  I_36_33 (.E(E), 
-                 .I(I[3]), 
-                 .O(O[3]));
-   BUFE  I_36_34 (.E(E), 
-                 .I(I[7]), 
-                 .O(O[7]));
-   BUFE  I_36_35 (.E(E), 
-                 .I(I[6]), 
-                 .O(O[6]));
-   BUFE  I_36_36 (.E(E), 
-                 .I(I[5]), 
-                 .O(O[5]));
-   BUFE  I_36_37 (.E(E), 
-                 .I(I[4]), 
-                 .O(O[4]));
 endmodule
 `timescale 1ns / 1ps
 
@@ -329,21 +291,95 @@ module FTCLE_MXILINX_top(C,
 endmodule
 `timescale 1ns / 1ps
 
-module OBUFE_MXILINX_top(E, 
+module FD8CE_MXILINX_top(C, 
+                         CE, 
+                         CLR, 
+                         D, 
+                         Q);
+
+    input C;
+    input CE;
+    input CLR;
+    input [7:0] D;
+   output [7:0] Q;
+   
+   
+   FDCE #( .INIT(1'b0) ) Q0 (.C(C), 
+            .CE(CE), 
+            .CLR(CLR), 
+            .D(D[0]), 
+            .Q(Q[0]));
+   FDCE #( .INIT(1'b0) ) Q1 (.C(C), 
+            .CE(CE), 
+            .CLR(CLR), 
+            .D(D[1]), 
+            .Q(Q[1]));
+   FDCE #( .INIT(1'b0) ) Q2 (.C(C), 
+            .CE(CE), 
+            .CLR(CLR), 
+            .D(D[2]), 
+            .Q(Q[2]));
+   FDCE #( .INIT(1'b0) ) Q3 (.C(C), 
+            .CE(CE), 
+            .CLR(CLR), 
+            .D(D[3]), 
+            .Q(Q[3]));
+   FDCE #( .INIT(1'b0) ) Q4 (.C(C), 
+            .CE(CE), 
+            .CLR(CLR), 
+            .D(D[4]), 
+            .Q(Q[4]));
+   FDCE #( .INIT(1'b0) ) Q5 (.C(C), 
+            .CE(CE), 
+            .CLR(CLR), 
+            .D(D[5]), 
+            .Q(Q[5]));
+   FDCE #( .INIT(1'b0) ) Q6 (.C(C), 
+            .CE(CE), 
+            .CLR(CLR), 
+            .D(D[6]), 
+            .Q(Q[6]));
+   FDCE #( .INIT(1'b0) ) Q7 (.C(C), 
+            .CE(CE), 
+            .CLR(CLR), 
+            .D(D[7]), 
+            .Q(Q[7]));
+endmodule
+`timescale 1ns / 1ps
+
+module BUFE8_MXILINX_top(E, 
                          I, 
                          O);
 
     input E;
-    input I;
-   output O;
+    input [7:0] I;
+   output [7:0] O;
    
-   wire T;
    
-   OBUFT  I_36_10 (.I(I), 
-                  .T(T), 
-                  .O(O));
-   INV  I_36_12 (.I(E), 
-                .O(T));
+   BUFE  I_36_30 (.E(E), 
+                 .I(I[0]), 
+                 .O(O[0]));
+   BUFE  I_36_31 (.E(E), 
+                 .I(I[1]), 
+                 .O(O[1]));
+   BUFE  I_36_32 (.E(E), 
+                 .I(I[2]), 
+                 .O(O[2]));
+   BUFE  I_36_33 (.E(E), 
+                 .I(I[3]), 
+                 .O(O[3]));
+   BUFE  I_36_34 (.E(E), 
+                 .I(I[7]), 
+                 .O(O[7]));
+   BUFE  I_36_35 (.E(E), 
+                 .I(I[6]), 
+                 .O(O[6]));
+   BUFE  I_36_36 (.E(E), 
+                 .I(I[5]), 
+                 .O(O[5]));
+   BUFE  I_36_37 (.E(E), 
+                 .I(I[4]), 
+                 .O(O[4]));
 endmodule
 `timescale 1ns / 1ps
 
@@ -508,42 +544,6 @@ module IBUF8_MXILINX_top(I,
 endmodule
 `timescale 1ns / 1ps
 
-module D2_4E_MXILINX_top(A0, 
-                         A1, 
-                         E, 
-                         D0, 
-                         D1, 
-                         D2, 
-                         D3);
-
-    input A0;
-    input A1;
-    input E;
-   output D0;
-   output D1;
-   output D2;
-   output D3;
-   
-   
-   AND3  I_36_30 (.I0(A1), 
-                 .I1(A0), 
-                 .I2(E), 
-                 .O(D3));
-   AND3B1  I_36_31 (.I0(A0), 
-                   .I1(A1), 
-                   .I2(E), 
-                   .O(D2));
-   AND3B1  I_36_32 (.I0(A1), 
-                   .I1(A0), 
-                   .I2(E), 
-                   .O(D1));
-   AND3B2  I_36_33 (.I0(A0), 
-                   .I1(A1), 
-                   .I2(E), 
-                   .O(D0));
-endmodule
-`timescale 1ns / 1ps
-
 module IBUF16_MXILINX_top(I, 
                           O);
 
@@ -590,22 +590,26 @@ module top(A_EXT,
            nAS_EXT, 
            nCBREQ_EXT, 
            nCIOUT_EXT, 
-           nDS_EXT, 
+           nDS, 
            nECS_EXT, 
+           nM230DTACK, 
            nOCS_EXT, 
            nRESET_EXT, 
-           nRMC_EXT, 
+           nRMC, 
+           nR561DTACK, 
            RnW, 
            SIZ_0, 
            SIZ_1, 
            SYSCLK_EXT, 
-           LD, 
+           CBREQ, 
+           DS, 
            LLD, 
            LMD, 
            nBERR, 
            nBOOTCS, 
            nCBACK_EXT, 
            nCIIN_EXT, 
+           nCLK, 
            nDSACK0, 
            nDSACK1, 
            nFLASHCS, 
@@ -613,40 +617,47 @@ module top(A_EXT,
            nIOCS0, 
            nIOCS1, 
            nIOSEL, 
+           nLDS, 
            nRAMCS, 
            nRD, 
+           nRDLL, 
+           nRDLM, 
+           nRDUM, 
+           nRDUU, 
+           nRESET_OUT, 
            nSTERM, 
+           nUDS, 
            nWR, 
+           nWRLL, 
+           nWRLM, 
+           nWRUM, 
+           nWRUU, 
            n68230CS, 
            n68561CS, 
-           RDLL, 
-           RDLM, 
-           RDUM, 
-           RDUU, 
-           UD, 
+           OCS, 
+           RMC, 
            UMD, 
            UUD, 
-           WRLL, 
-           WRLM, 
-           WRUM, 
-           WRUU, 
            D_EXT);
 
     input [31:0] A_EXT;
     input nAS_EXT;
     input nCBREQ_EXT;
     input nCIOUT_EXT;
-    input nDS_EXT;
+    input nDS;
     input nECS_EXT;
+    input nM230DTACK;
     input nOCS_EXT;
    (* LOC = "P99" *) 
     input nRESET_EXT;
-    input nRMC_EXT;
+    input nRMC;
+    input nR561DTACK;
     input RnW;
     input SIZ_0;
     input SIZ_1;
     input SYSCLK_EXT;
-   output LD;
+   output CBREQ;
+   output DS;
    output LLD;
    output LMD;
    (* LOC = "P10" *) 
@@ -654,6 +665,7 @@ module top(A_EXT,
    output nBOOTCS;
    output nCBACK_EXT;
    output nCIIN_EXT;
+   output nCLK;
    (* LOC = "P6" *) 
    output nDSACK0;
    (* LOC = "P7" *) 
@@ -664,24 +676,28 @@ module top(A_EXT,
    output nIOCS0;
    output nIOCS1;
    output nIOSEL;
+   output nLDS;
    output nRAMCS;
    output nRD;
+   output nRDLL;
+   output nRDLM;
+   output nRDUM;
+   output nRDUU;
+   output nRESET_OUT;
    (* LOC = "P8" *) 
    output nSTERM;
+   output nUDS;
    output nWR;
+   output nWRLL;
+   output nWRLM;
+   output nWRUM;
+   output nWRUU;
    output n68230CS;
    output n68561CS;
-   output RDLL;
-   output RDLM;
-   output RDUM;
-   output RDUU;
-   output UD;
+   output OCS;
+   output RMC;
    output UMD;
    output UUD;
-   output WRLL;
-   output WRLM;
-   output WRUM;
-   output WRUU;
    (* SLEW = "FAST" *) 
     inout [7:0] D_EXT;
    
@@ -691,6 +707,7 @@ module top(A_EXT,
    wire ACK_CS0_D8;
    wire ACK_CS0_D16;
    wire ACK_RAM_ROM;
+   wire ACK_RAM_ROM_OR_R561DTACK;
    wire AS;
    wire [4:0] BCC;
    wire BERR_EN;
@@ -703,30 +720,29 @@ module top(A_EXT,
    wire CS0_ACK_PULSE;
    wire [7:0] DI;
    wire [7:0] DO;
-   wire DS;
    wire ECS;
    wire HALT_EN;
+   wire LD;
    wire LOAD;
    wire nAS;
    wire nCACHE_INHIBIT;
    wire nCBACK;
    wire nCBREQ;
    wire nCIOUT;
-   wire nCLK;
-   wire nDS;
    wire nECS;
    wire nOCS;
    wire nRESET;
-   wire nRMC;
    wire RD;
+   wire RDLL;
+   wire RDLM;
+   wire RDUM;
+   wire RDUU;
    wire REGSEL0;
    wire REGSEL1;
    wire REGSEL2;
    wire REGSEL3;
    wire [7:0] REG0;
    wire [7:0] REG1;
-   wire [7:0] REG2;
-   wire [7:0] REG3;
    wire RESET;
    wire SEL_BOOT;
    wire SEL_CS0;
@@ -738,21 +754,22 @@ module top(A_EXT,
    wire SEL_ROM;
    wire SEL_R68561;
    wire [1:0] SIZ;
+   wire UD;
    wire WR;
+   wire WRLL;
+   wire WRLM;
+   wire WRUM;
+   wire WRUU;
    wire XLXN_249;
    wire XLXN_252;
    wire XLXN_255;
    wire XLXN_276;
    wire XLXN_281;
-   wire XLXN_285;
-   wire XLXN_286;
    wire XLXN_310;
    wire XLXN_324;
    wire XLXN_325;
    wire XLXN_340;
    wire XLXN_348;
-   wire XLXN_630;
-   wire XLXN_634;
    wire XLXN_640;
    wire XLXN_646;
    wire XLXN_649;
@@ -764,28 +781,31 @@ module top(A_EXT,
    wire XLXN_723;
    wire XLXN_724;
    wire XLXN_742;
-   wire [7:0] XLXN_750;
-   wire XLXN_754;
-   wire XLXN_758;
    wire XLXN_865;
    wire XLXN_871;
    wire XLXN_878;
    wire XLXN_887;
    wire XLXN_889;
    wire XLXN_893;
+   wire XLXN_900;
+   wire XLXN_1106;
+   wire XLXN_1107;
+   wire XLXN_1109;
    wire UMD_DUMMY;
    wire LLD_DUMMY;
    wire LMD_DUMMY;
+   wire nCLK_DUMMY;
    wire UUD_DUMMY;
    
    assign LLD = LLD_DUMMY;
    assign LMD = LMD_DUMMY;
+   assign nCLK = nCLK_DUMMY;
    assign UMD = UMD_DUMMY;
    assign UUD = UUD_DUMMY;
-   (* HU_SET = "DI_BUF_10" *) 
+   (* HU_SET = "DI_BUF_9" *) 
    IBUF8_MXILINX_top  DI_BUF (.I(D_EXT[7:0]), 
                              .O(DI[7:0]));
-   (* HU_SET = "DO_BUF_11" *) (* SLEW = "FAST" *) 
+   (* HU_SET = "DO_BUF_10" *) (* SLEW = "FAST" *) 
    OBUFT8_MXILINX_top  DO_BUF (.I(DO[7:0]), 
                               .T(XLXN_249), 
                               .O(D_EXT[7:0]));
@@ -807,48 +827,32 @@ module top(A_EXT,
                    .O(SIZ[1]));
    IBUF  IBUF_SYSCLK (.I(SYSCLK_EXT), 
                      .O(CLK));
-   (* HU_SET = "REG0BUF_16" *) 
+   (* HU_SET = "REG0BUF_15" *) 
    BUFE8_MXILINX_top  REG0BUF (.E(XLXN_255), 
                               .I(REG0[7:0]), 
                               .O(DO[7:0]));
-   (* HU_SET = "REG0_INST_17" *) 
+   (* HU_SET = "REG0_INST_16" *) 
    FD8CE_MXILINX_top  REG0_INST (.C(CLK), 
                                 .CE(XLXN_252), 
                                 .CLR(RESET), 
                                 .D(DI[7:0]), 
                                 .Q(REG0[7:0]));
-   (* HU_SET = "REG1OBUF_18" *) 
+   (* HU_SET = "REG1OBUF_17" *) 
    BUFE8_MXILINX_top  REG1OBUF (.E(XLXN_276), 
                                .I(REG1[7:0]), 
                                .O(DO[7:0]));
-   (* HU_SET = "REG1_INST_19" *) 
+   (* HU_SET = "REG1_INST_18" *) 
    FD8CE_MXILINX_top  REG1_INST (.C(CLK), 
                                 .CE(XLXN_281), 
                                 .CLR(RESET), 
                                 .D(DI[7:0]), 
                                 .Q(REG1[7:0]));
-   (* HU_SET = "REG2_INST_21" *) 
-   FD8CE_MXILINX_top  REG2_INST (.C(CLK), 
-                                .CE(XLXN_630), 
-                                .CLR(RESET), 
-                                .D(DI[7:0]), 
-                                .Q(REG2[7:0]));
-   (* HU_SET = "REG3_INST_27" *) 
-   FD8CE_MXILINX_top  REG3_INST (.C(CLK), 
-                                .CE(XLXN_754), 
-                                .CLR(RESET), 
-                                .D(DI[7:0]), 
-                                .Q(REG3[7:0]));
    INV  XLXI_14 (.I(CLK), 
-                .O(nCLK));
-   IBUF  XLXI_16 (.I(nDS_EXT), 
-                 .O(nDS));
+                .O(nCLK_DUMMY));
    IBUF  XLXI_17 (.I(nECS_EXT), 
                  .O(nECS));
    INV  XLXI_18 (.I(nAS), 
                 .O(AS));
-   INV  XLXI_19 (.I(nDS), 
-                .O(DS));
    INV  XLXI_20 (.I(nECS), 
                 .O(ECS));
    INV  XLXI_31 (.I(RD), 
@@ -856,11 +860,7 @@ module top(A_EXT,
    IBUF  XLXI_32 (.I(nOCS_EXT), 
                  .O(nOCS));
    INV  XLXI_33 (.I(nOCS), 
-                .O(XLXN_285));
-   IBUF  XLXI_34 (.I(nRMC_EXT), 
-                 .O(nRMC));
-   INV  XLXI_35 (.I(nRMC), 
-                .O(XLXN_286));
+                .O(OCS));
    IBUF  XLXI_37 (.I(nCIOUT_EXT), 
                  .O(nCIOUT));
    INV  XLXI_39 (.I(nCIOUT), 
@@ -868,7 +868,7 @@ module top(A_EXT,
    IBUF  XLXI_40 (.I(nCBREQ_EXT), 
                  .O(nCBREQ));
    INV  XLXI_41 (.I(nCBREQ), 
-                .O());
+                .O(CBREQ));
    (* SLEW = "SLOW" *) 
    OBUF  XLXI_44 (.I(nCACHE_INHIBIT), 
                  .O(nCIIN_EXT));
@@ -942,7 +942,7 @@ module top(A_EXT,
                                .SEL_IO_xFF3XXXXX(SEL_CS1), 
                                .SEL_IO_xFF4XXXXX_INT(SEL_INT), 
                                .SEL_RAM(SEL_RAM));
-   (* HU_SET = "XLXI_163_9" *) 
+   (* HU_SET = "XLXI_163_28" *) 
    D2_4E_MXILINX_top  XLXI_163 (.A0(A[0]), 
                                .A1(A[1]), 
                                .E(SEL_INT), 
@@ -965,21 +965,21 @@ module top(A_EXT,
    NAND2  XLXI_184 (.I0(SEL_INT), 
                    .I1(RD), 
                    .O(XLXN_249));
-   (* HU_SET = "XLXI_189_13" *) 
+   (* HU_SET = "XLXI_189_12" *) 
    OBUFE_MXILINX_top  XLXI_189 (.E(XLXN_310), 
                                .I(XLXN_640), 
                                .O(nDSACK0));
-   (* HU_SET = "XLXI_192_14" *) 
+   (* HU_SET = "XLXI_192_13" *) 
    OBUFE_MXILINX_top  XLXI_192 (.E(XLXN_348), 
                                .I(XLXN_640), 
                                .O(nDSACK1));
    GND  XLXI_193 (.G(XLXN_640));
-   (* HU_SET = "XLXI_195_15" *) 
+   (* HU_SET = "XLXI_195_14" *) 
    OBUFE_MXILINX_top  XLXI_195 (.E(XLXN_324), 
                                .I(XLXN_640), 
                                .O(nSTERM));
-   (* HU_SET = "XLXI_198_12" *) 
-   CB4CLE_MXILINX_top  XLXI_198 (.C(nCLK), 
+   (* HU_SET = "XLXI_198_11" *) 
+   CB4CLE_MXILINX_top  XLXI_198 (.C(nCLK_DUMMY), 
                                 .CE(AS), 
                                 .CLR(CCLR), 
                                 .D0(XLXN_340), 
@@ -996,11 +996,11 @@ module top(A_EXT,
    VCC  XLXI_199 (.P(XLXN_340));
    GND  XLXI_200 (.G(XLXN_646));
    OR3  XLXI_211 (.I0(ACK_BOOT), 
-                 .I1(ACK_RAM_ROM), 
+                 .I1(XLXN_1107), 
                  .I2(ACK_CS0_D8), 
                  .O(XLXN_310));
    OR3  XLXI_212 (.I0(XLXN_640), 
-                 .I1(ACK_RAM_ROM), 
+                 .I1(ACK_RAM_ROM_OR_R561DTACK), 
                  .I2(ACK_CS0_D16), 
                  .O(XLXN_348));
    OR3  XLXI_213 (.I0(XLXN_640), 
@@ -1016,30 +1016,20 @@ module top(A_EXT,
    OR2  XLXI_219 (.I0(SEL_CS1), 
                  .I1(SEL_CS0), 
                  .O(CS_CI));
-   (* HU_SET = "XLXI_305_20" *) 
-   BUFE8_MXILINX_top  XLXI_305 (.E(XLXN_634), 
-                               .I(REG2[7:0]), 
-                               .O(DO[7:0]));
-   AND2  XLXI_306 (.I0(REGSEL2), 
-                  .I1(WR), 
-                  .O(XLXN_630));
-   AND2  XLXI_308 (.I0(REGSEL2), 
-                  .I1(RD), 
-                  .O(XLXN_634));
-   (* HU_SET = "XLXI_309_22" *) 
+   (* HU_SET = "XLXI_309_19" *) 
    OBUFE_MXILINX_top  XLXI_309 (.E(HALT_EN), 
                                .I(XLXN_640), 
                                .O(nHALT));
-   (* HU_SET = "XLXI_310_23" *) 
+   (* HU_SET = "XLXI_310_20" *) 
    OBUFE_MXILINX_top  XLXI_310 (.E(BERR_EN), 
                                .I(XLXN_640), 
                                .O(nBERR));
    OR3  XLXI_312 (.I0(XLXN_640), 
                  .I1(XLXN_640), 
-                 .I2(), 
+                 .I2(RESET), 
                  .O(HALT_EN));
-   (* HU_SET = "XLXI_314_24" *) 
-   FTCLE_MXILINX_top #( .INIT(1'b0) ) XLXI_314 (.C(nCLK), 
+   (* HU_SET = "XLXI_314_21" *) 
+   FTCLE_MXILINX_top #( .INIT(1'b0) ) XLXI_314 (.C(nCLK_DUMMY), 
                                .CE(XLXN_649), 
                                .CLR(CCLR), 
                                .D(XLXN_646), 
@@ -1049,7 +1039,7 @@ module top(A_EXT,
    OR2  XLXI_315 (.I0(XLXN_651), 
                  .I1(LOAD), 
                  .O(XLXN_649));
-   (* HU_SET = "XLXI_329_25" *) 
+   (* HU_SET = "XLXI_329_22" *) 
    COMP4_MXILINX_top  XLXI_329 (.A0(REG0[0]), 
                                .A1(REG0[1]), 
                                .A2(REG0[2]), 
@@ -1062,7 +1052,7 @@ module top(A_EXT,
    XNOR2  XLXI_330 (.I0(BCC[4]), 
                    .I1(REG0[4]), 
                    .O(XLXN_716));
-   (* HU_SET = "XLXI_334_28" *) 
+   (* HU_SET = "XLXI_334_23" *) 
    FTSRE_MXILINX_top #( .INIT(1'b0) ) XLXI_334 (.C(CLK), 
                                .CE(XLXN_720), 
                                .R(nAS), 
@@ -1082,24 +1072,14 @@ module top(A_EXT,
                   .I1(REG0[5]), 
                   .I2(SEL_CS0), 
                   .O(XLXN_723));
-   (* HU_SET = "XLXI_342_29" *) 
-   FTSRE_MXILINX_top #( .INIT(1'b0) ) XLXI_342 (.C(nCLK), 
+   (* HU_SET = "XLXI_342_24" *) 
+   FTSRE_MXILINX_top #( .INIT(1'b0) ) XLXI_342 (.C(nCLK_DUMMY), 
                                .CE(XLXN_878), 
                                .R(nAS), 
                                .S(BTP), 
                                .T(XLXN_742), 
                                .Q(BUS_TIMEOUT));
    GND  XLXI_343 (.G(XLXN_742));
-   (* HU_SET = "XLXI_348_26" *) 
-   BUFE8_MXILINX_top  XLXI_348 (.E(XLXN_758), 
-                               .I(REG3[7:0]), 
-                               .O(XLXN_750[7:0]));
-   AND2  XLXI_349 (.I0(REGSEL3), 
-                  .I1(WR), 
-                  .O(XLXN_754));
-   AND2  XLXI_351 (.I0(REGSEL3), 
-                  .I1(RD), 
-                  .O(XLXN_758));
    AND3  XLXI_385 (.I0(AS), 
                   .I1(BCC[4]), 
                   .I2(XLXN_655), 
@@ -1113,8 +1093,8 @@ module top(A_EXT,
                  .O(nRD));
    INV  XLXI_389 (.I(WR), 
                  .O(nWR));
-   (* HU_SET = "XLXI_390_30" *) 
-   FTSRE_MXILINX_top #( .INIT(1'b0) ) XLXI_390 (.C(nCLK), 
+   (* HU_SET = "XLXI_390_25" *) 
+   FTSRE_MXILINX_top #( .INIT(1'b0) ) XLXI_390 (.C(nCLK_DUMMY), 
                                .CE(XLXN_878), 
                                .R(nAS), 
                                .S(XLXN_871), 
@@ -1123,8 +1103,8 @@ module top(A_EXT,
    OR2  XLXI_392 (.I0(XLXN_640), 
                  .I1(BUS_TIMEOUT), 
                  .O(BERR_EN));
-   (* HU_SET = "XLXI_393_31" *) 
-   FTSRE_MXILINX_top #( .INIT(1'b0) ) XLXI_393 (.C(nCLK), 
+   (* HU_SET = "XLXI_393_26" *) 
+   FTSRE_MXILINX_top #( .INIT(1'b0) ) XLXI_393 (.C(nCLK_DUMMY), 
                                .CE(XLXN_878), 
                                .R(nAS), 
                                .S(XLXN_887), 
@@ -1149,4 +1129,43 @@ module top(A_EXT,
    AND2  XLXI_408 (.I0(BCC[0]), 
                   .I1(XLXN_889), 
                   .O(XLXN_871));
+   INV  XLXI_409 (.I(nRMC), 
+                 .O(RMC));
+   (* HU_SET = "XLXI_412_27" *) 
+   OBUFE_MXILINX_top  XLXI_412 (.E(RESET), 
+                               .I(XLXN_900), 
+                               .O(nRESET_OUT));
+   GND  XLXI_413 (.G(XLXN_900));
+   INV  XLXI_414 (.I(nDS), 
+                 .O(DS));
+   INV  XLXI_499 (.I(RDUU), 
+                 .O(nRDUU));
+   INV  XLXI_500 (.I(RDUM), 
+                 .O(nRDUM));
+   INV  XLXI_501 (.I(RDLM), 
+                 .O(nRDLM));
+   INV  XLXI_502 (.I(RDLL), 
+                 .O(nRDLL));
+   INV  XLXI_503 (.I(WRUU), 
+                 .O(nWRUU));
+   INV  XLXI_504 (.I(WRUM), 
+                 .O(nWRUM));
+   INV  XLXI_505 (.I(WRLM), 
+                 .O(nWRLM));
+   INV  XLXI_506 (.I(WRLL), 
+                 .O(nWRLL));
+   INV  XLXI_507 (.I(UD), 
+                 .O(nUDS));
+   INV  XLXI_508 (.I(LD), 
+                 .O(nLDS));
+   INV  XLXI_509 (.I(nM230DTACK), 
+                 .O(XLXN_1106));
+   INV  XLXI_510 (.I(nR561DTACK), 
+                 .O(XLXN_1109));
+   OR2  XLXI_511 (.I0(XLXN_1106), 
+                 .I1(ACK_RAM_ROM), 
+                 .O(XLXN_1107));
+   OR2  XLXI_512 (.I0(XLXN_1109), 
+                 .I1(ACK_RAM_ROM), 
+                 .O(ACK_RAM_ROM_OR_R561DTACK));
 endmodule

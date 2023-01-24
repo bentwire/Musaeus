@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE ibis [
+<!ELEMENT ibis (part, pin+)>
+<!ELEMENT part EMPTY>
+<!ELEMENT pin EMPTY>
+<!ATTLIST part
+  arch   CDATA #REQUIRED
+  device CDATA #REQUIRED
+  spg    CDATA #REQUIRED
+  pkg    CDATA #REQUIRED>
+<!ATTLIST pin
+  nm     CDATA #REQUIRED
+  no     CDATA #REQUIRED
+  iostd  (TTL|LVTTL|LVCMOS2|NA) "NA"
+  sr     (SLOW|FAST|slow|fast) "SLOW"
+  dir    (BIDIR|bidir|INPUT|input|OUTPUT|output) "BIDIR">
+]>
+<ibis><part arch="xc9500" device="XC95108" pkg="TQ100" spg="-7"/><pin dir="input" nm="A19" no="97"/><pin dir="input" nm="A18" no="64"/><pin dir="input" nm="A17" no="32"/><pin dir="input" nm="A16" no="11"/><pin dir="input" nm="FC0" no="95"/><pin dir="input" nm="FC1" no="17"/><pin dir="input" nm="FC2" no="74"/><pin dir="output" nm="BA" no="96" sr="fast"/><pin dir="output" nm="IA" no="81" sr="fast"/><pin dir="output" nm="CPU" no="50" sr="fast"/><pin dir="output" nm="CC" no="29" sr="fast"/><pin dir="output" nm="SUP" no="8" sr="fast"/><pin dir="output" nm="CUS" no="65" sr="fast"/><pin dir="output" nm="DAT" no="13" sr="fast"/><pin dir="output" nm="PRG" no="16" sr="fast"/><pin dir="output" nm="USR" no="20" sr="fast"/></ibis>

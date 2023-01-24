@@ -12,18 +12,13 @@ Done.
 Annotating constraints to design from ucf file "top.ucf" ...
 Resolving constraint associations...
 Checking Constraint Associations...
-WARNING:ConstraintSystem:119 - Constraint <NET "nCLK"       LOC="P27";>
-   [top.ucf(11)]: This constraint cannot be distributed from the design objects
-   matching 'NET "nCLK"' because those design objects do not contain or drive
-   any instances of the correct type.
-
 WARNING:ConstraintSystem - A target design object for the Locate constraint
-   '<NET "nCLK"       LOC="P27";> [top.ucf(11)]' could not be found and so the
-   Locate constraint will be removed.
+   '<NET "nRESET_EXT" LOC = P99>' could not be found and so the Locate
+   constraint will be removed.
 
-WARNING:NgdBuild:1012 - The constraint <INST /top/EXPANDED/top/DO_BUF SLEW =
-   FAST> is overridden on the design object DO_BUF by the constraint <INST
-   "DO_BUF" FAST;> [top.ucf(14)].
+WARNING:NgdBuild:1012 - The constraint <NET "nRESET_EXT" LOC = P99> is
+   overridden on the design object nRESET_EXT by the constraint <NET
+   "nRESET_EXT"  LOC="P99";> [top.ucf(41)].
 Done...
 
 Checking expanded design ...
@@ -37,9 +32,9 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings:   3
+  Number of warnings:   2
 
-Total memory usage is 391124 kilobytes
+Total memory usage is 390908 kilobytes
 
 Writing NGD file "top.ngd" ...
 Total REAL time to NGDBUILD completion:  1 sec

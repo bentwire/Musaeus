@@ -78,25 +78,23 @@ wysiwyg                            : NO
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "/home/mike/devel/embedded/m68k/m68030-bbb-clone/xc95108-glue/addr_decode_combi.vhd" in Library work.
-Entity <addr_decode_combi> compiled.
-Entity <addr_decode_combi> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity addr_decode_combi is up to date.
 Compiling vhdl file "/home/mike/devel/embedded/m68k/m68030-bbb-clone/xc95108-glue/dynamic_sizer.vhd" in Library work.
-Entity <dynamic_sizer> compiled.
-Entity <dynamic_sizer> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity dynamic_sizer is up to date.
 Compiling verilog file "top.vf" in library work
+Module <D2_4E_MXILINX_top> compiled
+Module <OBUFE_MXILINX_top> compiled
 Module <FD_MXILINX_top> compiled
 Module <FDSE_MXILINX_top> compiled
 Module <FTSRE_MXILINX_top> compiled
-Module <FD8CE_MXILINX_top> compiled
-Module <BUFE8_MXILINX_top> compiled
 Module <COMP4_MXILINX_top> compiled
 Module <M2_1_MXILINX_top> compiled
 Module <FTCLE_MXILINX_top> compiled
-Module <OBUFE_MXILINX_top> compiled
+Module <FD8CE_MXILINX_top> compiled
+Module <BUFE8_MXILINX_top> compiled
 Module <CB4CLE_MXILINX_top> compiled
 Module <OBUFT8_MXILINX_top> compiled
 Module <IBUF8_MXILINX_top> compiled
-Module <D2_4E_MXILINX_top> compiled
 Module <IBUF16_MXILINX_top> compiled
 Module <top> compiled
 No errors in compilation
@@ -124,13 +122,9 @@ Analyzing hierarchy for module <BUFE8_MXILINX_top> in library <work>.
 
 Analyzing hierarchy for module <FD8CE_MXILINX_top> in library <work>.
 
-Analyzing hierarchy for module <FD8CE_MXILINX_top> in library <work>.
+Analyzing hierarchy for entity <dynamic_sizer> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for module <FD8CE_MXILINX_top> in library <work>.
-
-Analyzing hierarchy for entity <dynamic_sizer> in library <work> (architecture <Behavioral>).
-
-Analyzing hierarchy for entity <addr_decode_combi> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <addr_decode_combi> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for module <D2_4E_MXILINX_top> in library <work>.
 
@@ -141,8 +135,6 @@ Analyzing hierarchy for module <OBUFE_MXILINX_top> in library <work>.
 Analyzing hierarchy for module <OBUFE_MXILINX_top> in library <work>.
 
 Analyzing hierarchy for module <CB4CLE_MXILINX_top> in library <work>.
-
-Analyzing hierarchy for module <BUFE8_MXILINX_top> in library <work>.
 
 Analyzing hierarchy for module <OBUFE_MXILINX_top> in library <work>.
 
@@ -159,13 +151,13 @@ Analyzing hierarchy for module <FTSRE_MXILINX_top> in library <work> with parame
 Analyzing hierarchy for module <FTSRE_MXILINX_top> in library <work> with parameters.
 	INIT = "0"
 
-Analyzing hierarchy for module <BUFE8_MXILINX_top> in library <work>.
-
 Analyzing hierarchy for module <FTSRE_MXILINX_top> in library <work> with parameters.
 	INIT = "0"
 
 Analyzing hierarchy for module <FTSRE_MXILINX_top> in library <work> with parameters.
 	INIT = "0"
+
+Analyzing hierarchy for module <OBUFE_MXILINX_top> in library <work>.
 
 Analyzing hierarchy for module <FTCLE_MXILINX_top> in library <work> with parameters.
 	INIT = "0"
@@ -226,11 +218,6 @@ Module <top> is correct for synthesis.
     Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <IBUF_SYSCLK> in unit <top>.
     Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <IBUF_SYSCLK> in unit <top>.
     Set user-defined property "IOSTANDARD =  DEFAULT" for instance <IBUF_SYSCLK> in unit <top>.
-    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <XLXI_16> in unit <top>.
-    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <XLXI_16> in unit <top>.
-    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <XLXI_16> in unit <top>.
-    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <XLXI_16> in unit <top>.
-    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <XLXI_16> in unit <top>.
     Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <XLXI_17> in unit <top>.
     Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <XLXI_17> in unit <top>.
     Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <XLXI_17> in unit <top>.
@@ -241,11 +228,6 @@ Module <top> is correct for synthesis.
     Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <XLXI_32> in unit <top>.
     Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <XLXI_32> in unit <top>.
     Set user-defined property "IOSTANDARD =  DEFAULT" for instance <XLXI_32> in unit <top>.
-    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <XLXI_34> in unit <top>.
-    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <XLXI_34> in unit <top>.
-    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <XLXI_34> in unit <top>.
-    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <XLXI_34> in unit <top>.
-    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <XLXI_34> in unit <top>.
     Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <XLXI_37> in unit <top>.
     Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <XLXI_37> in unit <top>.
     Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <XLXI_37> in unit <top>.
@@ -264,32 +246,29 @@ Module <top> is correct for synthesis.
     Set user-defined property "DRIVE =  12" for instance <XLXI_45> in unit <top>.
     Set user-defined property "IOSTANDARD =  DEFAULT" for instance <XLXI_45> in unit <top>.
     Set user-defined property "SLEW =  SLOW" for instance <XLXI_45> in unit <top>.
-    Set user-defined property "HU_SET =  DI_BUF_10" for instance <DI_BUF> in unit <top>.
-    Set user-defined property "HU_SET =  DO_BUF_11" for instance <DO_BUF> in unit <top>.
+    Set user-defined property "HU_SET =  DI_BUF_9" for instance <DI_BUF> in unit <top>.
+    Set user-defined property "HU_SET =  DO_BUF_10" for instance <DO_BUF> in unit <top>.
     Set user-defined property "SLEW =  FAST" for instance <DO_BUF> in unit <top>.
     Set user-defined property "HU_SET =  IBUFA_A_7" for instance <IBUFA_A> in unit <top>.
     Set user-defined property "HU_SET =  IBUFA_B_8" for instance <IBUFA_B> in unit <top>.
-    Set user-defined property "HU_SET =  REG0BUF_16" for instance <REG0BUF> in unit <top>.
-    Set user-defined property "HU_SET =  REG0_INST_17" for instance <REG0_INST> in unit <top>.
-    Set user-defined property "HU_SET =  REG1OBUF_18" for instance <REG1OBUF> in unit <top>.
-    Set user-defined property "HU_SET =  REG1_INST_19" for instance <REG1_INST> in unit <top>.
-    Set user-defined property "HU_SET =  REG2_INST_21" for instance <REG2_INST> in unit <top>.
-    Set user-defined property "HU_SET =  REG3_INST_27" for instance <REG3_INST> in unit <top>.
-    Set user-defined property "HU_SET =  XLXI_163_9" for instance <XLXI_163> in unit <top>.
-    Set user-defined property "HU_SET =  XLXI_189_13" for instance <XLXI_189> in unit <top>.
-    Set user-defined property "HU_SET =  XLXI_192_14" for instance <XLXI_192> in unit <top>.
-    Set user-defined property "HU_SET =  XLXI_195_15" for instance <XLXI_195> in unit <top>.
-    Set user-defined property "HU_SET =  XLXI_198_12" for instance <XLXI_198> in unit <top>.
-    Set user-defined property "HU_SET =  XLXI_305_20" for instance <XLXI_305> in unit <top>.
-    Set user-defined property "HU_SET =  XLXI_309_22" for instance <XLXI_309> in unit <top>.
-    Set user-defined property "HU_SET =  XLXI_310_23" for instance <XLXI_310> in unit <top>.
-    Set user-defined property "HU_SET =  XLXI_314_24" for instance <XLXI_314> in unit <top>.
-    Set user-defined property "HU_SET =  XLXI_329_25" for instance <XLXI_329> in unit <top>.
-    Set user-defined property "HU_SET =  XLXI_334_28" for instance <XLXI_334> in unit <top>.
-    Set user-defined property "HU_SET =  XLXI_342_29" for instance <XLXI_342> in unit <top>.
-    Set user-defined property "HU_SET =  XLXI_348_26" for instance <XLXI_348> in unit <top>.
-    Set user-defined property "HU_SET =  XLXI_390_30" for instance <XLXI_390> in unit <top>.
-    Set user-defined property "HU_SET =  XLXI_393_31" for instance <XLXI_393> in unit <top>.
+    Set user-defined property "HU_SET =  REG0BUF_15" for instance <REG0BUF> in unit <top>.
+    Set user-defined property "HU_SET =  REG0_INST_16" for instance <REG0_INST> in unit <top>.
+    Set user-defined property "HU_SET =  REG1OBUF_17" for instance <REG1OBUF> in unit <top>.
+    Set user-defined property "HU_SET =  REG1_INST_18" for instance <REG1_INST> in unit <top>.
+    Set user-defined property "HU_SET =  XLXI_163_28" for instance <XLXI_163> in unit <top>.
+    Set user-defined property "HU_SET =  XLXI_189_12" for instance <XLXI_189> in unit <top>.
+    Set user-defined property "HU_SET =  XLXI_192_13" for instance <XLXI_192> in unit <top>.
+    Set user-defined property "HU_SET =  XLXI_195_14" for instance <XLXI_195> in unit <top>.
+    Set user-defined property "HU_SET =  XLXI_198_11" for instance <XLXI_198> in unit <top>.
+    Set user-defined property "HU_SET =  XLXI_309_19" for instance <XLXI_309> in unit <top>.
+    Set user-defined property "HU_SET =  XLXI_310_20" for instance <XLXI_310> in unit <top>.
+    Set user-defined property "HU_SET =  XLXI_314_21" for instance <XLXI_314> in unit <top>.
+    Set user-defined property "HU_SET =  XLXI_329_22" for instance <XLXI_329> in unit <top>.
+    Set user-defined property "HU_SET =  XLXI_334_23" for instance <XLXI_334> in unit <top>.
+    Set user-defined property "HU_SET =  XLXI_342_24" for instance <XLXI_342> in unit <top>.
+    Set user-defined property "HU_SET =  XLXI_390_25" for instance <XLXI_390> in unit <top>.
+    Set user-defined property "HU_SET =  XLXI_393_26" for instance <XLXI_393> in unit <top>.
+    Set user-defined property "HU_SET =  XLXI_412_27" for instance <XLXI_412> in unit <top>.
     Set user-defined property "LOC =  P99" for signal <nRESET_EXT> in unit <top>.
     Set user-defined property "LOC =  P10" for signal <nBERR> in unit <top>.
     Set user-defined property "LOC =  P6" for signal <nDSACK0> in unit <top>.
@@ -569,32 +548,10 @@ Module <FD8CE_MXILINX_top.2> is correct for synthesis.
     Set user-defined property "INIT =  0" for instance <Q5> in unit <FD8CE_MXILINX_top.2>.
     Set user-defined property "INIT =  0" for instance <Q6> in unit <FD8CE_MXILINX_top.2>.
     Set user-defined property "INIT =  0" for instance <Q7> in unit <FD8CE_MXILINX_top.2>.
-Analyzing module <FD8CE_MXILINX_top.3> in library <work>.
-Module <FD8CE_MXILINX_top.3> is correct for synthesis.
- 
-    Set user-defined property "INIT =  0" for instance <Q0> in unit <FD8CE_MXILINX_top.3>.
-    Set user-defined property "INIT =  0" for instance <Q1> in unit <FD8CE_MXILINX_top.3>.
-    Set user-defined property "INIT =  0" for instance <Q2> in unit <FD8CE_MXILINX_top.3>.
-    Set user-defined property "INIT =  0" for instance <Q3> in unit <FD8CE_MXILINX_top.3>.
-    Set user-defined property "INIT =  0" for instance <Q4> in unit <FD8CE_MXILINX_top.3>.
-    Set user-defined property "INIT =  0" for instance <Q5> in unit <FD8CE_MXILINX_top.3>.
-    Set user-defined property "INIT =  0" for instance <Q6> in unit <FD8CE_MXILINX_top.3>.
-    Set user-defined property "INIT =  0" for instance <Q7> in unit <FD8CE_MXILINX_top.3>.
-Analyzing module <FD8CE_MXILINX_top.4> in library <work>.
-Module <FD8CE_MXILINX_top.4> is correct for synthesis.
- 
-    Set user-defined property "INIT =  0" for instance <Q0> in unit <FD8CE_MXILINX_top.4>.
-    Set user-defined property "INIT =  0" for instance <Q1> in unit <FD8CE_MXILINX_top.4>.
-    Set user-defined property "INIT =  0" for instance <Q2> in unit <FD8CE_MXILINX_top.4>.
-    Set user-defined property "INIT =  0" for instance <Q3> in unit <FD8CE_MXILINX_top.4>.
-    Set user-defined property "INIT =  0" for instance <Q4> in unit <FD8CE_MXILINX_top.4>.
-    Set user-defined property "INIT =  0" for instance <Q5> in unit <FD8CE_MXILINX_top.4>.
-    Set user-defined property "INIT =  0" for instance <Q6> in unit <FD8CE_MXILINX_top.4>.
-    Set user-defined property "INIT =  0" for instance <Q7> in unit <FD8CE_MXILINX_top.4>.
-Analyzing Entity <dynamic_sizer> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <dynamic_sizer> in library <work> (Architecture <behavioral>).
 Entity <dynamic_sizer> analyzed. Unit <dynamic_sizer> generated.
 
-Analyzing Entity <addr_decode_combi> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <addr_decode_combi> in library <work> (Architecture <behavioral>).
 Entity <addr_decode_combi> analyzed. Unit <addr_decode_combi> generated.
 
 Analyzing module <D2_4E_MXILINX_top> in library <work>.
@@ -655,9 +612,6 @@ Module <FTCLE_MXILINX_top.5> is correct for synthesis.
  
     Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCLE_MXILINX_top.5>.
     Set user-defined property "HU_SET =  I_36_30_2" for instance <I_36_30> in unit <FTCLE_MXILINX_top.5>.
-Analyzing module <BUFE8_MXILINX_top.3> in library <work>.
-Module <BUFE8_MXILINX_top.3> is correct for synthesis.
- 
 Analyzing module <OBUFE_MXILINX_top.4> in library <work>.
 Module <OBUFE_MXILINX_top.4> is correct for synthesis.
  
@@ -702,9 +656,6 @@ Analyzing module <FTSRE_MXILINX_top.2> in library <work>.
 Module <FTSRE_MXILINX_top.2> is correct for synthesis.
  
     Set user-defined property "HU_SET =  I_36_35_1" for instance <I_36_35> in unit <FTSRE_MXILINX_top.2>.
-Analyzing module <BUFE8_MXILINX_top.4> in library <work>.
-Module <BUFE8_MXILINX_top.4> is correct for synthesis.
- 
 Analyzing module <FTSRE_MXILINX_top.3> in library <work>.
 	INIT = 1'b0
 Module <FTSRE_MXILINX_top.3> is correct for synthesis.
@@ -715,6 +666,13 @@ Analyzing module <FTSRE_MXILINX_top.4> in library <work>.
 Module <FTSRE_MXILINX_top.4> is correct for synthesis.
  
     Set user-defined property "HU_SET =  I_36_35_1" for instance <I_36_35> in unit <FTSRE_MXILINX_top.4>.
+Analyzing module <OBUFE_MXILINX_top.6> in library <work>.
+Module <OBUFE_MXILINX_top.6> is correct for synthesis.
+ 
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <I_36_10> in unit <OBUFE_MXILINX_top.6>.
+    Set user-defined property "DRIVE =  12" for instance <I_36_10> in unit <OBUFE_MXILINX_top.6>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <I_36_10> in unit <OBUFE_MXILINX_top.6>.
+    Set user-defined property "SLEW =  SLOW" for instance <I_36_10> in unit <OBUFE_MXILINX_top.6>.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -778,16 +736,6 @@ Synthesizing Unit <FD8CE_MXILINX_top_2>.
 Unit <FD8CE_MXILINX_top_2> synthesized.
 
 
-Synthesizing Unit <FD8CE_MXILINX_top_3>.
-    Related source file is "top.vf".
-Unit <FD8CE_MXILINX_top_3> synthesized.
-
-
-Synthesizing Unit <FD8CE_MXILINX_top_4>.
-    Related source file is "top.vf".
-Unit <FD8CE_MXILINX_top_4> synthesized.
-
-
 Synthesizing Unit <D2_4E_MXILINX_top>.
     Related source file is "top.vf".
 Unit <D2_4E_MXILINX_top> synthesized.
@@ -808,11 +756,6 @@ Synthesizing Unit <OBUFE_MXILINX_top_3>.
 Unit <OBUFE_MXILINX_top_3> synthesized.
 
 
-Synthesizing Unit <BUFE8_MXILINX_top_3>.
-    Related source file is "top.vf".
-Unit <BUFE8_MXILINX_top_3> synthesized.
-
-
 Synthesizing Unit <OBUFE_MXILINX_top_4>.
     Related source file is "top.vf".
 Unit <OBUFE_MXILINX_top_4> synthesized.
@@ -828,9 +771,9 @@ Synthesizing Unit <COMP4_MXILINX_top>.
 Unit <COMP4_MXILINX_top> synthesized.
 
 
-Synthesizing Unit <BUFE8_MXILINX_top_4>.
+Synthesizing Unit <OBUFE_MXILINX_top_6>.
     Related source file is "top.vf".
-Unit <BUFE8_MXILINX_top_4> synthesized.
+Unit <OBUFE_MXILINX_top_6> synthesized.
 
 
 Synthesizing Unit <M2_1_MXILINX_top>.
@@ -900,10 +843,8 @@ Unit <FTSRE_MXILINX_top_4> synthesized.
 
 Synthesizing Unit <top>.
     Related source file is "top.vf".
-WARNING:Xst:646 - Signal <XLXN_750> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <XLXN_286> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <XLXN_285> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <DS> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <REGSEL3> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <REGSEL2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 Unit <top> synthesized.
 
 
@@ -929,8 +870,8 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # Counters                                             : 1
  4-bit up counter                                      : 1
-# Registers                                            : 42
- Flip-Flops                                            : 42
+# Registers                                            : 26
+ Flip-Flops                                            : 26
 
 =========================================================================
 
@@ -988,26 +929,6 @@ Optimizing unit <FD8CE_MXILINX_top_2> ...
   implementation constraint: INIT=0	 : Q6
   implementation constraint: INIT=0	 : Q7
 
-Optimizing unit <FD8CE_MXILINX_top_3> ...
-  implementation constraint: INIT=0	 : Q0
-  implementation constraint: INIT=0	 : Q1
-  implementation constraint: INIT=0	 : Q2
-  implementation constraint: INIT=0	 : Q3
-  implementation constraint: INIT=0	 : Q4
-  implementation constraint: INIT=0	 : Q5
-  implementation constraint: INIT=0	 : Q6
-  implementation constraint: INIT=0	 : Q7
-
-Optimizing unit <FD8CE_MXILINX_top_4> ...
-  implementation constraint: INIT=0	 : Q0
-  implementation constraint: INIT=0	 : Q1
-  implementation constraint: INIT=0	 : Q2
-  implementation constraint: INIT=0	 : Q3
-  implementation constraint: INIT=0	 : Q4
-  implementation constraint: INIT=0	 : Q5
-  implementation constraint: INIT=0	 : Q6
-  implementation constraint: INIT=0	 : Q7
-
 Optimizing unit <D2_4E_MXILINX_top> ...
 
 Optimizing unit <OBUFE_MXILINX_top_1> ...
@@ -1016,15 +937,13 @@ Optimizing unit <OBUFE_MXILINX_top_2> ...
 
 Optimizing unit <OBUFE_MXILINX_top_3> ...
 
-Optimizing unit <BUFE8_MXILINX_top_3> ...
-
 Optimizing unit <OBUFE_MXILINX_top_4> ...
 
 Optimizing unit <OBUFE_MXILINX_top_5> ...
 
 Optimizing unit <COMP4_MXILINX_top> ...
 
-Optimizing unit <BUFE8_MXILINX_top_4> ...
+Optimizing unit <OBUFE_MXILINX_top_6> ...
 
 Optimizing unit <M2_1_MXILINX_top> ...
 
@@ -1087,34 +1006,34 @@ XOR Preserve                       : YES
 wysiwyg                            : NO
 
 Design Statistics
-# IOs                              : 83
+# IOs                              : 91
 
 Cell Usage :
-# BELS                             : 234
-#      AND2                        : 65
+# BELS                             : 245
+#      AND2                        : 61
 #      AND3                        : 10
 #      AND4                        : 4
 #      AND5                        : 2
 #      AND8                        : 2
 #      GND                         : 5
-#      INV                         : 72
-#      OR2                         : 41
+#      INV                         : 85
+#      OR2                         : 43
 #      OR3                         : 8
 #      OR5                         : 1
 #      VCC                         : 6
 #      XNOR2                       : 5
 #      XOR2                        : 13
-# FlipFlops/Latches                : 46
+# FlipFlops/Latches                : 30
 #      FDC                         : 4
-#      FDCE                        : 37
+#      FDCE                        : 21
 #      FDCP                        : 4
 #      FDP                         : 1
-# Tri-States                       : 32
-#      BUFE                        : 32
-# IO Buffers                       : 91
-#      IBUF                        : 52
-#      OBUF                        : 26
-#      OBUFT                       : 13
+# Tri-States                       : 16
+#      BUFE                        : 16
+# IO Buffers                       : 99
+#      IBUF                        : 54
+#      OBUF                        : 31
+#      OBUFT                       : 14
 # Others                           : 17
 #      AND2B1                      : 13
 #      AND3B1                      : 2
@@ -1124,14 +1043,14 @@ Cell Usage :
 
 
 Total REAL time to Xst completion: 2.00 secs
-Total CPU time to Xst completion: 2.25 secs
+Total CPU time to Xst completion: 2.23 secs
  
 --> 
 
 
-Total memory usage is 530980 kilobytes
+Total memory usage is 529448 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    7 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="function_decoder">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2023-1-21T3:31:20</timestamp>
+    <pin polarity="Input" x="0" y="-544" name="FC0" />
+    <pin polarity="Input" x="0" y="-464" name="FC1" />
+    <pin polarity="Input" x="0" y="-384" name="FC2" />
+    <pin polarity="Input" x="0" y="-304" name="A16" />
+    <pin polarity="Input" x="0" y="-224" name="A17" />
+    <pin polarity="Input" x="0" y="-144" name="A18" />
+    <pin polarity="Input" x="0" y="-64" name="A19" />
+    <pin polarity="Output" x="384" y="-544" name="SUP" />
+    <pin polarity="Output" x="384" y="-480" name="USR" />
+    <pin polarity="Output" x="384" y="-416" name="DAT" />
+    <pin polarity="Output" x="384" y="-352" name="PRG" />
+    <pin polarity="Output" x="384" y="-288" name="CUS" />
+    <pin polarity="Output" x="384" y="-224" name="CPU" />
+    <pin polarity="Output" x="384" y="-160" name="BA" />
+    <pin polarity="Output" x="384" y="-96" name="CC" />
+    <pin polarity="Output" x="384" y="-32" name="IA" />
+    <graph>
+        <rect width="256" x="64" y="-576" height="576" />
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="192" y="-584" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-544" type="pin FC0" />
+        <line x2="0" y1="-544" y2="-544" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-464" type="pin FC1" />
+        <line x2="0" y1="-464" y2="-464" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-384" type="pin FC2" />
+        <line x2="0" y1="-384" y2="-384" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-304" type="pin A16" />
+        <line x2="0" y1="-304" y2="-304" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-224" type="pin A17" />
+        <line x2="0" y1="-224" y2="-224" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-144" type="pin A18" />
+        <line x2="0" y1="-144" y2="-144" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-64" type="pin A19" />
+        <line x2="0" y1="-64" y2="-64" x1="64" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-544" type="pin SUP" />
+        <line x2="384" y1="-544" y2="-544" x1="320" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-480" type="pin USR" />
+        <line x2="384" y1="-480" y2="-480" x1="320" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-416" type="pin DAT" />
+        <line x2="384" y1="-416" y2="-416" x1="320" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-352" type="pin PRG" />
+        <line x2="384" y1="-352" y2="-352" x1="320" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-288" type="pin CUS" />
+        <line x2="384" y1="-288" y2="-288" x1="320" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-224" type="pin CPU" />
+        <line x2="384" y1="-224" y2="-224" x1="320" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-160" type="pin BA" />
+        <line x2="384" y1="-160" y2="-160" x1="320" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-96" type="pin CC" />
+        <line x2="384" y1="-96" y2="-96" x1="320" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-32" type="pin IA" />
+        <line x2="384" y1="-32" y2="-32" x1="320" />
+    </graph>
+</symbol>

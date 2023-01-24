@@ -1,0 +1,9 @@
+xst -intstyle ise -filter "/home/mike/devel/embedded/m68k/m68030-bbb-clone/xc95108-intc/iseconfig/filter.filter" -ifn "/home/mike/devel/embedded/m68k/m68030-bbb-clone/xc95108-intc/function_decoder.xst" -ofn "/home/mike/devel/embedded/m68k/m68030-bbb-clone/xc95108-intc/function_decoder.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -i -p xc95108-TQ100-7 function_decoder.ngc function_decoder.ngd  
+cpldfit -filter /home/mike/devel/embedded/m68k/m68030-bbb-clone/xc95108-intc/iseconfig/filter.filter -intstyle ise -p xc95108-7-TQ100 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk function_decoder.ngd 
+XSLTProcess -filter /home/mike/devel/embedded/m68k/m68030-bbb-clone/xc95108-intc/iseconfig/filter.filter function_decoder_build.xml 
+tsim -filter /home/mike/devel/embedded/m68k/m68030-bbb-clone/xc95108-intc/iseconfig/filter.filter -intstyle ise function_decoder function_decoder.nga 
+taengine -intstyle ise -f function_decoder -w --format html1 -l function_decoder_html/tim/timing_report.htm 
+hprep6 -filter /home/mike/devel/embedded/m68k/m68030-bbb-clone/xc95108-intc/iseconfig/filter.filter -s IEEE1149 -n function_decoder -i function_decoder 
+vhdtdtfi -lib work function_decoder.vhd -prj xc95108-intc -o function_decoder.spl -module function_decoder -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family xc9500 function_decoder.spl /home/mike/devel/embedded/m68k/m68030-bbb-clone/xc95108-intc/function_decoder.sym 
